@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JongoApplicazione.View.Prenota1">
+    <StackLayout>
+        <Label Text="INFO PERSONALI"/>
+        <Entry Placeholder="Nome"/>
+        <Entry Placeholder="Cognome"/>
+        <Entry Placeholder="Indirizzo,n°civico"/>
+        <Entry Placeholder="CAP"/>
+
+        <Entry Placeholder="Numero telefono"/>
+
+
+
+        <Frame BackgroundColor="Chocolate" HeightRequest="40" WidthRequest="69" />
+    </StackLayout>
+</ContentView>
