@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JongoApplicazione.LogInPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <!-- Scritta di Benvenuto-->
+                <RowDefinition Height="*"></RowDefinition>
+                <!-- Immagine/Animazione Jongo-->
+                <RowDefinition Height="*"></RowDefinition>
+                <!-- Selezione Amministratore o Utente -->
+                <RowDefinition Height="0.4*"></RowDefinition>
+                <!-- Email -->
+                <RowDefinition Height="0.4*"></RowDefinition>
+                <!-- Password -->
+                <RowDefinition Height="0.4*"></RowDefinition>
+                <!-- Password Dimenticata -->
+                <RowDefinition Height="*"></RowDefinition>
+                <!-- Bottone LogIn-->
+                <RowDefinition Height="0.7*"></RowDefinition>
+                <!-- Iscrizione -->
+                <RowDefinition Height="0.4*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!-- Scritta di Benvenuto -->
+            <StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Benvenuto in: " />
+            </StackLayout>
+
+            <!-- Immagine/ Animazione Jongo -->
+            <StackLayout>
+            
+            </StackLayout>
+
+            <!-- Selezione Amministratore o Utente -->
+            <StackLayout>
+
+            </StackLayout>
+
+            <!-- Email-->
+            <StackLayout Grid.Column="1" Grid.Row="3">
+                <!-- immagine email-->
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3">
+                <Entry Placeholder="email"/>
+                <Label x:Name="Errore_Mail"
+                       Text="il campo email non può essere vuoto"
+                       FontSize="11"
+                       TextColor="White"/>
+            </StackLayout>
+
+            <!-- Password -->
+            <StackLayout>
+                <!-- immagine password -->
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="4">
+                <Entry Placeholder="password"/>
+                <Label x:Name="Errore_Password"
+                       Text="il campo password non può essere vuoto"
+                       FontSize="11"
+                       TextColor="White"/>
+            </StackLayout>
+
+            <!-- Password Dimenticata -->
+            <StackLayout Grid.Column="2" Grid.Row="5" >
+                <Button x:Name="Bottone_Recupero_Password"
+                        Text="Recupera password"
+                        FontSize="13"
+                        TextColor="#6F00FF"
+                        BackgroundColor="Transparent"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Clicked="Bottone_Recupero_Password_Cliccato"/>
+            </StackLayout>
+
+            <!-- Bottone LogIn -->
+            <StackLayout Grid.Column="2" Grid.Row="6">
+                <Button x:Name="Bottone_Log_In"
+                        Text="LOG IN"
+                        FontSize="20"
+                        TextColor="White"
+                        BackgroundColor="#6F00FF"
+                        CornerRadius="15"
+                        Clicked="Bottone_Log_In_Cliccato"/>
+            </StackLayout>
+
+            <!-- Iscrizione -->
+            <StackLayout Grid.Column="2" Grid.Row="7" Orientation="Horizontal"
+                         HorizontalOptions="Center">
+                <Label Text="Non sei iscritto? "
+                       FontSize="13"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       />
+
+                <Button x:Name="Bottone_Iscrizone"
+                        Text="Iscriviti"
+                        FontSize="13"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        TextColor="#6F00FF"
+                        BackgroundColor="Transparent"
+                        Clicked="Bottone_Recupero_Iscrizone"/>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
