@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.View.Prenota1">
     <StackLayout>
-        <Label Text="INFO PERSONALI"/>
+        <Label Margin="1" Text="INFO PERSONALI"/>
         <Entry Placeholder="Nome"/>
         <Entry Placeholder="Cognome"/>
         <Entry Placeholder="Indirizzo,n°civico"/>
