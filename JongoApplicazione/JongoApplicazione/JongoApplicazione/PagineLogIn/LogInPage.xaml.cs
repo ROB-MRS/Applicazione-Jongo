@@ -12,6 +12,10 @@ namespace JongoApplicazione
             InitializeComponent();
         }
 
+        void Bottone_Recupero_Password_Cliccato(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new PageRecuperoPassword());
+        }
 
     }
 }
