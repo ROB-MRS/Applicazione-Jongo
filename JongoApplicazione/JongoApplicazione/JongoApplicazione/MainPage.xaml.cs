@@ -14,7 +14,7 @@ namespace JongoApplicazione
         {
             InitializeComponent();
 
-            this.Children.Add(new LogInPage() { Title = "impostazioni" });
+            this.Children.Add(new ContentPage() { Title = "impostazioni" });
             this.Children.Add(new View.Prenota() { Title = "prenota!" });
             this.Children.Add(new ContentPage() { Title = "cronologia" });
             this.Children.Add(new ContentPage() { Title = "admin" });

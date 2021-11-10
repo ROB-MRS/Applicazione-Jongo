@@ -57,9 +57,9 @@
                 <Entry x:Name="Email"
                        Placeholder="email"/>
                 <Label x:Name="Errore_Email"
-                       Text="il campo email non può essere vuoto"
+                       Text=" "
                        FontSize="11"
-                       TextColor="White"/>
+                       TextColor="Red"/>
             </StackLayout>
 
             <!-- Password -->
@@ -70,9 +70,9 @@
                 <Entry x:Name="Password"
                        Placeholder="password"/>
                 <Label x:Name="Errore_Password"
-                       Text="il campo password non può essere vuoto"
+                       Text=" "
                        FontSize="11"
-                       TextColor="White"/>
+                       TextColor="Red"/>
             </StackLayout>
 
             <!-- Password Dimenticata -->
@@ -106,15 +106,18 @@
                        VerticalOptions="Center"
                        HorizontalOptions="Center"
                        />
-
-                <Button x:Name="Bottone_Iscrizione"
+                <Label Text="Iscriviti"
+                       FontSize="13"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+                <!--<Button x:Name="Bottone_Iscrizione"
                         Text="Iscriviti"
                         FontSize="13"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
                         TextColor="#6F00FF"
                         BackgroundColor="Transparent"
-                        Clicked="Bottone_Iscrizione"/>
+                        Clicked="Bottone_Iscrizione"/>-->
             </StackLayout>
 
         </Grid>

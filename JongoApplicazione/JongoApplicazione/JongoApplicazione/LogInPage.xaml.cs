@@ -24,13 +24,13 @@ namespace JongoApplicazione
         //Bottone di Log In
         void Bottone_Log_In_Cliccato(System.Object sender, System.EventArgs e)
         {
-                Console.WriteLine("Qualcosa è cambiato");
-                //Navigation.PushAsync(new MainPage());
+            if (Email.Text != null && Password.Text != null)
+            {
+                Console.WriteLine("stampa: " + Email.Text);
+                Navigation.PushAsync(new MainPage());
+            }
+                
         }
 
-        void Bottone_Iscrizione(System.Object sender, System.EventArgs e)
-        {
-            Navigation.PushAsync(new PageIscrizione());
-        }
     }
 }
