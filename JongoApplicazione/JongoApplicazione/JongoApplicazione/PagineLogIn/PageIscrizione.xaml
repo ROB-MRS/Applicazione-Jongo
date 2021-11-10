@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.PagineLogIn.PageIscrizione">
     <ContentPage.Content>
-        
+        <Label Text="Pagina di iscrizione all'app"/>
+
     </ContentPage.Content>
 </ContentPage>

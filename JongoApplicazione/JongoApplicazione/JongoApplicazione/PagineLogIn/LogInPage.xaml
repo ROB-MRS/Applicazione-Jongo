@@ -52,8 +52,9 @@
                 <!-- immagine email-->
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3">
-                <Entry Placeholder="email"/>
-                <Label x:Name="Errore_Mail"
+                <Entry x:Name="Email"
+                       Placeholder="email"/>
+                <Label x:Name="Errore_Email"
                        Text="il campo email non può essere vuoto"
                        FontSize="11"
                        TextColor="White"/>
@@ -64,7 +65,8 @@
                 <!-- immagine password -->
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="4">
-                <Entry Placeholder="password"/>
+                <Entry x:Name="Password"
+                       Placeholder="password"/>
                 <Label x:Name="Errore_Password"
                        Text="il campo password non può essere vuoto"
                        FontSize="11"
@@ -110,7 +112,7 @@
                         HorizontalOptions="Center"
                         TextColor="#6F00FF"
                         BackgroundColor="Transparent"
-                        Clicked="Bottone_Recupero_Iscrizone"/>
+                        Clicked="Bottone_Iscrizone"/>
             </StackLayout>
 
         </Grid>
