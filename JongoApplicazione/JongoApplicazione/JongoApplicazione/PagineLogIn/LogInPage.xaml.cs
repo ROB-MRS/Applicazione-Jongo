@@ -24,19 +24,13 @@ namespace JongoApplicazione
         //Bottone di Log In
         void Bottone_Log_In_Cliccato(System.Object sender, System.EventArgs e)
         {
-            if (Email.Text == null)
-            {
-                Errore_Email.TextColor = Color.Red;
-                if (Email.Text == null)
-                {
-                    Errore_Password.TextColor = Color.Red;
-                }
-            }
-            else
-            {
-                Navigation.PushAsync(new MainPage());
-            }
+                Console.WriteLine("Qualcosa è cambiato");
+                //Navigation.PushAsync(new MainPage());
         }
 
+        void Bottone_Iscrizione(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new PageIscrizione());
+        }
     }
 }

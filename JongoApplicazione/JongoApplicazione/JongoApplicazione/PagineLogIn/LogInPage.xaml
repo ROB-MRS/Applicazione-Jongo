@@ -38,8 +38,10 @@
             </StackLayout>
 
             <!-- Immagine/ Animazione Jongo -->
-            <StackLayout>
-            
+            <StackLayout Grid.Column="2" Grid.Row="1" >
+                <Image Source="Logo_quadrato.png"
+                       HeightRequest="30"
+                       WidthRequest="30"/>
             </StackLayout>
 
             <!-- Selezione Amministratore o Utente -->
@@ -105,14 +107,14 @@
                        HorizontalOptions="Center"
                        />
 
-                <Button x:Name="Bottone_Iscrizone"
+                <Button x:Name="Bottone_Iscrizione"
                         Text="Iscriviti"
                         FontSize="13"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
                         TextColor="#6F00FF"
                         BackgroundColor="Transparent"
-                        Clicked="Bottone_Iscrizone"/>
+                        Clicked="Bottone_Iscrizione"/>
             </StackLayout>
 
         </Grid>
