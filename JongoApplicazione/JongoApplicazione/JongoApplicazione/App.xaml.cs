@@ -10,8 +10,7 @@ namespace JongoApplicazione
         {
             InitializeComponent();
 
-            //MainPage = new NavigationPage(new LogInPage());
-            MainPage = new PagineLogIn.PageSelezioneLogIn();
+            MainPage = new NavigationPage(new PagineLogIn.PageSelezioneLogIn());
         }
 
         protected override void OnStart()

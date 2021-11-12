@@ -15,13 +15,13 @@
 
             <Grid.RowDefinitions>
                 <!-- Grafica -->
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="1.6*"></RowDefinition>
                 <!-- Bottone Log In User -->
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
                 <!-- Bottone Log In Admin -->
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="0.6*"></RowDefinition>
                 <!-- Bottone Iscrizione -->
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="1.3*"></RowDefinition>
             </Grid.RowDefinitions>
 
             <!-- Grafica -->
@@ -30,7 +30,8 @@
             </StackLayout>
 
             <!-- Bottone Log In User -->
-            <StackLayout Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3">
+            <StackLayout Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3"
+                         VerticalOptions="End">
                 <Button x:Name="Bottone_Log_In_User"
                         Text="LOG IN COME USER"
                         FontSize="20"
@@ -42,7 +43,8 @@
             </StackLayout>
 
             <!-- Bottone Log In Admin -->
-            <StackLayout Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3">
+            <StackLayout Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3"
+                         VerticalOptions="Start">
                 <Button x:Name="Bottone_Log_In_Admin"
                         Text="LOG IN COME ADMIN"
                         FontSize="20"
