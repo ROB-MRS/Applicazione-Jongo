@@ -133,4 +133,7 @@
       <Name>JongoApplicazione</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_quadrato.png" />
+  </ItemGroup>
 </Project>
