@@ -68,7 +68,8 @@
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="4">
                 <Entry x:Name="Password"
-                       Placeholder="password"/>
+                       Placeholder="password"
+                       IsPassword="True"/>
                 <Label x:Name="Errore_Password"
                        Text=" "
                        FontSize="11"
