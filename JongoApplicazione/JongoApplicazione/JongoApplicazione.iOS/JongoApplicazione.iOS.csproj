@@ -134,6 +134,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\logo_quadrato.png" />
+    <AndroidResource Include="Resources\logo_quadrato2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_rettangolare2.png" />
   </ItemGroup>
 </Project>

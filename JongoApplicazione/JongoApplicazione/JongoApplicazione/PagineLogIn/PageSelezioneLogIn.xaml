@@ -15,9 +15,9 @@
 
             <Grid.RowDefinitions>
                 <!-- Grafica -->
-                <RowDefinition Height="1.6*"></RowDefinition>
+                <RowDefinition Height="1.5*"></RowDefinition>
                 <!-- Bottone Log In User -->
-                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="0.4*"></RowDefinition>
                 <!-- Bottone Log In Admin -->
                 <RowDefinition Height="0.6*"></RowDefinition>
                 <!-- Bottone Iscrizione -->
@@ -31,7 +31,7 @@
 
             <!-- Bottone Log In User -->
             <StackLayout Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3"
-                         VerticalOptions="End">
+                         VerticalOptions="Center">
                 <Button x:Name="Bottone_Log_In_User"
                         Text="LOG IN COME USER"
                         FontSize="20"

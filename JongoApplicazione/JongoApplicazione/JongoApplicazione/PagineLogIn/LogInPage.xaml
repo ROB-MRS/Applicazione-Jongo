@@ -17,19 +17,15 @@
                 <!-- Scritta di Benvenuto-->
                 <RowDefinition Height="0.5*"></RowDefinition>
                 <!-- Immagine/Animazione Jongo-->
-                <RowDefinition Height="2*"></RowDefinition>
-                <!-- Selezione Amministratore o Utente -->
-                <RowDefinition Height="0.4*"></RowDefinition>
-                <!-- Email -->
-                <RowDefinition Height="0.4*"></RowDefinition>
-                <!-- Password -->
-                <RowDefinition Height="0.4*"></RowDefinition>
-                <!-- Password Dimenticata -->
                 <RowDefinition Height="*"></RowDefinition>
-                <!-- Bottone LogIn-->
-                <RowDefinition Height="0.7*"></RowDefinition>
-                <!-- Iscrizione -->
+                <!-- Email -->
+                <RowDefinition Height="0.6*"></RowDefinition>
+                <!-- Password -->
+                <RowDefinition Height="0.6*"></RowDefinition>
+                <!-- Password Dimenticata -->
                 <RowDefinition Height="0.4*"></RowDefinition>
+                <!-- Bottone LogIn-->
+                <RowDefinition Height="0.8*"></RowDefinition>
             </Grid.RowDefinitions>
 
             <!-- Scritta di Benvenuto -->
@@ -39,29 +35,25 @@
 
             <!-- Immagine/ Animazione Jongo -->
             <StackLayout Grid.Column="2" Grid.Row="1" Padding="0,-125,0,0">
-                <Image Source="logo_quadrato.png"
+                <Image Source="logo_quadrato2.png"
                        HeightRequest="400"
                        WidthRequest="400"
                        VerticalOptions="Start"
                        HorizontalOptions="End"/>
             </StackLayout>
 
-            <!-- Selezione Amministratore o Utente -->
-            <StackLayout>
-
-            </StackLayout>
-
             <!-- Email-->
             <StackLayout Grid.Column="1" Grid.Row="3">
                 <!-- immagine email-->
             </StackLayout>
-            <StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3">
+            <StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3" >
                 <Entry x:Name="Email"
                        Placeholder="email"/>
                 <Label x:Name="Errore_Email"
-                       Text=" "
+                       Text="Il campo email non può essere vuoto"
                        FontSize="11"
-                       TextColor="Red"/>
+                       TextColor="Red"
+                       IsVisible="false"/>
             </StackLayout>
 
             <!-- Password -->
@@ -73,9 +65,10 @@
                        Placeholder="password"
                        IsPassword="True"/>
                 <Label x:Name="Errore_Password"
-                       Text=" "
+                       Text="Il campo password non può essere vuoto"
                        FontSize="11"
-                       TextColor="Red"/>
+                       TextColor="Red"
+                       IsVisible="false"/>
             </StackLayout>
 
             <!-- Password Dimenticata -->
@@ -100,29 +93,6 @@
                         CornerRadius="15"
                         Clicked="Bottone_Log_In_Cliccato"/>
             </StackLayout>
-
-            <!-- Iscrizione -->
-            <StackLayout Grid.Column="2" Grid.Row="7" Orientation="Horizontal"
-                         HorizontalOptions="Center">
-                <Label Text="Non sei iscritto? "
-                       FontSize="13"
-                       VerticalOptions="Center"
-                       HorizontalOptions="Center"
-                       />
-                <Label Text="Iscriviti"
-                       FontSize="13"
-                       VerticalOptions="Center"
-                       HorizontalOptions="Center" />
-                <!--<Button x:Name="Bottone_Iscrizione"
-                        Text="Iscriviti"
-                        FontSize="13"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center"
-                        TextColor="#6F00FF"
-                        BackgroundColor="Transparent"
-                        Clicked="Bottone_Iscrizione"/>-->
-            </StackLayout>
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>
