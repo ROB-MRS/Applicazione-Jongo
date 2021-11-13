@@ -2,20 +2,18 @@
 <ContentView
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="JongoApplicazione.View.Prenota1">
+    x:Class="JongoApplicazione.View.Prenota1"
+    BackgroundColor="Yellow">
     <StackLayout>
-        <Label Text="INFO PERSONALI"
-               VerticalOptions="Center"
-               HorizontalOptions="Center" Font="Title"/>
-        <Entry Placeholder="Nome"/>
-        <Entry Placeholder="Cognome"/>
-        <Entry Placeholder="Indirizzo,n°civico"/>
-        <Entry Placeholder="CAP"/>
-
-        <Entry Placeholder="Numero telefono"/>
+        <Label Text="INFO PERSONALI" Font="Title" Margin="100" FontSize="Large" TextColor="DarkViolet"/>
+        <Entry Placeholder="Nome" PlaceholderColor="Violet" BackgroundColor="Yellow"/>
+        <Entry Placeholder="Cognome" PlaceholderColor="Violet" BackgroundColor="Yellow"/>
+        <Entry Placeholder="Indirizzo,n°civico" PlaceholderColor="Violet" BackgroundColor="Yellow"/>
+        <Entry Placeholder="CAP" PlaceholderColor="Violet" BackgroundColor="Yellow"/>
+        <Entry Placeholder="Numero telefono" PlaceholderColor="Violet" BackgroundColor="Yellow"/>
 
 
 
-        <Frame BackgroundColor="Chocolate" HeightRequest="40" WidthRequest="69" />
+       <!-- <Frame BackgroundColor="Chocolate" HeightRequest="40" WidthRequest="69" /--> 
     </StackLayout>
 </ContentView>
