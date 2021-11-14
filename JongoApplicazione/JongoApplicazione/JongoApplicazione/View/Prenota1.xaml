@@ -6,7 +6,7 @@
     <StackLayout>
         <Label Text="INFO PERSONALI"/>
         <Entry Placeholder="Nome"/>
-        <Entry Placeholder="Cognomeee"/>
+        <Entry Placeholder="Cognome"/>
         <Entry Placeholder="Indirizzo,n°civico"/>
         <Entry Placeholder="CAP"/>
 
