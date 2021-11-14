@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JongoApplicazione.PagineLogIn.PageSelezioneLogIn">
+    <ContentPage.Content>
+        <Grid BackgroundColor="#FFCCFF">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <!-- Grafica -->
+                <RowDefinition Height="1.5*"></RowDefinition>
+                <!-- Bottone Log In User -->
+                <RowDefinition Height="0.4*"></RowDefinition>
+                <!-- Bottone Log In Admin -->
+                <RowDefinition Height="0.6*"></RowDefinition>
+                <!-- Bottone Iscrizione -->
+                <RowDefinition Height="1.3*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!-- Grafica -->
+            <StackLayout>
+
+            </StackLayout>
+
+            <!-- Bottone Log In User -->
+            <StackLayout Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3"
+                         VerticalOptions="Center">
+                <Button x:Name="Bottone_Log_In_User"
+                        Text="LOG IN COME USER"
+                        FontSize="20"
+                        BackgroundColor="#6F00FF"
+                        TextColor="White"
+                        CornerRadius="15"
+                        Clicked="Bottone_Log_In_User_Clicked"
+                        />
+            </StackLayout>
+
+            <!-- Bottone Log In Admin -->
+            <StackLayout Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3"
+                         VerticalOptions="Start">
+                <Button x:Name="Bottone_Log_In_Admin"
+                        Text="LOG IN COME ADMIN"
+                        FontSize="20"
+                        BackgroundColor="#6F00FF"
+                        TextColor="White"
+                        CornerRadius="15"
+                        Clicked="Bottone_Log_In_Admin_Clicked"
+                        />
+            </StackLayout>
+
+            <!-- Bottone Iscrizione -->
+            <StackLayout Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3">
+                <Label Text="Non sei iscritto?"
+                       HorizontalOptions="Center"></Label>
+                <Button x:Name="Bottone_Iscrizione"
+                        Text="ISCRIVITI"
+                        FontSize="20"
+                        BackgroundColor="#6F00FF"
+                        TextColor="White"
+                        CornerRadius="15"
+                        Clicked="Bottone_Iscrizione_Clicked"
+                        />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
