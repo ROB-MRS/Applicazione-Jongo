@@ -134,10 +134,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\logo_quadrato2.png" />
-    <AndroidResource Include="Resources\Mail.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\logo_rettangolare2.png" />
+    <BundleResource Include="Resources\logo_quadrato2.png" />
   </ItemGroup>
 </Project>
