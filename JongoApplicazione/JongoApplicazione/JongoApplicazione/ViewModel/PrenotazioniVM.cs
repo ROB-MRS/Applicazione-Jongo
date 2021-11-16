@@ -26,6 +26,8 @@ namespace JongoApplicazione.ViewModel
             content = new ContentView();
             Prenota1 = new View.Prenota1();
             Prenota2 = new View.Prenota2();
+            Prenota3 = new View.Prenota3();
+            Prenota4 = new View.Prenota4();
 
             ComandoAvanti = new Command(Avanti);
             ComandoIndietro = new Command(Indietro);

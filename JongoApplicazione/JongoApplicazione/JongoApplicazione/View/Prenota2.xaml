@@ -8,6 +8,7 @@
    
         
             <Grid>
+                <!--Divido la pagina in 5 colonne e 5 righe-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -27,7 +28,7 @@
 
 
             </Grid.RowDefinitions>
-
+            <!--Griglia di prova-->
              <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="1" />
              <Frame BackgroundColor="AntiqueWhite" Grid.Row="0" Grid.Column="2" />
              <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="3" />

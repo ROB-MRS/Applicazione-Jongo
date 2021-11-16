@@ -4,6 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.View.Prenota3">
     <ContentView.Content>
-        
+        <StackLayout>
+            <Label Text="DETTAGLI" Font="Title" Margin="100" FontSize="Large" TextColor="DarkViolet"/>
+
+            </StackLayout>
     </ContentView.Content>
 </ContentView>
