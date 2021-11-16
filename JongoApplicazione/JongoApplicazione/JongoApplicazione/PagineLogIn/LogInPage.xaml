@@ -45,6 +45,9 @@
             <!-- Email-->
             <StackLayout Grid.Column="1" Grid.Row="3">
                 <!-- immagine email-->
+                <Image Source="Mail.svg"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3" >
                 <Entry x:Name="Email"

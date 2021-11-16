@@ -24,29 +24,30 @@ namespace JongoApplicazione
         //Bottone di Log In
         void Bottone_Log_In_Cliccato(System.Object sender, System.EventArgs e)
         {
-            if (Email.Text != null && Password.Text != null)
+            if (!String.IsNullOrEmpty(Email.Text) && !String.IsNullOrEmpty(Password.Text))
             {
+                Errore_Password.IsVisible = false;
                 Console.WriteLine("stampa: " + Email.Text + Password.Text);
                 Navigation.PushAsync(new MainPage());
             }
             else
             {
-                if(Email.Text == null)
+                if(String.IsNullOrEmpty(Email.Text))
                 {
-                    Errore_Email.IsEnabled = true;
+                    Errore_Email.IsVisible = true;
                 }
                 else
                 {
-                    Errore_Email.IsEnabled = false;
+                    Errore_Email.IsVisible = false;
                 }
 
-                if(Password.Text == null)
+                if(String.IsNullOrEmpty(Password.Text))
                 {
-                    Errore_Password.IsEnabled = true;
+                    Errore_Password.IsVisible = true;
                 }
                 else
                 {
-                    Errore_Password.IsEnabled = false;
+                    Errore_Password.IsVisible = false;
                 }
             }
                 
