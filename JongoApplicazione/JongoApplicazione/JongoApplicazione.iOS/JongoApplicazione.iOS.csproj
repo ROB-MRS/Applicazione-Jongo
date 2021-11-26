@@ -136,4 +136,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\logo_quadrato2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Mail.png" />
+  </ItemGroup>
 </Project>
