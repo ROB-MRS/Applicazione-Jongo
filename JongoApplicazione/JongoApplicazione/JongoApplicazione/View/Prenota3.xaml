@@ -4,9 +4,43 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.View.Prenota3">
     <ContentView.Content>
-        <StackLayout>
+         <Grid>
+                  <!--Divido la pagina in 5 colonne e 5 righe-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+
+
+
+        </Grid.RowDefinitions>
+
+              <!-- Immagine/ Animazione Jongo -->
+            <StackLayout Grid.Column="1" Grid.Row="0" Padding="0,-125,0,0" Margin="15" Grid.ColumnSpan="3">
+                <Image Source="logo_rettangolare2.png"
+                       HeightRequest="400"
+                       WidthRequest="400"
+                       VerticalOptions="Start"
+                       HorizontalOptions="End"/>
+            </StackLayout>
+             
+             <!-- TITOLO -->
+        <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
             <Label Text="DETTAGLI" Font="Title" Margin="100" FontSize="Large" TextColor="DarkViolet"/>
 
+        
             </StackLayout>
+               </Grid>
     </ContentView.Content>
 </ContentView>
