@@ -11,6 +11,7 @@ namespace JongoApplicazione
         public LogInPage()
         {
             InitializeComponent();
+            Imm = new Image { Source = "Mail.png" };
         }
 
 

@@ -2,7 +2,9 @@
 <ContentPage BackgroundColor="#FFCCFF"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="JongoApplicazione.LogInPage">
+    x:Class="JongoApplicazione.LogInPage"
+    NavigationPage.HasNavigationBar="True"
+    NavigationPage.HasBackButton="True">
     <ContentPage.Content>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -34,10 +36,9 @@
             </StackLayout>
 
             <!-- Immagine/ Animazione Jongo -->
-            <StackLayout Grid.Column="2" Grid.Row="1" Padding="0,-125,0,0">
+            <StackLayout Grid.Column="2" Grid.Row="1" Padding="0,-5,0,0">
                 <Image Source="logo_quadrato2.png"
-                       HeightRequest="450"
-                       WidthRequest="450"
+                       Scale="1.4"
                        VerticalOptions="Start"
                        HorizontalOptions="End"/>
             </StackLayout>
@@ -45,7 +46,7 @@
             <!-- Email-->
             <StackLayout Grid.Column="1" Grid.Row="3">
                 <!-- immagine email-->
-                <Image Source="Mail.png"
+                <Image x:Name="Immagine_Email"
                        VerticalOptions="Center"
                        HorizontalOptions="Center"/>
             </StackLayout>
