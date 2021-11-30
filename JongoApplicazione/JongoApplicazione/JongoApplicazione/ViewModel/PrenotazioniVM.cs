@@ -24,7 +24,7 @@ namespace JongoApplicazione.ViewModel
             pagina = 1;
 
             content = new ContentView();
-            Prenota3 = new View.Prenota3();
+            Prenota1 = new View.Prenota1();
             Prenota2 = new View.Prenota2();
             Prenota3 = new View.Prenota3();
             Prenota4 = new View.Prenota4();
@@ -67,7 +67,7 @@ namespace JongoApplicazione.ViewModel
             switch (pagina)
             {
                 case 1:
-                    content = Prenota3;
+                    content = Prenota1;
                     return;
                 case 2:
                     content = Prenota2;
