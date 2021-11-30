@@ -11695,7 +11695,7 @@ namespace JongoApplicazione.Droid
 			public const int logo_quadrato2 = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int logo_rettangolare2 = 2131165297;
+			public const int Mail = 2131165297;
 			
 			// aapt resource value: 0x7F070072
 			public const int material_ic_calendar_black_24dp = 2131165298;

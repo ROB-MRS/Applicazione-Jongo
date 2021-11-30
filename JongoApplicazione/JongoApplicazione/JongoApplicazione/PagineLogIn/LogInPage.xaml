@@ -2,7 +2,9 @@
 <ContentPage BackgroundColor="#FFCCFF"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="JongoApplicazione.LogInPage">
+    x:Class="JongoApplicazione.LogInPage"
+    NavigationPage.HasNavigationBar="True"
+    NavigationPage.HasBackButton="True">
     <ContentPage.Content>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -15,13 +17,13 @@
 
             <Grid.RowDefinitions>
                 <!-- Scritta di Benvenuto-->
-                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="0.9*"></RowDefinition>
                 <!-- Immagine/Animazione Jongo-->
                 <RowDefinition Height="*"></RowDefinition>
                 <!-- Email -->
-                <RowDefinition Height="0.6*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
                 <!-- Password -->
-                <RowDefinition Height="0.6*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
                 <!-- Password Dimenticata -->
                 <RowDefinition Height="0.4*"></RowDefinition>
                 <!-- Bottone LogIn-->
@@ -30,14 +32,13 @@
 
             <!-- Scritta di Benvenuto -->
             <StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center">
-                <Label Text="Benvenuto in: " />
+                  <Label Text="Benvenuto in: " />
             </StackLayout>
 
             <!-- Immagine/ Animazione Jongo -->
-            <StackLayout Grid.Column="2" Grid.Row="1" Padding="0,-125,0,0">
-                <Image Source="logo_rettangolare2.png"
-                       HeightRequest="400"
-                       WidthRequest="400"
+            <StackLayout Grid.Column="2" Grid.Row="1" Padding="0,-5,0,0">
+                <Image Source="logo_quadrato2.png"
+                       Scale="1.4"
                        VerticalOptions="Start"
                        HorizontalOptions="End"/>
             </StackLayout>
@@ -45,6 +46,9 @@
             <!-- Email-->
             <StackLayout Grid.Column="1" Grid.Row="3">
                 <!-- immagine email-->
+                <Image x:Name="Immagine_Email"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3" >
                 <Entry x:Name="Email"
