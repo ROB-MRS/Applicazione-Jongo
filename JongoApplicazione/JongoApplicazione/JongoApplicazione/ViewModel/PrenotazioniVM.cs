@@ -12,9 +12,9 @@ namespace JongoApplicazione.ViewModel
         public ContentView content { get; set; }
 
         public View.Prenota1 Prenota1 { get; set; }
-        public ContentView Prenota2 { get; set; }
-        public ContentView Prenota3 { get; set; }
-        public ContentView Prenota4 { get; set; }
+        public View.Prenota2 Prenota2 { get; set; }
+        public View.Prenota3 Prenota3 { get; set; }
+        public View.Prenota4 Prenota4 { get; set; }
 
         public ICommand ComandoAvanti { private set; get; }
         public ICommand ComandoIndietro { private set; get; }
@@ -24,7 +24,10 @@ namespace JongoApplicazione.ViewModel
             pagina = 1;
 
             content = new ContentView();
-            Prenota1 = new View.Prenota1();
+            Prenota3 = new View.Prenota3();
+            Prenota2 = new View.Prenota2();
+            Prenota3 = new View.Prenota3();
+            Prenota4 = new View.Prenota4();
 
             ComandoAvanti = new Command(Avanti);
             ComandoIndietro = new Command(Indietro);
@@ -64,7 +67,7 @@ namespace JongoApplicazione.ViewModel
             switch (pagina)
             {
                 case 1:
-                    content = Prenota1;
+                    content = Prenota3;
                     return;
                 case 2:
                     content = Prenota2;

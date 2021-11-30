@@ -3,17 +3,51 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.View.Prenota1"
-    BackgroundColor="Yellow">
-    <StackLayout>
-        <Label Text="INFO PERSONALI" Font="Title" Margin="100" FontSize="Large" TextColor="DarkViolet"/>
-        <Entry Placeholder="Nome" PlaceholderColor="Violet" BackgroundColor="Yellow"/>
-        <Entry Placeholder="Cognome" PlaceholderColor="Violet" BackgroundColor="Yellow"/>
-        <Entry Placeholder="Indirizzo,n°civico" PlaceholderColor="Violet" BackgroundColor="Yellow"/>
-        <Entry Placeholder="CAP" PlaceholderColor="Violet" BackgroundColor="Yellow"/>
-        <Entry Placeholder="Numero telefono" PlaceholderColor="Violet" BackgroundColor="Yellow"/>
+     BackgroundColor="#FFCCFF">
+    
+         <Grid>
+                <!--Divido la pagina in 5 colonne e 5 righe-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+
+            </Grid.RowDefinitions>
+
+            <!-- Immagine/ Animazione Jongo -->
+            <StackLayout Grid.Column="1" Grid.Row="0" Padding="0,-125,0,0" Margin="15" Grid.ColumnSpan="3">
+                <Image Source="logo_rettangolare2.png"
+                       HeightRequest="400"
+                       WidthRequest="400"
+                       VerticalOptions="Start"
+                       HorizontalOptions="End"/>
+            </StackLayout>
+             
+             <!-- TITOLO -->
+             <StackLayout Grid.Row="2" Grid.Column="2" >
+        <Label Text="INFO PERSONALI" Font="Title" HorizontalTextAlignment="Center"  FontSize="Title" TextColor="DarkViolet"  />
+                  </StackLayout>
+             <!--Entry per inserimento info personali-->
+             <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3">
+        <Entry Placeholder="Nome" PlaceholderColor="Violet" BackgroundColor="LightGoldenrodYellow" Margin="8"/>
+        <Entry Placeholder="Cognome" PlaceholderColor="Violet" BackgroundColor="LightGoldenrodYellow" Margin="8"/>
+        <Entry Placeholder="Indirizzo,n°civico" PlaceholderColor="Violet" BackgroundColor="LightGoldenrodYellow" Margin="8"/>
+        <Entry Placeholder="CAP" PlaceholderColor="Violet" BackgroundColor="LightGoldenrodYellow" Margin="8"/>
+        <Entry Placeholder="Numero telefono" PlaceholderColor="Violet" BackgroundColor="LightGoldenrodYellow" Margin="8"/>
 
 
 
        <!-- <Frame BackgroundColor="Chocolate" HeightRequest="40" WidthRequest="69" /--> 
     </StackLayout>
+  </Grid>
 </ContentView>

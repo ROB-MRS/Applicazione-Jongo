@@ -2,8 +2,119 @@
 <ContentView
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="JongoApplicazione.View.Prenota2">
-    <ContentView.Content>
+    x:Class="JongoApplicazione.View.Prenota2"
+   >
+    
+   
         
-    </ContentView.Content>
+            <Grid>
+        <!--Divido la pagina in 5 colonne e 5 righe-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+
+
+
+        </Grid.RowDefinitions>
+        <!--Griglia di prova
+             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="1" />
+             <Frame BackgroundColor="AntiqueWhite" Grid.Row="0" Grid.Column="2" />
+             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="3" />
+             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="4" />
+             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="0" />
+             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="0" />
+             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="1" />
+             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="2" />
+             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="3" />
+             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="4" />
+             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="0" />
+             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="1" />
+             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="2" />
+             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="3" />
+             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="4" />
+             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="0" />
+             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="1" />
+             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="2" />
+             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="3" />
+             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="4" />
+             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="0" />
+             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="1" />
+             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="2" />
+             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="3" />
+             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="4" /> -->
+
+
+
+
+
+        <!-- Immagine/ Animazione Jongo -->
+        <StackLayout Grid.Column="1" Grid.Row="0" Padding="0,-125,0,0" Margin="15" Grid.ColumnSpan="3">
+            <Image Source="logo_rettangolare2.png"
+                       HeightRequest="400"
+                       WidthRequest="400"
+                       VerticalOptions="Start"
+                       HorizontalOptions="End"/>
+        </StackLayout>
+
+
+
+
+
+
+        <!-- Titolo della pagina -->
+        <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Center" >
+            <Label Text="DATA E ORARIO"  Font="Title" TextColor="DarkViolet"/>
+        </StackLayout>
+
+
+        <StackLayout   Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal">
+
+            <!-- Data -->
+            <DatePicker  x:Name="Data"
+                                 MinimumDate="01/01/1921"
+                                 MaximumDate="01/01/2025"
+                                 HorizontalOptions="FillAndExpand"
+                                 FontSize="Large"
+                                 FontAttributes="Bold"
+                                 TextColor="Violet"
+                                 BackgroundColor="LightYellow"
+                         />
+
+            <!-- Orario -->
+            <TimePicker
+                                x:Name="Orario"
+                                Time="00:00"
+                                HorizontalOptions="FillAndExpand"
+                                IsEnabled="True"
+                                FontSize="Large"
+                                FontAttributes="Bold"
+                                TextColor="Violet"
+                                BackgroundColor="LightYellow"
+                                />
+
+            </StackLayout>
+               
+
+          <!--Entry per inserire info extra-->
+            <Entry Placeholder="INFO EXTRA" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Large" FontAttributes="Bold" PlaceholderColor="Violet" BackgroundColor="LightYellow"/>
+
+                   
+
+
+
+   </Grid>
+  
+
 </ContentView>
