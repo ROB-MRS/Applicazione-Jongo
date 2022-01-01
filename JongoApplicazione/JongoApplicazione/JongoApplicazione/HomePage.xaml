@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
+<ContentPage NavigationPage.HasNavigationBar="False"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.HomePage">
@@ -8,22 +8,101 @@
         <Grid>
             <Grid.RowDefinitions>
                 <!-- Bottone utente -->
+                <RowDefinition Height="1.5*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <!-- Bottoni 1 e 2 -->
                 <RowDefinition Height="*"></RowDefinition>
-                <!-- Bottone 1 -->
+                <!-- Bottone 3 -->
+                <RowDefinition Height="2*"></RowDefinition>
+                <!-- Bottone 4 e 5 -->
                 <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
                 <!-- Bottone mappa -->
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="2*"></ColumnDefinition>
-                <ColumnDefinition Width="2*"></ColumnDefinition>
-                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+
+            <!-- Bottone utente -->
+            <StackLayout VerticalOptions="End">
+                <Button
+                    Text="utente"
+                    BackgroundColor="Blue"/>
+            </StackLayout>
+
+            <!-- Bottone 1 -->
+            <!--<StackLayout Grid.Column="1" Grid.Row="2">
+                <Button Text="Bottone 1"
+                        CornerRadius="23"
+                        BackgroundColor="Blue"/>
+            </StackLayout>-->
+
+            <Button Grid.Column="1" Grid.Row="2"
+                    CornerRadius="35"
+                    Text="Bottone 1"
+                    BackgroundColor="Blue">
+            </Button>
+
+            <!-- Bottone 2 -->
+            <!--<StackLayout Grid.Column="3" Grid.Row="2">
+                <Button Text="Bottone 2"
+                        BackgroundColor="Blue"/>
+            </StackLayout>-->
+
+            <Button Grid.Column="3" Grid.Row="2"
+                    CornerRadius="35"
+                    Text="Bottone 2"
+                    BackgroundColor="Blue">
+            </Button>
+
+            <!-- Bottone 3 -->
+            <!--<StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3">
+                <Button Text="Bottone 3"
+                        Background="Blue"/>
+            </StackLayout>-->
+
+            <Button Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3"
+                    CornerRadius="60"
+                    Text="Bottone 1"
+                    BackgroundColor="Blue">
+            </Button>
+
+            <!-- Bottone 4 -->
+            <!--<StackLayout Grid.Column="1" Grid.Row="4">
+                <Button Text="Bottone 1"
+                        BackgroundColor="Blue"/>
+            </StackLayout>-->
+
+            <Button Grid.Column="1" Grid.Row="2"
+                    CornerRadius="35"
+                    Text="Bottone 1"
+                    BackgroundColor="Blue">
+            </Button>
+
+             <!--Bottone 5 -->
+            <!--<StackLayout Grid.Column="3" Grid.Row="4">
+                <Button Text="Bottone 1"
+                        BackgroundColor="Blue"/>
+            </StackLayout>-->
+
+            <Button Grid.Column="1" Grid.Row="2"
+                    CornerRadius="35"
+                    Text="Bottone 1"
+                    BackgroundColor="Blue">
+            </Button>
+
+            <!-- Bottone mappa -->
+            <StackLayout Grid.Column="2" Grid.Row="7">
+                <Button Text="mappa"
+                        BackgroundColor="Blue" />
+            </StackLayout>
+
         </Grid>
 
 
