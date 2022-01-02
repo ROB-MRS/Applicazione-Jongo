@@ -138,5 +138,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Mail.png" />
+    <AndroidResource Include="Resources\User.svg" />
   </ItemGroup>
 </Project>
