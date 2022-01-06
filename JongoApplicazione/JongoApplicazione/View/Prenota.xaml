@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage
+<ContentPage  BackgroundColor="#FFCCFF"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.View.Prenota"
@@ -24,12 +24,33 @@
         </Label>
         </StackLayout> -->
         </ContentView>
+         <Grid>
+                <!--Divido la pagina in 5 colonne e 5 righe-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Margin="10">
-            <Button BackgroundColor="Red" Text="indietro" Command="{Binding ComandoIndietro}" x:Name="indietro" ></Button>
-            <Button BackgroundColor="LightGreen" Text="avanti" Command="{Binding ComandoAvanti}" x:Name="avanti" ></Button>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            
+       <!--Pulsanti avanti e indietro-->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Margin="10" Grid.Row="5" Grid.Column="2">
+            <Button BackgroundColor="DarkGray"  Text="INDIETRO" TextColor="Gray" Command="{Binding ComandoIndietro}" x:Name="indietro" ></Button>
+            <Button BackgroundColor="DarkGray" Text="AVANTI" TextColor="Gray" Command="{Binding ComandoAvanti}" x:Name="avanti" ></Button>
         </StackLayout>
+             </Grid>
 
+<!--Griglia con pulsanti che indicano la pagina in cui ci troviamo
     <Grid VerticalOptions="End">
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="*"/>
@@ -43,6 +64,6 @@
        <Frame BackgroundColor="#2196F3" Padding="3" CornerRadius="3" Grid.Column="2" HeightRequest="3" WidthRequest="3"/>
        <Frame BackgroundColor="#2196F3" Padding="3" CornerRadius="3" Grid.Column="3" HeightRequest="3" WidthRequest="3"/>
     </Grid>
-
+        -->
     </StackLayout>
 </ContentPage>

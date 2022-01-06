@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage BackgroundColor="#FFCCFF"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JongoApplicazione.LogInPage"
+    NavigationPage.HasNavigationBar="True"
+    NavigationPage.HasBackButton="True">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <!-- Scritta di Benvenuto-->
+                <RowDefinition Height="0.9*"></RowDefinition>
+                <!-- Immagine/Animazione Jongo-->
+                <RowDefinition Height="*"></RowDefinition>
+                <!-- Email -->
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <!-- Password -->
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <!-- Password Dimenticata -->
+                <RowDefinition Height="0.4*"></RowDefinition>
+                <!-- Bottone LogIn-->
+                <RowDefinition Height="0.8*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!-- Scritta di Benvenuto -->
+            <StackLayout Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center">
+                  <Label Text="Benvenuto in: " />
+            </StackLayout>
+
+            <!-- Immagine/ Animazione Jongo -->
+            <StackLayout Grid.Column="2" Grid.Row="1" Padding="0,-5,0,0">
+                <Image Source="logo_quadrato2.png"
+                       Scale="1.4"
+                       VerticalOptions="Start"
+                       HorizontalOptions="End"/>
+            </StackLayout>
+
+            <!-- Email-->
+            <StackLayout Grid.Column="1" Grid.Row="3">
+                <!-- immagine email-->
+                <Image x:Name="Immagine_Email"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3" >
+                <Entry x:Name="Email"
+                       Placeholder="email"/>
+                <Label x:Name="Errore_Email"
+                       Text="Il campo email non può essere vuoto"
+                       FontSize="11"
+                       TextColor="Red"
+                       IsVisible="false"/>
+            </StackLayout>
+
+            <!-- Password -->
+            <StackLayout>
+                <!-- immagine password -->
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="4">
+                <Entry x:Name="Password"
+                       Placeholder="password"
+                       IsPassword="True"/>
+                <Label x:Name="Errore_Password"
+                       Text="Il campo password non può essere vuoto"
+                       FontSize="11"
+                       TextColor="Red"
+                       IsVisible="false"/>
+            </StackLayout>
+
+            <!-- Password Dimenticata -->
+            <StackLayout Grid.Column="2" Grid.Row="5" >
+                <Button x:Name="Bottone_Recupero_Password"
+                        Text="Recupera password"
+                        FontSize="13"
+                        TextColor="#6F00FF"
+                        BackgroundColor="Transparent"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Clicked="Bottone_Recupero_Password_Cliccato"/>
+            </StackLayout>
+
+            <!-- Bottone LogIn -->
+            <StackLayout Grid.Column="2" Grid.Row="6">
+                <Button x:Name="Bottone_Log_In"
+                        Text="LOG IN"
+                        FontSize="20"
+                        TextColor="White"
+                        BackgroundColor="#6F00FF"
+                        CornerRadius="15"
+                        Clicked="Bottone_Log_In_Cliccato"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

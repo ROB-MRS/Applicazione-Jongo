@@ -129,8 +129,14 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\JongoApplicazione\JongoApplicazione.csproj">
-      <Project>{B4B770CA-22A2-42D4-9FFA-BE0466FA4A72}</Project>
+      <Project>{91E13A72-7F93-4A7B-8EC3-B8E4565BA728}</Project>
       <Name>JongoApplicazione</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo_quadrato2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Mail.png" />
   </ItemGroup>
 </Project>
