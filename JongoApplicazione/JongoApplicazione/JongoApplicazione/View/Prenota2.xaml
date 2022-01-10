@@ -2,12 +2,8 @@
 <ContentView
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="JongoApplicazione.View.Prenota2"
-   >
-    
-   
-        
-            <Grid>
+    x:Class="JongoApplicazione.View.Prenota2">
+        <Grid>
         <!--Divido la pagina in 5 colonne e 5 righe-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -28,34 +24,7 @@
 
 
         </Grid.RowDefinitions>
-        <!--Griglia di prova
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="1" />
-             <Frame BackgroundColor="AntiqueWhite" Grid.Row="0" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="4" /> -->
-
-
+        
 
 
 
@@ -68,12 +37,7 @@
                        HorizontalOptions="End"/>
         </StackLayout>
 
-
-
-
-
-
-        <!-- Titolo della pagina -->
+             <!-- Titolo della pagina -->
         <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Center" >
             <Label Text="DATA E ORARIO"  Font="Title" TextColor="DarkViolet"/>
         </StackLayout>
@@ -112,9 +76,5 @@
 
                    
 
-
-
-   </Grid>
-  
-
+            </Grid>
 </ContentView>

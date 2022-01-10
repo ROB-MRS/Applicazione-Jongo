@@ -8,9 +8,7 @@ namespace JongoApplicazione.View
     {
         public Prenota2()
         {
-         
-
+            InitializeComponent();
         }
-   
     }
 }
