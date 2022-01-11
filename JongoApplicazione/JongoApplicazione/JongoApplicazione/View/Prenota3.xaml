@@ -66,6 +66,13 @@
             <Label Text="DETTAGLI"  Font="Title" FontSize="Large" TextColor="DarkViolet"/>
             </StackLayout>
 
+             <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
+                  <Picker x:Name="categoria" Title="Categoria"/>
+                     
+                 
+                 </StackLayout>
+
+
              <StackLayout Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3">
                   <Entry Text="Descrizione"/>
                      
