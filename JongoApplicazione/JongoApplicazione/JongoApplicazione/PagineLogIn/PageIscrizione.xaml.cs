@@ -11,5 +11,11 @@ namespace JongoApplicazione.PagineLogIn
         {
             InitializeComponent();
         }
+
+        void Bottone_premuto(System.Object sender, System.EventArgs e)
+        {
+            Etichetta.IsVisible = true;   
+        }
+
     }
 }
