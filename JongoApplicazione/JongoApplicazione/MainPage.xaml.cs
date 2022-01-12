@@ -13,7 +13,7 @@ namespace JongoApplicazione
         public MainPage()
         {
             InitializeComponent();
-
+            
             this.Children.Add(new MasterDetailUtente() { Title = "impostazioni" });
             this.Children.Add(new View.Prenota() { Title = "prenota!" });
             this.Children.Add(new ContentPage() { Title = "cronologia" });
