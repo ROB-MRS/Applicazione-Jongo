@@ -12,8 +12,8 @@
     <MasterDetailPage.Detail>
         <ContentPage>
             <StackLayout>
-                <Label Text="Pulsante 1"></Label>
-                <Label Text="Pulsante 2"></Label>
+                <!--<Label Text="Pulsante 1"></Label>
+                <Label Text="Pulsante 2"></Label>-->
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Detail>

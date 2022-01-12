@@ -4,7 +4,42 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.PagineLogIn.PageIscrizione">
     <ContentPage.Content>
-        <Label Text="Pagina di iscrizione all'app"/>
-        
+
+        <StackLayout>
+            <Entry
+                x:Name="Nome"
+                Text="Nome">
+            </Entry>
+            <Entry
+                x:Name="Cognome"
+                Text="Cognome">
+            </Entry>
+            <Entry
+                x:Name="Numero"
+                Text="Numero di telefono">
+            </Entry>
+            <Entry
+                x:Name="Email"
+                Text="Email">
+            </Entry>
+            <Entry
+                x:Name="Password"
+                Text="Password">
+            </Entry>
+            <Entry
+                x:Name="Conferma_Password"
+                Text="Conferma password">
+            </Entry>
+            <Button
+                Text="Avanti"
+                BackgroundColor="Red"
+                Clicked="Bottone_premuto"
+                ></Button>
+            <Label
+                x:Name="Etichetta"
+                Text="Ti Sei Iscritto con Successo"
+                IsVisible="False"></Label>
+        </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
