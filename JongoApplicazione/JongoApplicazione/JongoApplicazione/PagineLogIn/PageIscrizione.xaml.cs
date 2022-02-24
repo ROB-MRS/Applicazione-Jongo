@@ -27,77 +27,94 @@ namespace JongoApplicazione.PagineLogIn
 
         async void Bottone_premuto(System.Object sender, System.EventArgs e)
         {
-            Etichetta.IsVisible = true;
+            
             string nome = Nome.Text;
             string cognome = Cognome.Text;
             string numero = Numero.Text;
             string email = Email.Text;
             string password = Password.Text;
 
-
-
-            if(string.IsNullOrEmpty(nome))
+            if (string.IsNullOrEmpty(nome))
             {
                 await DisplayAlert("Errore", "Inserire il nome", "OK");
             }
 
-            if (string.IsNullOrEmpty(cognome))
+            else if (string.IsNullOrEmpty(cognome))
             {
                 await DisplayAlert("Errore", "Inserire il cognome", "OK");
             }
 
-            if (string.IsNullOrEmpty(numero))
+            else if (string.IsNullOrEmpty(numero))
             {
                 await DisplayAlert("Errore", "Inserire il numero", "OK");
             }
 
-            if (string.IsNullOrEmpty(password))
+            else if (string.IsNullOrEmpty(password))
             {
                 await DisplayAlert("Errore", "Inserire la password", "OK");
             }
 
-            if (string.IsNullOrEmpty(email))
+            else if (string.IsNullOrEmpty(email))
             {
                 await DisplayAlert("Errore", "Inserire l' email", "OK");
             }
 
-            if(password != Conferma_Password.Text)
+            else if (password != Conferma_Password.Text)
             {
                 await DisplayAlert("Errore", "Password non corretta", "OK");
             }
 
-            Utente utente = new Utente();
-            utente.Name = nome;
-            utente.Surname = cognome;
-            utente.Email = email;
-            utente.Password = password;
-            utente.Numero = numero;
+            List<string> listaEmail = new List<string>();
+            List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
 
-            var isSaved = await repository.Save(utente);
-            if (isSaved)
+            foreach (Utente u in await repository.GetAll())
             {
-                await DisplayAlert("Informazione", "Registrazione effettuata!", "OK");
+                listaEmail.Add(u.Email);
             }
-                            
-            
-            /*try {
-                string srvrdbname = "Jongo";
-                string srvrname = "192.168.1.254";
-                string srvrusername = "adp";
-                string srvrpasswd = "Anto4700";
-                string sqlconn = $"Data Source = {srvrname};Initial Catalog = {srvrdbname};User Id = {srvrusername};Password = {srvrpasswd}; Trudted_connection = true";
 
-                SqlConnection connessione = new SqlConnection(sqlconn);
-                connessione.Open();
+            if (listaEmail.Contains(email))
+            {
+                await DisplayAlert("Errore", "Email già presente", "OK");
             }
+
+            else
+            {   
                 
-            catch (Exception ex){
-                Console.WriteLine(ex.Message);
-                throw;
-            }*/
-            
-               
-            
+
+                Utente utente = new Utente();
+                utente.Name = nome;
+                utente.Surname = cognome;
+                utente.Email = email;
+                utente.Password = password;
+                utente.Numero = numero;
+
+
+                
+
+                var isSaved = await repository.Save(utente);
+                if (isSaved)
+                {
+                    await DisplayAlert("Informazione", "Registrazione effettuata!", "OK");
+                }
+
+
+                /*try {
+                    string srvrdbname = "Jongo";
+                    string srvrname = "192.168.1.254";
+                    string srvrusername = "adp";
+                    string srvrpasswd = "Anto4700";
+                    string sqlconn = $"Data Source = {srvrname};Initial Catalog = {srvrdbname};User Id = {srvrusername};Password = {srvrpasswd}; Trudted_connection = true";
+
+                    SqlConnection connessione = new SqlConnection(sqlconn);
+                    connessione.Open();
+                }
+
+                catch (Exception ex){
+                    Console.WriteLine(ex.Message);
+                    throw;
+                }*/
+            }
+            Etichetta.IsVisible = true;
 
         }
 

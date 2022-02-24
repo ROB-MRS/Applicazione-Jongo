@@ -10,7 +10,7 @@ namespace JongoApplicazione.JongoApplicazione.PagineLogIn
     public class Utente
     {
         
-        public static string Id { get; set; }
+        public  string Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
 

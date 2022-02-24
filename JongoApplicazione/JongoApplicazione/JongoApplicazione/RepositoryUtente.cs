@@ -3,6 +3,7 @@ using JongoApplicazione.JongoApplicazione.PagineLogIn;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,6 +22,26 @@ namespace JongoApplicazione.JongoApplicazione
                 return true;
             }
             return false;
+        }
+
+        public async Task<List<Utente>> GetAll()
+        {
+            
+            return (await firebaseClient.Child(nameof(Utente)).OnceAsync<Utente>()).Select(item=> new Utente
+                {
+                    Email = item.Object.Email,
+                    Name = item.Object.Name,
+                    Surname = item.Object.Surname,
+                    Numero = item.Object.Numero,
+                    Password = item.Object.Password,
+                    Id = item.Key
+                }).ToList();
+        }
+
+        public async void Delete(Utente utente)
+        {
+            List<Utente> list = await GetAll();
+            list.Remove(utente);
         }
     }
 }
