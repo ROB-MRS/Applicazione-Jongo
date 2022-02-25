@@ -18,6 +18,7 @@ namespace JongoApplicazione.PagineLogIn
         //FirebaseClient firebaseClient =
           //  new FirebaseClient("https://jongo-data-default-rtdb.europe-west1.firebasedatabase.app/");
           RepositoryUtente repository = new RepositoryUtente();
+          
         
 
         public PageIscrizione()
@@ -25,9 +26,23 @@ namespace JongoApplicazione.PagineLogIn
             InitializeComponent();
         }
 
+        
+        int conta_caratteri_maiuscoli(string passwd)
+        {
+            int conta = 0;
+            foreach(char c in passwd)
+            {
+                if(c > 'A' && c < 'Z')
+                {
+                    conta++;
+                }  
+            }
+            return conta;
+        }
+
         async void Bottone_premuto(System.Object sender, System.EventArgs e)
         {
-            
+            bool verifica = true;
             string nome = Nome.Text;
             string cognome = Cognome.Text;
             string numero = Numero.Text;
@@ -37,31 +52,49 @@ namespace JongoApplicazione.PagineLogIn
             if (string.IsNullOrEmpty(nome))
             {
                 await DisplayAlert("Errore", "Inserire il nome", "OK");
+                verifica = false;
             }
 
             else if (string.IsNullOrEmpty(cognome))
             {
                 await DisplayAlert("Errore", "Inserire il cognome", "OK");
+                verifica = false;
             }
 
             else if (string.IsNullOrEmpty(numero))
             {
                 await DisplayAlert("Errore", "Inserire il numero", "OK");
+                verifica = false;
             }
 
             else if (string.IsNullOrEmpty(password))
             {
                 await DisplayAlert("Errore", "Inserire la password", "OK");
+                verifica = false;
             }
 
             else if (string.IsNullOrEmpty(email))
             {
                 await DisplayAlert("Errore", "Inserire l' email", "OK");
+                verifica = false;
             }
 
             else if (password != Conferma_Password.Text)
             {
                 await DisplayAlert("Errore", "Password non corretta", "OK");
+                verifica = false;
+            }
+
+            else if(password.Length < 6)
+            {
+                await DisplayAlert("Errore", "Password troppo corta, deve contenere almeno 6 caratteri", "OK");
+                verifica = false;
+            }
+
+            else if(conta_caratteri_maiuscoli(password) < 2)
+            {
+                await DisplayAlert("Errore", "Password non corretta, deve contenere almeno 2 caratteri maiuscoli", "OK");
+                verifica = false;
             }
 
             List<string> listaEmail = new List<string>();
@@ -72,12 +105,12 @@ namespace JongoApplicazione.PagineLogIn
                 listaEmail.Add(u.Email);
             }
 
-            if (listaEmail.Contains(email))
+            if (listaEmail.Contains(email) && verifica)
             {
                 await DisplayAlert("Errore", "Email già presente", "OK");
             }
 
-            else
+            else if(verifica)
             {   
                 
 
@@ -87,10 +120,7 @@ namespace JongoApplicazione.PagineLogIn
                 utente.Email = email;
                 utente.Password = password;
                 utente.Numero = numero;
-
-
-                
-
+                          
                 var isSaved = await repository.Save(utente);
                 if (isSaved)
                 {
