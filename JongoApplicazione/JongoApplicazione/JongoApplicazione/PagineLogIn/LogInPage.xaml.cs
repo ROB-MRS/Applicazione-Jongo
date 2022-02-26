@@ -55,19 +55,18 @@ namespace JongoApplicazione
                 }
             }
             */
-            bool verifica = false;
+
             List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
-            Utente u = new Utente();
+            Utente u = null;
             foreach (Utente utente in listaUtenti)
             {
                 if(utente.Email == Email.Text)
                 {
                     u = utente;
-                    verifica = true;
                 }
             }
 
-            if(!verifica)
+            if(u == null)
             {
                 await DisplayAlert("Errore", "Email errata", "OK");
             }
@@ -80,6 +79,7 @@ namespace JongoApplicazione
                     Console.WriteLine("stampa: " + Email.Text + Password.Text);
                     await Navigation.PushAsync(new MainPage());
                 }
+
                 else
                 {
                     await DisplayAlert("Errore", "Password errata", "OK");

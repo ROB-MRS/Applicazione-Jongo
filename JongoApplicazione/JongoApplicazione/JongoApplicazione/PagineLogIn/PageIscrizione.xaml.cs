@@ -32,12 +32,25 @@ namespace JongoApplicazione.PagineLogIn
             int conta = 0;
             foreach(char c in passwd)
             {
-                if(c > 'A' && c < 'Z')
+                if(c >= 'A' && c <= 'Z')
                 {
                     conta++;
                 }  
             }
             return conta;
+        }
+
+        bool isNumero(string numero)
+        {
+            foreach(char c in numero)
+            {
+                if(c < '1' || c > '9')
+                {
+                    return false;
+                }
+                
+            }
+            return true;
         }
 
         async void Bottone_premuto(System.Object sender, System.EventArgs e)
@@ -61,9 +74,9 @@ namespace JongoApplicazione.PagineLogIn
                 verifica = false;
             }
 
-            else if (string.IsNullOrEmpty(numero))
+            else if (string.IsNullOrEmpty(numero) && isNumero(numero))
             {
-                await DisplayAlert("Errore", "Inserire il numero", "OK");
+                await DisplayAlert("Errore", "Inserire un numero", "OK");
                 verifica = false;
             }
 
