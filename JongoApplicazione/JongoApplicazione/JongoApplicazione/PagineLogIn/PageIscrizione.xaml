@@ -8,30 +8,44 @@
         <StackLayout>
             <Entry
                 x:Name="Nome"
-                Text="Nome">
+                Placeholder="Nome"
+                Text="">
             </Entry>
             <Entry
                 x:Name="Cognome"
-                Text="Cognome">
+                Placeholder="Cognome"
+                Text="">
+                <!--Text="Cognome">-->
             </Entry>
             <Entry
                 x:Name="Numero"
-                Text="Numero di telefono">
+                Placeholder="Numero"
+                Text="">
+                <!--Text="Numero di telefono">-->
             </Entry>
             <Entry
                 x:Name="Email"
-                Text="Email">
+                Placeholder="Email"
+                Text="">
+                <!--Text="Email">-->
             </Entry>
             <Entry
                 x:Name="Password"
-                Text="Password">
+                Placeholder="Password"
+                Text=""
+                IsPassword="True">
+                <!--Text="Password">-->
+                
             </Entry>
             <Entry
                 x:Name="Conferma_Password"
-                Text="Conferma password">
+                IsPassword="True"
+                Text=""
+                Placeholder="Conferma Password">
+                <!--Text="Conferma password">-->
             </Entry>
             <Button
-                Text="Avanti"
+                Text="Iscriviti"
                 BackgroundColor="Red"
                 Clicked="Bottone_premuto"
                 ></Button>

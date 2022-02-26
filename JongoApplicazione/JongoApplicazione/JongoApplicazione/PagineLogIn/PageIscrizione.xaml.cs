@@ -81,7 +81,7 @@ namespace JongoApplicazione.PagineLogIn
 
             else if (password != Conferma_Password.Text)
             {
-                await DisplayAlert("Errore", "Password non corretta", "OK");
+                await DisplayAlert("Errore", "Password di conferma non corretta", "OK");
                 verifica = false;
             }
 
@@ -125,6 +125,7 @@ namespace JongoApplicazione.PagineLogIn
                 if (isSaved)
                 {
                     await DisplayAlert("Informazione", "Registrazione effettuata!", "OK");
+                    Etichetta.IsVisible = true;
                 }
 
 
@@ -144,7 +145,7 @@ namespace JongoApplicazione.PagineLogIn
                     throw;
                 }*/
             }
-            Etichetta.IsVisible = true;
+            
 
         }
 
