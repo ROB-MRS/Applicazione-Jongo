@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using JongoApplicazione.JongoApplicazione;
+using JongoApplicazione.JongoApplicazione.PagineLogIn;
 using JongoApplicazione.PagineLogIn;
 
 using Xamarin.Forms;
@@ -7,7 +9,9 @@ using Xamarin.Forms;
 namespace JongoApplicazione
 {
     public partial class LogInPage : ContentPage
-    {
+    {   
+        RepositoryUtente repository = new RepositoryUtente();
+
         public LogInPage()
         {
             InitializeComponent();
@@ -22,9 +26,9 @@ namespace JongoApplicazione
 
 
         //Bottone di Log In
-        void Bottone_Log_In_Cliccato(System.Object sender, System.EventArgs e)
+        async void Bottone_Log_In_Cliccato(System.Object sender, System.EventArgs e)
         {
-            if (!String.IsNullOrEmpty(Email.Text) && !String.IsNullOrEmpty(Password.Text))
+            /*if (!String.IsNullOrEmpty(Email.Text) && !String.IsNullOrEmpty(Password.Text))
             {
                 Errore_Password.IsVisible = false;
                 Console.WriteLine("stampa: " + Email.Text + Password.Text);
@@ -48,6 +52,37 @@ namespace JongoApplicazione
                 else
                 {
                     Errore_Password.IsVisible = false;
+                }
+            }
+            */
+            bool verifica = false;
+            List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
+            Utente u = new Utente();
+            foreach (Utente utente in listaUtenti)
+            {
+                if(utente.Email == Email.Text)
+                {
+                    u = utente;
+                    verifica = true;
+                }
+            }
+
+            if(!verifica)
+            {
+                await DisplayAlert("Errore", "Email errata", "OK");
+            }
+
+            else
+            {
+                if(u.Password == Password.Text)
+                {
+                    Errore_Password.IsVisible = false;
+                    Console.WriteLine("stampa: " + Email.Text + Password.Text);
+                    await Navigation.PushAsync(new MainPage());
+                }
+                else
+                {
+                    await DisplayAlert("Errore", "Password errata", "OK");
                 }
             }
                 
