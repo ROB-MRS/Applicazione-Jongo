@@ -49,7 +49,8 @@
                     CornerRadius="50"
                     Text="Bottone 1"
                     BackgroundColor="#83738E"
-                    TextColor="#FFDE00">
+                    TextColor="#FFDE00"
+                    Clicked="Button_1_Clicked">
             </Button>
 
             <!-- Bottone 2 -->
