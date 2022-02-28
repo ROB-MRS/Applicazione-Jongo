@@ -14,7 +14,7 @@ namespace JongoApplicazione.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "12.1.0.11")]
 	public partial class Resource
 	{
 		
@@ -11792,6 +11792,9 @@ namespace JongoApplicazione.Droid
 			
 			// aapt resource value: 0x7F070091
 			public const int tooltip_frame_light = 2131165329;
+			
+			// aapt resource value: 0x7F070092
+			public const int User = 2131165330;
 			
 			static Drawable()
 			{

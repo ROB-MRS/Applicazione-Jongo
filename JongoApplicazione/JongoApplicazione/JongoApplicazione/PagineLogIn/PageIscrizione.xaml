@@ -2,9 +2,66 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="JongoApplicazione.PagineLogIn.PageIscrizione">
+    x:Class="JongoApplicazione.PagineLogIn.PageIscrizione"
+    BackgroundColor="#FFCCFF">
+
     <ContentPage.Content>
-        <Label Text="Pagina di iscrizione all'app"/>
+        <StackLayout >
+                <Entry
+                x:Name="Nome"
+                Placeholder="Nome"
+                PlaceholderColor="Violet"
+                Text="">
+                </Entry>
+                <Entry
+                x:Name="Cognome"
+                Placeholder="Cognome"
+                PlaceholderColor="Violet"
+                Text="">
+                    <!--Text="Cognome">-->
+                </Entry>
+                <Entry
+                x:Name="Numero"
+                Placeholder="Numero di telefono"
+                PlaceholderColor="Violet"
+                Text="">
+                    <!--Text="Numero di telefono">-->
+                </Entry>
+                <Entry
+                x:Name="Email"
+                Placeholder="Email"
+                PlaceholderColor="Violet"
+                Text="">
+                    <!--Text="Email">-->
+                </Entry>
+                <Entry
+                x:Name="Password"
+                Placeholder="Password"
+                PlaceholderColor="Violet"
+                Text=""
+                IsPassword="True">
+                    <!--Text="Password">-->
+
+                </Entry>
+                <Entry
+                x:Name="Conferma_Password"
+                IsPassword="True"
+                Text=""
+                PlaceholderColor="Violet"
+                Placeholder="Conferma Password">
+                    <!--Text="Conferma password">-->
+                </Entry>
+                <Button
+                Text="Iscriviti"
+                BackgroundColor="Gold"
+                Clicked="Bottone_premuto"
+                ></Button>
+                <Label
+                x:Name="Etichetta"
+                Text="Ti Sei Iscritto con Successo"
+                IsVisible="False"></Label>
+            </StackLayout>
+        
 
     </ContentPage.Content>
 </ContentPage>

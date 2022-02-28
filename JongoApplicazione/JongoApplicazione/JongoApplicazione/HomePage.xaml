@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="False" BackgroundColor="Black"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JongoApplicazione.HomePage">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <!-- Bottone utente e condividi -->
+                <RowDefinition Height="1.5*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <!-- Bottoni 1 e 2 -->
+                <RowDefinition Height="0.65*"></RowDefinition>
+                <RowDefinition Height="0.65*"></RowDefinition>
+                <!-- Bottone 3 -->
+                <RowDefinition Height="0.3*"></RowDefinition>
+                <!-- Bottone 4 e 5 -->
+                <RowDefinition Height="0.65*"></RowDefinition>
+                <RowDefinition Height="0.65*"></RowDefinition>
+                <RowDefinition Height="2.5*"></RowDefinition>
+                <!-- Bottone mappa -->
+                <RowDefinition Height="1.5*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                <ColumnDefinition Width="2.6*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="2.6*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <!-- Bottone utente -->
+            <StackLayout VerticalOptions="End" Grid.Column="1">
+                <ImageButton
+                    Source="User.svg"
+                    BackgroundColor="#83738E"></ImageButton>
+            </StackLayout>
+
+            <!-- Bottone 1 -->
+            <!--<StackLayout Grid.Column="1" Grid.Row="2">
+                <Button Text="Bottone 1"
+                        CornerRadius="23"
+                        BackgroundColor="Blue"/>
+            </StackLayout>-->
+
+            <Button Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"
+                    CornerRadius="50"
+                    Text="Bottone 1"
+                    BackgroundColor="#83738E"
+                    TextColor="#FFDE00">
+            </Button>
+
+            <!-- Bottone 2 -->
+            <!--<StackLayout Grid.Column="3" Grid.Row="2">
+                <Button Text="Bottone 2"
+                        BackgroundColor="Blue"/>
+            </StackLayout>-->
+
+            <Button Grid.Column="3" Grid.Row="2" Grid.RowSpan="2"
+                    CornerRadius="50"
+                    Text="Bottone 2"
+                     BackgroundColor="#83738E"
+                    TextColor="#FFDE00">
+            </Button>
+
+            <!-- Bottone 3 -->
+            <!--<StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3">
+                <Button Text="Bottone 3"
+                        Background="Blue"/>
+            </StackLayout>-->
+
+            <Button Grid.Column="2" Grid.Row="3" Grid.RowSpan="3"
+                    CornerRadius="40"
+                    Text="pagine iscrizione"
+                     BackgroundColor="#83738E"
+                    TextColor="#FFDE00"
+                    Clicked="Button_Clicked">
+            </Button>
+
+            <!-- Bottone 4 -->
+            <!--<StackLayout Grid.Column="1" Grid.Row="4">
+                <Button Text="Bottone 1"
+                        BackgroundColor="Blue"/>
+            </StackLayout>-->
+
+            <Button Grid.Column="1" Grid.Row="5" Grid.RowSpan="2"
+                    CornerRadius="50"
+                    Text="Bottone 4"
+                    BackgroundColor="#83738E"
+                    TextColor="#FFDE00">
+            </Button>
+
+             <!--Bottone 5 -->
+            <!--<StackLayout Grid.Column="3" Grid.Row="4">
+                <Button Text="Bottone 1"
+                        BackgroundColor="Blue"/>
+            </StackLayout>-->
+
+            <Button Grid.Column="3" Grid.Row="5" Grid.RowSpan="2"
+                    CornerRadius="50"
+                    Text="Bottone 5"
+                     BackgroundColor="#83738E"
+                    TextColor="#FFDE00">
+            </Button>
+
+            <!-- Bottone mappa -->
+            <StackLayout Grid.Column="2" Grid.Row="8" VerticalOptions="Start">
+                <Button Text="mappa"
+                    BackgroundColor="#83738E"
+                    TextColor="#FFDE00"/>
+            </StackLayout>
+
+        </Grid>
+
+
+    
+    </ContentPage.Content>
+</ContentPage>
