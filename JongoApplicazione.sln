@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JongoApplicazione.iOS", "Jo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JongoApplicazione", "JongoApplicazione\JongoApplicazione\JongoApplicazione.csproj", "{91E13A72-7F93-4A7B-8EC3-B8E4565BA728}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementi della soluzione", "Elementi della soluzione", "{B0E4EDC5-8ADD-4CFD-B43F-75C32C20EA2C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
