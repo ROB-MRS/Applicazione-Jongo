@@ -66,7 +66,10 @@
             <Label Text="DETTAGLI"  Font="Title" FontSize="Large" TextColor="DarkViolet"/>
             </StackLayout>
 
-             <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
+              <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
+            <Label Text="Di quale lavoro hai bisogno?"  Font="Title" TextColor="DarkViolet"/>
+            </StackLayout>
+             <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3">
                   <Picker x:Name="categoria" Title="Categoria"/>
                      
                  

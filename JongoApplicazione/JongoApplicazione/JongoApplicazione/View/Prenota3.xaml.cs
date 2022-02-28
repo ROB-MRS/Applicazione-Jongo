@@ -17,13 +17,13 @@ namespace JongoApplicazione.View
 
             InitializeComponent();
 
+            /* Creo una lista per utilizzarla nello xaml nel picker */
             List<string> categorie = new List<string>();
-            categorie.Add("Armadio");
-            categorie.Add("Comodino");
-            categorie.Add("Lampadine");
-            categorie.Add("Scrivania");
-            categorie.Add("Sedia");
-            categorie.Add("Altre cose");
+            categorie.Add("Montaggio");
+            categorie.Add("Fabbro");
+            categorie.Add("Idraulico");
+            categorie.Add("Muratore");
+            categorie.Add("Altro");
 
             categoria.ItemsSource = categorie;
             
