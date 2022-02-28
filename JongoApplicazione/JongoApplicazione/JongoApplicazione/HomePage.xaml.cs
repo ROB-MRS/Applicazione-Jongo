@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using JongoApplicazione.View;
 using Xamarin.Forms;
 
 namespace JongoApplicazione
@@ -17,9 +17,14 @@ namespace JongoApplicazione
             
         }
 
-        void Button_Clicked(System.Object sender, System.EventArgs e)
+        void Button_utente_Clicked(System.Object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new NavigationPage(new PagineLogIn.PageIscrizione()));
+        }
+
+        void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+             Navigation.PushAsync(new NavigationPage(new View.Prenota()));
         }
     }
 }

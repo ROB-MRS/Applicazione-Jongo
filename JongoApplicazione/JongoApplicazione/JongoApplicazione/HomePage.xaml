@@ -31,11 +31,20 @@
                 <ColumnDefinition Width="0.5*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <!-- Bottone utente -->
+            <!-- Bottone utente 
             <StackLayout VerticalOptions="End" Grid.Column="1">
                 <ImageButton
                     Source="User.svg"
                     BackgroundColor="#83738E"></ImageButton>
+            </StackLayout>-->
+
+            <!-- Bottone utente -->
+            <StackLayout VerticalOptions="End" Grid.Column="1">
+                <Button
+                    Text="Log In"
+                    BackgroundColor="#83738E"
+                    Clicked="Button_utente_Clicked">
+                </Button>
             </StackLayout>
 
             <!-- Bottone 1 -->
@@ -47,7 +56,7 @@
 
             <Button Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 1"
+                    Text="CHI SIAMO?"
                     BackgroundColor="#83738E"
                     TextColor="#FFDE00"
                     Clicked="Button_1_Clicked">
@@ -61,7 +70,7 @@
 
             <Button Grid.Column="3" Grid.Row="2" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 2"
+                    Text="IMPOSTAZIONI"
                      BackgroundColor="#83738E"
                     TextColor="#FFDE00">
             </Button>
@@ -74,7 +83,7 @@
 
             <Button Grid.Column="2" Grid.Row="3" Grid.RowSpan="3"
                     CornerRadius="40"
-                    Text="pagine iscrizione"
+                    Text="PRENOTA SUBITO"
                      BackgroundColor="#83738E"
                     TextColor="#FFDE00"
                     Clicked="Button_Clicked">
@@ -88,7 +97,7 @@
 
             <Button Grid.Column="1" Grid.Row="5" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 4"
+                    Text="CONTATTACI"
                     BackgroundColor="#83738E"
                     TextColor="#FFDE00">
             </Button>
@@ -101,7 +110,7 @@
 
             <Button Grid.Column="3" Grid.Row="5" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 5"
+                    Text="CRONOLOGIA"
                      BackgroundColor="#83738E"
                     TextColor="#FFDE00">
             </Button>

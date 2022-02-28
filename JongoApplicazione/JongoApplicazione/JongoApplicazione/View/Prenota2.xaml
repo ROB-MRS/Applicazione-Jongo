@@ -38,12 +38,12 @@
         </StackLayout>
 
              <!-- Titolo della pagina -->
-        <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Center" >
+        <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Center" >
             <Label Text="DATA E ORARIO"  Font="Title" TextColor="DarkViolet"/>
         </StackLayout>
 
 
-        <StackLayout   Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal">
+        <StackLayout   Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal">
 
             <!-- Data -->
             <DatePicker  x:Name="Data"
@@ -72,7 +72,7 @@
                
 
           <!--Entry per inserire info extra-->
-            <Entry Placeholder="INFO EXTRA" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Large" FontAttributes="Bold" PlaceholderColor="Violet" BackgroundColor="LightYellow"/>
+            <Entry Placeholder="INFO EXTRA" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Large" FontAttributes="Bold" PlaceholderColor="Violet" BackgroundColor="LightYellow"/>
 
                    
 
