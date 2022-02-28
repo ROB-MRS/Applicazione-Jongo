@@ -26,8 +26,10 @@ namespace JongoApplicazione.Droid
 		public static void UpdateIdValues()
 		{
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::JongoApplicazione.Droid.Resource.Attribute.alpha;
-			global::Xamarin.Essentials.Resource.Attribute.font = global::JongoApplicazione.Droid.Resource.Attribute.font;
-			global::Xamarin.Essentials.Resource.Attribute.fontProviderAuthority = global::JongoApplicazione.Droid.Resource.Attribute.fontProviderAuthority;
+#pragma warning disable CS0436 // Type conflicts with imported type
+            global::Xamarin.Essentials.Resource.Attribute.font = global::JongoApplicazione.Droid.Resource.Attribute.font;
+#pragma warning restore CS0436 // Type conflicts with imported type
+            global::Xamarin.Essentials.Resource.Attribute.fontProviderAuthority = global::JongoApplicazione.Droid.Resource.Attribute.fontProviderAuthority;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderCerts = global::JongoApplicazione.Droid.Resource.Attribute.fontProviderCerts;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderFetchStrategy = global::JongoApplicazione.Droid.Resource.Attribute.fontProviderFetchStrategy;
 			global::Xamarin.Essentials.Resource.Attribute.fontProviderFetchTimeout = global::JongoApplicazione.Droid.Resource.Attribute.fontProviderFetchTimeout;
