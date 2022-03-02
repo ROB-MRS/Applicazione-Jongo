@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JongoApplicazione.JongoApplicazione.PagePrenotazione.Page2">
+    <ContentPage.Content>
+         <Grid>
+        <!--Divido la pagina in 5 colonne e 5 righe-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+
+
+
+        <!-- Immagine/ Animazione Jongo -->
+        <StackLayout Grid.Column="1" Grid.Row="0" Padding="0,-125,0,0" Margin="15" Grid.ColumnSpan="3">
+            <Image Source="logo_rettangolare2.png"
+                       HeightRequest="400"
+                       WidthRequest="400"
+                       VerticalOptions="Start"
+                       HorizontalOptions="End"/>
+        </StackLayout>
+
+             <!-- Titolo della pagina -->
+        <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Center" >
+            <Label Text="DATA E ORARIO"  Font="Title" TextColor="DarkViolet"/>
+        </StackLayout>
+
+
+        <StackLayout   Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal">
+
+            <!-- Data -->
+            <DatePicker  x:Name="Data"
+                                 MinimumDate="01/01/1921"
+                                 MaximumDate="01/01/2025"
+                                 HorizontalOptions="FillAndExpand"
+                                 FontSize="Large"
+                                 FontAttributes="Bold"
+                                 TextColor="Violet"
+                                 BackgroundColor="LightYellow"
+                         />
+
+            <!-- Orario -->
+            <TimePicker
+                                x:Name="Orario"
+                                Time="00:00"
+                                HorizontalOptions="FillAndExpand"
+                                IsEnabled="True"
+                                FontSize="Large"
+                                FontAttributes="Bold"
+                                TextColor="Violet"
+                                BackgroundColor="LightYellow"
+                                />
+
+            </StackLayout>
+               
+
+          <!--Entry per inserire info extra-->
+            <Entry Placeholder="INFO EXTRA" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Large" FontAttributes="Bold" PlaceholderColor="Violet" BackgroundColor="LightYellow"/>
+
+
+             <!-- Bottone Avanti -->
+            <StackLayout Grid.Column="3" Grid.ColumnSpan="4"  Grid.Row="4">
+                <Button x:Name="Bottone_Avanti"
+                        Text="AVANTI"
+                        FontSize="20"
+                        TextColor="White"
+                        BackgroundColor="#6F00FF"
+                        CornerRadius="15"/>
+                       <!-- Clicked="Bottone_Avanti_Cliccato"-->
+                        
+            </StackLayout>
+
+              <!-- Bottone Indietro -->
+            <StackLayout Grid.Column="0" Grid.ColumnSpan="1"  Grid.Row="4">
+                <Button x:Name="Bottone_Indietro"
+                        Text="INDIETRO"
+                        FontSize="20"
+                        TextColor="White"
+                        BackgroundColor="#6F00FF"
+                        CornerRadius="15"
+                        Clicked="Bottone_Indietro_Cliccato"/>
+                        
+            </StackLayout>
+                   
+
+            </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>
