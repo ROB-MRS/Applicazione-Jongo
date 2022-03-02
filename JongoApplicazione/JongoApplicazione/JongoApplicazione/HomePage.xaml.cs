@@ -14,7 +14,8 @@ namespace JongoApplicazione
 
         void Button_1_Clicked(System.Object sender, System.EventArgs e)
         {
-            
+            Navigation.PushAsync(new NavigationPage(new JongoApplicazione.PagePrenotazione.Page1()));
+
         }
 
         void Button_utente_Clicked(System.Object sender, System.EventArgs e)
