@@ -79,9 +79,9 @@
             <Label Text="TARIFFE"  Font="Title" FontSize="Large" TextColor="DarkViolet"/>
             </StackLayout>
 
-          <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">
+         <!-- <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">
            <Label Text="Le tariffe indicate servono per dare un idea, potrebbero avere piccole oscillazioni da caso a caso. La cifra precisa viene valutata sul posto prima del lavoro."  Margin="100" FontSize="Large" TextColor="Gray"/>
-             </StackLayout>
+             </StackLayout> -->
 
             </Grid>
     </ContentView.Content>
