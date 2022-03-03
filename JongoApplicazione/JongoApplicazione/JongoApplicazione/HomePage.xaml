@@ -34,7 +34,7 @@
             <!-- Bottone utente -->
             <StackLayout VerticalOptions="End" Grid.Column="1">
                 <ImageButton
-                    Source="User.svg"
+                    Source="{StaticResource immagineUser}"
                     BackgroundColor="#83738E"></ImageButton>
             </StackLayout>
 
@@ -61,9 +61,10 @@
 
             <Button Grid.Column="3" Grid.Row="2" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 2"
+                    Text="Impostazioni"
                      BackgroundColor="#83738E"
-                    TextColor="#FFDE00">
+                    TextColor="#FFDE00"
+                    Clicked="Bottone_Impostazioni_Clicked">
             </Button>
 
             <!-- Bottone 3 -->
@@ -101,9 +102,10 @@
 
             <Button Grid.Column="3" Grid.Row="5" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 5"
-                     BackgroundColor="#83738E"
-                    TextColor="#FFDE00">
+                    Text="Contattaci"
+                    BackgroundColor="#83738E"
+                    TextColor="#FFDE00"
+                    Clicked="Bottone_Contattaci">
             </Button>
 
             <!-- Bottone mappa -->

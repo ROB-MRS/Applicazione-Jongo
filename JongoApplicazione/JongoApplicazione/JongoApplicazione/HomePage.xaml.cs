@@ -21,5 +21,15 @@ namespace JongoApplicazione
         {
             Navigation.PushAsync(new NavigationPage(new PagineLogIn.PageIscrizione()));
         }
+
+        void Bottone_Impostazioni_Clicked(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new NavigationPage(new SettingsPage()));
+        }
+
+        void Bottone_Contattaci(System.Object sender, System.EventArgs e)
+        {
+          
+        }
     }
 }
