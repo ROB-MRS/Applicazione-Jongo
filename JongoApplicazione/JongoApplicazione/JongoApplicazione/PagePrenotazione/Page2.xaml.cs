@@ -13,9 +13,13 @@ namespace JongoApplicazione.JongoApplicazione.PagePrenotazione
         }
 
         //Bottone AVANTI
-         void Bottone_Avanti_Cliccato(System.Object sender, System.EventArgs e)
+         async void Bottone_Avanti_Cliccato(System.Object sender, System.EventArgs e)
         {
-           
+           // if(Data.Date==null && Orario.Time==null)
+            //    await DisplayAlert("Errore", "Seleziona data e orario", "OK");
+
+            Navigation.PushAsync(new NavigationPage(new View.Prenota()));
+
 
         }
 
