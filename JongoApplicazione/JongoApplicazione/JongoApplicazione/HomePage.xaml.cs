@@ -25,7 +25,7 @@ namespace JongoApplicazione
 
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-             Navigation.PushAsync(new NavigationPage(new View.Prenota()));
+             Navigation.PushAsync(new View.Prenota());
         }
     }
 }

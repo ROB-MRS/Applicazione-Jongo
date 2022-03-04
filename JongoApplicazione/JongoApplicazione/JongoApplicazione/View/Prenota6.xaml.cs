@@ -12,7 +12,7 @@ namespace JongoApplicazione.View
         }
         void Button_OK_Clicked(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new NavigationPage(new HomePage()));
+            Navigation.PopAsync();
 
         }
     }
