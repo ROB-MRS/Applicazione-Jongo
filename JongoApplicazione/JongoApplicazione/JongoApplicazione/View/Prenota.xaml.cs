@@ -14,9 +14,9 @@ namespace JongoApplicazione.View
             VM = new ViewModel.PrenotazioniVM();
             InitializeComponent();
 
-            content.BindingContext = VM;
-            avanti.Command = VM.ComandoAvanti;
-            indietro.Command = VM.ComandoIndietro;
+            BindingContext = VM;
+            //avanti.Command = VM.ComandoAvanti;
+            //indietro.Command = VM.ComandoIndietro;
         }
     }
 }
