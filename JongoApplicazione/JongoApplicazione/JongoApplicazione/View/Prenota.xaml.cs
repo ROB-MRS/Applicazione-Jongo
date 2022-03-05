@@ -17,6 +17,14 @@ namespace JongoApplicazione.View
             BindingContext = VM;
             //avanti.Command = VM.ComandoAvanti;
             //indietro.Command = VM.ComandoIndietro;
+            VM.CambioPaginaEvent += CambioPagina;
+
+        }
+
+        void CambioPagina(int pagina)
+        {
+            if (pagina == 6)
+                buttons.IsVisible = false;
         }
     }
 }
