@@ -85,7 +85,29 @@
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
                         Clicked="Bottone_Recupero_Password_Cliccato"/>
+
+                <Button x:Name="Bottone_Iscrizione_Login"
+                        Text="Iscriviti"
+                        FontSize="13"
+                        TextColor="#6F00FF"
+                        BackgroundColor="Transparent"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Clicked="Bottone_Iscrizione"/>
             </StackLayout>
+
+            <!--Iscrizione-->
+            
+            <!--<StackLayout Grid.Column="2" Grid.Row="5" >
+                <Button x:Name="Bottone_Iscrizione_Login"
+                        Text="Iscriviti"
+                        FontSize="13"
+                        TextColor="#6F00FF"
+                        BackgroundColor="Transparent"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Clicked="Bottone_Iscrizione"/>
+            </StackLayout>-->
 
             <!-- Bottone LogIn -->
             <StackLayout Grid.Column="2" Grid.Row="6">

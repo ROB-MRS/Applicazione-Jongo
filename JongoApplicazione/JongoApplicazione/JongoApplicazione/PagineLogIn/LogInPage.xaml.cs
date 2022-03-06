@@ -11,9 +11,10 @@ namespace JongoApplicazione
     public partial class LogInPage : ContentPage
     {   
         RepositoryUtente repository = new RepositoryUtente();
+        string descrizioneUtente;
 
         public LogInPage()
-        {
+        {   
             InitializeComponent();
         }
 
@@ -22,6 +23,12 @@ namespace JongoApplicazione
         void Bottone_Recupero_Password_Cliccato(System.Object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new PageRecuperoPassword());
+        }
+
+        //Bottone di Iscrizione
+        void Bottone_Iscrizione(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new PageIscrizione());
         }
 
 
@@ -57,27 +64,28 @@ namespace JongoApplicazione
             */
 
             List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
-            Utente u = null;
+            Utente ut = null;
             foreach (Utente utente in listaUtenti)
             {
                 if(utente.Email == Email.Text)
                 {
-                    u = utente;
+                    ut = utente;
                 }
             }
 
-            if(u == null)
+            if(ut == null)
             {
                 await DisplayAlert("Errore", "Email errata", "OK");
             }
 
             else
             {
-                if(u.Password == Password.Text)
+                if(ut.Password == Password.Text)
                 {
+                    descrizioneUtente = ut.Name + " " + ut.Surname;
                     Errore_Password.IsVisible = false;
                     Console.WriteLine("stampa: " + Email.Text + Password.Text);
-                    await Navigation.PushAsync(new MainPage());
+                    await Navigation.PushAsync(new HomePage(descrizioneUtente));
                 }
 
                 else

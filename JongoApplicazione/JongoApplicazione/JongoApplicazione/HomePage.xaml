@@ -32,12 +32,46 @@
             </Grid.ColumnDefinitions>
 
             <!-- Bottone utente -->
-            <StackLayout VerticalOptions="End" Grid.Column="1">
+            <!--<StackLayout VerticalOptions="End" Grid.Column="1">
                 <ImageButton
                     Source="User.svg"
                     BackgroundColor="#83738E"></ImageButton>
+            </StackLayout>-->
+
+            <Label  VerticalOptions="End" Grid.Column="3"
+                    x:Name="Utente_loggato"
+                    Text=""
+                    TextColor="#FFDE00"
+                    FontSize="Large"
+                    BackgroundColor="#83738E" 
+                    FormattedText="">
+                
+            </Label>
+
+            
+            
+            <StackLayout VerticalOptions="End" Grid.Column="1">
+                <Button
+                    x:Name="bottone_login"
+                    Text="LOG IN"
+                    TextColor="#FFDE00"
+                    Clicked="Bottone_login"
+                    BackgroundColor="#83738E"
+                    IsVisible="false">
+                </Button>
             </StackLayout>
 
+            <StackLayout VerticalOptions="End" Grid.Column="1">
+                <Button
+                    x:Name="bottone_logout"
+                    Text="LOG OUT"
+                    TextColor="#FFDE00"
+                    Clicked="Bottone_logout"
+                    BackgroundColor="#83738E"
+                    IsVisible="false"
+                    >
+                </Button>
+            </StackLayout>
             <!-- Bottone 1 -->
             <!--<StackLayout Grid.Column="1" Grid.Row="2">
                 <Button Text="Bottone 1"
