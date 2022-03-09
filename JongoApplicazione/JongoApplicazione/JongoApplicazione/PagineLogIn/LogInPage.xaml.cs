@@ -80,7 +80,7 @@ namespace JongoApplicazione
 
             else
             {
-                if(ut.Password == Password.Text)
+                if(ut.Password == Password.Text.GetHashCode())
                 {
                     descrizioneUtente = ut.Name + " " + ut.Surname;
                     Errore_Password.IsVisible = false;

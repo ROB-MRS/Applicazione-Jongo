@@ -131,7 +131,7 @@ namespace JongoApplicazione.PagineLogIn
                 utente.Name = nome;
                 utente.Surname = cognome;
                 utente.Email = email;
-                utente.Password = password;
+                utente.Password = password.GetHashCode();
                 utente.Numero = numero;
                           
                 var isSaved = await repository.Save(utente);

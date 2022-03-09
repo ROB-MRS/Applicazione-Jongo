@@ -18,7 +18,7 @@ namespace JongoApplicazione.JongoApplicazione.PagineLogIn
 
         public string Numero { get; set; }
 
-        public string Password { get; set; }
+        public int Password { get; set; }
 
     }
 }

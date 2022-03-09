@@ -25,7 +25,7 @@ namespace JongoApplicazione.PagineLogIn
             {
                 if(utente.Email == Inserimento.Text)
                 {
-                    await DisplayAlert("La tua password è: ", utente.Password, "OK");
+                    await DisplayAlert("La tua password è: ", utente.Password.ToString(), "OK");
                     trovato = true;
                 }
             }
