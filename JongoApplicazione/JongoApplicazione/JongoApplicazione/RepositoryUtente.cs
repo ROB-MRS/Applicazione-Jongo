@@ -1,4 +1,5 @@
-﻿using Firebase.Database;
+﻿using Firebase.Auth;
+using Firebase.Database;
 using JongoApplicazione.JongoApplicazione.PagineLogIn;
 using Newtonsoft.Json;
 using System;
@@ -13,6 +14,10 @@ namespace JongoApplicazione.JongoApplicazione
     {
         FirebaseClient firebaseClient =
                 new FirebaseClient("https://jongo-data-default-rtdb.europe-west1.firebasedatabase.app/");
+        
+        string webAPIkey = "AIzaSyCJ1J9HJUzcQnBaP3i5d8xhke9gXy7rcfA";
+        FirebaseAuthProvider authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyCJ1J9HJUzcQnBaP3i5d8xhke9gXy7rcfA"));
+
 
         public async Task<bool> Save(Utente utente)
         {
@@ -43,5 +48,23 @@ namespace JongoApplicazione.JongoApplicazione
             List<Utente> list = await GetAll();
             list.Remove(utente);
         }
+
+        public async Task<string> SignUp(string email,string password)
+        {
+            var token = await authProvider.CreateUserWithEmailAndPasswordAsync(email,password);
+            if (!string.IsNullOrEmpty(token.FirebaseToken))
+            {
+                return token.FirebaseToken;
+            }
+            return "";
+        }
+
+        public async Task<bool> ResetPassword(string email)
+        {
+            await authProvider.SendPasswordResetEmailAsync(email);
+            return true;
+        }
+
+
     }
 }

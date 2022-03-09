@@ -110,56 +110,59 @@ namespace JongoApplicazione.PagineLogIn
                 verifica = false;
             }
 
-            List<string> listaEmail = new List<string>();
-            List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
 
-            foreach (Utente u in await repository.GetAll())
-            {
-                listaEmail.Add(u.Email);
-            }
+            try {
+                string token = "";
+                if (verifica)
+                {
+                    token = await repository.SignUp(email, password);
+                
+                    if (!string.IsNullOrEmpty(token)) 
+                    { 
 
-            if (listaEmail.Contains(email) && verifica)
-            {
-                await DisplayAlert("Errore", "Email già presente", "OK");
-            }
+                        List<string> listaEmail = new List<string>();
+                        List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
 
-            else if(verifica)
-            {   
+                        foreach (Utente u in await repository.GetAll())
+                        {
+                            listaEmail.Add(u.Email);
+                        }
+
+                        if (listaEmail.Contains(email) && verifica)
+                        {
+                            await DisplayAlert("Errore", "Email già presente", "OK");
+                        }
+
+                        else if(verifica)
+                        {   
                 
 
-                Utente utente = new Utente();
-                utente.Name = nome;
-                utente.Surname = cognome;
-                utente.Email = email;
-                utente.Password = password.GetHashCode();
-                utente.Numero = numero;
+                            Utente utente = new Utente();
+                            utente.Name = nome;
+                            utente.Surname = cognome;
+                            utente.Email = email;
+                            utente.Password = password.GetHashCode();
+                            utente.Numero = numero;
                           
-                var isSaved = await repository.Save(utente);
-                if (isSaved)
-                {
-                    await DisplayAlert("Informazione", "Registrazione effettuata!", "OK");
-                    Etichetta.IsVisible = true;
+                            var isSaved = await repository.Save(utente);
+                            if (isSaved)
+                            {
+                                await DisplayAlert("Informazione", "Registrazione effettuata!", "OK");
+                                Etichetta.IsVisible = true;
+                            }
+                        }
+                    }
+
+                    else
+                    {
+                        await DisplayAlert("Errore", "Email non esistente", "OK");
+                    }
                 }
-
-
-                /*try {
-                    string srvrdbname = "Jongo";
-                    string srvrname = "192.168.1.254";
-                    string srvrusername = "adp";
-                    string srvrpasswd = "Anto4700";
-                    string sqlconn = $"Data Source = {srvrname};Initial Catalog = {srvrdbname};User Id = {srvrusername};Password = {srvrpasswd}; Trudted_connection = true";
-
-                    SqlConnection connessione = new SqlConnection(sqlconn);
-                    connessione.Open();
-                }
-
-                catch (Exception ex){
-                    Console.WriteLine(ex.Message);
-                    throw;
-                }*/
             }
-            
-
+            catch (Exception ex)
+            {
+                await DisplayAlert("Errore", "Email già presente o inesistente", "OK");
+            }
         }
 
     }
