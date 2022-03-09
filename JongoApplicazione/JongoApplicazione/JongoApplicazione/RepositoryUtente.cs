@@ -65,6 +65,16 @@ namespace JongoApplicazione.JongoApplicazione
             return true;
         }
 
+        public async Task<string> SignIn(string email,string password)
+        {
+            var token = await authProvider.SignInWithEmailAndPasswordAsync(email, password);
+            if (!string.IsNullOrEmpty(token.FirebaseToken))
+            {
+                return token.FirebaseToken;
+            }
+            return "";
+        }
+
 
     }
 }

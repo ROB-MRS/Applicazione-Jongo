@@ -63,7 +63,7 @@ namespace JongoApplicazione
             }
             */
 
-            List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
+            /*List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
             Utente ut = null;
             foreach (Utente utente in listaUtenti)
             {
@@ -92,8 +92,55 @@ namespace JongoApplicazione
                 {
                     await DisplayAlert("Errore", "Password errata", "OK");
                 }
+            }*/
+
+            if (string.IsNullOrEmpty(Email.Text))
+            {
+                await DisplayAlert("Errore", "Inserisci l'email", "OK");
+                return;
             }
-                
+
+            if (string.IsNullOrEmpty(Password.Text))
+            {
+                await DisplayAlert("Errore", "Inserisci la password", "OK");
+                return;
+            }
+            try
+            {
+                string token = await repository.SignIn(Email.Text, Password.Text);
+                if (!string.IsNullOrEmpty(token))
+                {
+                    List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
+                    Utente ut = null;
+                    foreach (Utente utente in listaUtenti)
+                    {
+                        if (utente.Email == Email.Text)
+                        {
+                            ut = utente;
+                        }
+                    }
+                    descrizioneUtente = ut.Name + " " + ut.Surname;
+                    Errore_Password.IsVisible = false;
+                    Console.WriteLine("stampa: " + Email.Text + Password.Text);
+                    await Navigation.PushAsync(new HomePage(descrizioneUtente));
+                }
+
+
+            }
+            
+            catch (Exception ex)
+            {
+                if (ex.Message.Contains("EMAIL_NOT_FOUND"))
+                {
+                    await DisplayAlert("Errore", "Email sbagliata", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("Errore", "Password errata", "OK");
+                }
+            }
+            
+            
         }
 
     }
