@@ -8,7 +8,25 @@ namespace JongoApplicazione.View
     {
         public Prenota3()
         {
+            /* List<string> listOfNames = new List<string>()
+            {
+                "John Doe",
+                "Jane Doe",
+                "Joe Doe"
+            }; */
+
             InitializeComponent();
+
+            /* Creo una lista per utilizzarla nello xaml nel picker */
+            List<string> categorie = new List<string>();
+            categorie.Add("Montaggio");
+            categorie.Add("Fabbro");
+            categorie.Add("Idraulico");
+            categorie.Add("Muratore");
+            categorie.Add("Altro");
+
+            categoria.ItemsSource = categorie;
+            
         }
     }
 }

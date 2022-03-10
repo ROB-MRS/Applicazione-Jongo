@@ -11,17 +11,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
     <PackageReference Include="FirebaseDatabase.net" Version="4.0.7" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="View\" />
     <None Remove="ViewModel\" />
     <None Remove="PagineLogIn\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="View\" />
     <Folder Include="ViewModel\" />
     <Folder Include="PagineLogIn\" />
   </ItemGroup>
@@ -34,8 +35,5 @@
       <DependentUpon>LogInPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\.editorconfig" />
   </ItemGroup>
 </Project>

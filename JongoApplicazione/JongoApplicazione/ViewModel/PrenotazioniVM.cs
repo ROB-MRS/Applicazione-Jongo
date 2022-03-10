@@ -15,6 +15,10 @@ namespace JongoApplicazione.ViewModel
         public View.Prenota2 Prenota2 { get; set; }
         public View.Prenota3 Prenota3 { get; set; }
         public View.Prenota4 Prenota4 { get; set; }
+        public View.Prenota5 Prenota5 { get; set; }
+        public View.Prenota6 Prenota6 { get; set; }
+
+        public Action<int> CambioPaginaEvent { get; set; }
 
         public ICommand ComandoAvanti { private set; get; }
         public ICommand ComandoIndietro { private set; get; }
@@ -28,6 +32,9 @@ namespace JongoApplicazione.ViewModel
             Prenota2 = new View.Prenota2();
             Prenota3 = new View.Prenota3();
             Prenota4 = new View.Prenota4();
+            Prenota5 = new View.Prenota5();
+            Prenota6 = new View.Prenota6();
+
 
             ComandoAvanti = new Command(Avanti);
             ComandoIndietro = new Command(Indietro);
@@ -48,10 +55,13 @@ namespace JongoApplicazione.ViewModel
 
         public void Avanti()
         {
-            if(pagina<4)
+          
+            if(pagina<6)
                 pagina++;
+            
             CambiaPagina();
-            OnPropertyChanged("content");       
+            
+                   
         }
 
         public void Indietro()
@@ -59,7 +69,7 @@ namespace JongoApplicazione.ViewModel
             if(pagina>1)
                 pagina--;
             CambiaPagina();
-            OnPropertyChanged("content");
+            
         }
 
         void CambiaPagina()
@@ -68,19 +78,37 @@ namespace JongoApplicazione.ViewModel
             {
                 case 1:
                     content = Prenota1;
+                    AggiornaPagina();
                     return;
                 case 2:
                     content = Prenota2;
+                    AggiornaPagina();
                     return;
                 case 3:
                     content = Prenota3;
+                    AggiornaPagina();
                     return;
                 case 4:
                     content = Prenota4;
+                    AggiornaPagina();
+                    return;
+                case 5:
+                    content = Prenota5;
+                    AggiornaPagina();
+                    return;
+                case 6:
+                    content = Prenota6;
+                    AggiornaPagina();
                     return;
                 default:
                     throw new NullReferenceException();
             }
+        }
+
+        void AggiornaPagina()
+        {
+            OnPropertyChanged("content");
+            CambioPaginaEvent?.Invoke(pagina);
         }
     }
 }

@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage 
-    NavigationPage.HasNavigationBar="False"
-    NavigationPage.HasBackButton="False"
-    
-    BackgroundColor="Black"
+<ContentPage NavigationPage.HasNavigationBar="False"     NavigationPage.HasBackButton="False"
+ BackgroundColor="Black"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.HomePage">
@@ -35,47 +32,22 @@
                 <ColumnDefinition Width="0.5*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <!-- Bottone utente -->
-            <!--<StackLayout VerticalOptions="End" Grid.Column="1">
+            <!-- Bottone utente 
+            <StackLayout VerticalOptions="End" Grid.Column="1">
                 <ImageButton
                     Source="User.svg"
                     BackgroundColor="#83738E"></ImageButton>
             </StackLayout>-->
 
-            <Label  VerticalOptions="End" Grid.Column="3"
-                    x:Name="Utente_loggato"
-                    Text=""
-                    TextColor="#FFDE00"
-                    FontSize="Large"
-                    BackgroundColor="#83738E" 
-                    FormattedText="">
-                
-            </Label>
-
-            
-            
+            <!-- Bottone utente -->
             <StackLayout VerticalOptions="End" Grid.Column="1">
                 <Button
-                    x:Name="bottone_login"
-                    Text="LOG IN"
-                    TextColor="#FFDE00"
-                    Clicked="Bottone_login"
+                    Text="Log In"
                     BackgroundColor="#83738E"
-                    IsVisible="false">
+                    Clicked="Button_utente_Clicked">
                 </Button>
             </StackLayout>
 
-            <StackLayout VerticalOptions="End" Grid.Column="1">
-                <Button
-                    x:Name="bottone_logout"
-                    Text="LOG OUT"
-                    TextColor="#FFDE00"
-                    Clicked="Bottone_logout"
-                    BackgroundColor="#83738E"
-                    IsVisible="false"
-                    >
-                </Button>
-            </StackLayout>
             <!-- Bottone 1 -->
             <!--<StackLayout Grid.Column="1" Grid.Row="2">
                 <Button Text="Bottone 1"
@@ -85,9 +57,10 @@
 
             <Button Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 1"
+                    Text="CHI SIAMO?"
                     BackgroundColor="#83738E"
-                    TextColor="#FFDE00">
+                    TextColor="#FFDE00"
+                    Clicked="Button_1_Clicked">
             </Button>
 
             <!-- Bottone 2 -->
@@ -98,7 +71,7 @@
 
             <Button Grid.Column="3" Grid.Row="2" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 2"
+                    Text="IMPOSTAZIONI"
                      BackgroundColor="#83738E"
                     TextColor="#FFDE00">
             </Button>
@@ -111,7 +84,7 @@
 
             <Button Grid.Column="2" Grid.Row="3" Grid.RowSpan="3"
                     CornerRadius="40"
-                    Text="pagine iscrizione"
+                    Text="PRENOTA SUBITO"
                      BackgroundColor="#83738E"
                     TextColor="#FFDE00"
                     Clicked="Button_Clicked">
@@ -125,7 +98,7 @@
 
             <Button Grid.Column="1" Grid.Row="5" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 4"
+                    Text="CONTATTACI"
                     BackgroundColor="#83738E"
                     TextColor="#FFDE00">
             </Button>
@@ -138,7 +111,7 @@
 
             <Button Grid.Column="3" Grid.Row="5" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 5"
+                    Text="CRONOLOGIA"
                      BackgroundColor="#83738E"
                     TextColor="#FFDE00">
             </Button>

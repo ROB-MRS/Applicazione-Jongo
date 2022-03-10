@@ -1,12 +1,89 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentView
+    NavigationPage.HasNavigationBar="False"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.View.Prenota4">
     <ContentView.Content>
-        <StackLayout>
-            <Label Text="TARIFFE" Font="Title" Margin="100" FontSize="Large" TextColor="DarkViolet"/>
 
+        <Grid>
+                  <!--Divido la pagina in 5 colonne e 5 righe-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+            <!--Griglia di prova 
+             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="1" />
+             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="2" />
+             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="3" />
+             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="4" />
+             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="0" />
+             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="0" />
+             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="1" />
+             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="2" />
+             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="3" />
+             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="4" />
+             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="0" />
+             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="1" />
+             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="2" />
+             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="3" />
+             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="4" />
+             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="0" />
+             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="1" />
+             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="2" />
+             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="3" />
+             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="4" />
+             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="0" />
+             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="1" />
+             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="2" />
+             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="3" />
+             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="4" /> -->
+                
+
+            
+             
+
+            
+        
+      
+
+        <!-- TITOLO -->
+        <StackLayout Grid.Row="1" Grid.Column="2" >
+            <Label Text="TARIFFE"  Font="Title" FontSize="Large" TextColor="DarkViolet"/>
             </StackLayout>
+
+         <!-- <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">
+           <Label Text="Le tariffe indicate servono per dare un idea, potrebbero avere piccole oscillazioni da caso a caso. La cifra precisa viene valutata sul posto prima del lavoro."  Margin="100" FontSize="Large" TextColor="Gray"/>
+             </StackLayout> -->
+
+            </Grid>
     </ContentView.Content>
 </ContentView>

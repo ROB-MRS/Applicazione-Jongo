@@ -1,13 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentView
+    NavigationPage.HasNavigationBar="False"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="JongoApplicazione.View.Prenota2"
-   >
-    
-   
-        
-            <Grid>
+    x:Class="JongoApplicazione.View.Prenota2">
+        <Grid>
         <!--Divido la pagina in 5 colonne e 5 righe-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -28,34 +25,7 @@
 
 
         </Grid.RowDefinitions>
-        <!--Griglia di prova
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="1" />
-             <Frame BackgroundColor="AntiqueWhite" Grid.Row="0" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="4" /> -->
-
-
+        
 
 
 
@@ -68,18 +38,13 @@
                        HorizontalOptions="End"/>
         </StackLayout>
 
-
-
-
-
-
-        <!-- Titolo della pagina -->
-        <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Center" >
+             <!-- Titolo della pagina -->
+        <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Center" >
             <Label Text="DATA E ORARIO"  Font="Title" TextColor="DarkViolet"/>
         </StackLayout>
 
 
-        <StackLayout   Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal">
+        <StackLayout   Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal">
 
             <!-- Data -->
             <DatePicker  x:Name="Data"
@@ -108,13 +73,9 @@
                
 
           <!--Entry per inserire info extra-->
-            <Entry Placeholder="INFO EXTRA" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Large" FontAttributes="Bold" PlaceholderColor="Violet" BackgroundColor="LightYellow"/>
+            <Entry Placeholder="INFO EXTRA" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Large" FontAttributes="Bold" PlaceholderColor="Violet" BackgroundColor="LightYellow"/>
 
                    
 
-
-
-   </Grid>
-  
-
+            </Grid>
 </ContentView>

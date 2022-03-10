@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using Xamarin.Forms;
 
-namespace JongoApplicazione
+namespace JongoApplicazione.View
 {
-    [Obsolete]
-    public partial class MasterDetailUtente : MasterDetailPage
+    public partial class Prenota5 : ContentView
     {
-        public MasterDetailUtente()
+        public Prenota5()
         {
             InitializeComponent();
         }
