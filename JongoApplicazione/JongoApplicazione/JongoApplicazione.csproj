@@ -19,12 +19,10 @@
   <ItemGroup>
     <None Remove="ViewModel\" />
     <None Remove="PagineLogIn\" />
-    <None Remove="JongoApplicazione\PagePrenotazione\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModel\" />
     <Folder Include="PagineLogIn\" />
-    <Folder Include="JongoApplicazione\PagePrenotazione\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
