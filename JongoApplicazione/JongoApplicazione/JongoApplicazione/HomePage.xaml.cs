@@ -27,17 +27,17 @@ namespace JongoApplicazione
 
         void Bottone_login(System.Object sender, System.EventArgs e)
         {   
-             Navigation.PushAsync(new NavigationPage(new LogInPage()));
+             Navigation.PushAsync(new LogInPage());
         }
 
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new NavigationPage(new PagineLogIn.PageIscrizione()));
+            Navigation.PushAsync(new PagineLogIn.PageIscrizione());
         }
 
         void Bottone_logout(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new NavigationPage(new HomePage("---")));
+            Navigation.PushAsync(new HomePage("---"));
         }
 
     }
