@@ -15,7 +15,6 @@ namespace JongoApplicazione.JongoApplicazione
         FirebaseClient firebaseClient =
                 new FirebaseClient("https://jongo-data-default-rtdb.europe-west1.firebasedatabase.app/");
         
-        string webAPIkey = "AIzaSyCJ1J9HJUzcQnBaP3i5d8xhke9gXy7rcfA";
         FirebaseAuthProvider authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyCJ1J9HJUzcQnBaP3i5d8xhke9gXy7rcfA"));
 
 
