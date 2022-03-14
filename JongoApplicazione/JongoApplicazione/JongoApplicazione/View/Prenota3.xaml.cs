@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JongoApplicazione.JongoApplicazione.View;
+using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 
@@ -6,7 +7,8 @@ namespace JongoApplicazione.View
 {
     public partial class Prenota3 : ContentView
     {
-        public Prenota3()
+        Prenotazione p;
+        public Prenota3(Prenotazione prenotazione)
         {
             /* List<string> listOfNames = new List<string>()
             {
@@ -26,7 +28,21 @@ namespace JongoApplicazione.View
             categorie.Add("Altro");
 
             categoria.ItemsSource = categorie;
+            p = prenotazione;
             
+        }
+
+        void bottone_conferma(System.Object sender, System.EventArgs e)
+        {
+            p.servizio = categoria.Title;
+            conferma.IsVisible = false;
+            modifica.IsVisible = true;
+        }
+
+        void bottone_modifica(System.Object sender, System.EventArgs e)
+        {
+            modifica.IsVisible = false;
+            conferma.IsVisible = true;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JongoApplicazione.JongoApplicazione.View;
+using System;
 using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -23,17 +24,17 @@ namespace JongoApplicazione.ViewModel
         public ICommand ComandoAvanti { private set; get; }
         public ICommand ComandoIndietro { private set; get; }
 
-        public PrenotazioniVM()
+        public PrenotazioniVM(Prenotazione prenotazione)
         {
             pagina = 1;
 
             content = new ContentView();
-            Prenota1 = new View.Prenota1();
-            Prenota2 = new View.Prenota2();
-            Prenota3 = new View.Prenota3();
+            Prenota1 = new View.Prenota1(prenotazione);
+            Prenota2 = new View.Prenota2(prenotazione);
+            Prenota3 = new View.Prenota3(prenotazione);
             Prenota4 = new View.Prenota4();
             Prenota5 = new View.Prenota5();
-            Prenota6 = new View.Prenota6();
+            Prenota6 = new View.Prenota6(prenotazione);
 
 
             ComandoAvanti = new Command(Avanti);

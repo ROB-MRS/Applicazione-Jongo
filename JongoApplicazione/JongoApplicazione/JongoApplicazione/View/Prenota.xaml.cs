@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JongoApplicazione.JongoApplicazione.View;
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -8,12 +9,14 @@ namespace JongoApplicazione.View
     public partial class Prenota : ContentPage
     {
         public ViewModel.PrenotazioniVM VM { get; set; }
+        public Prenotazione prenotazione = new Prenotazione();
 
         public Prenota()
         {
-            VM = new ViewModel.PrenotazioniVM();
-            InitializeComponent();
 
+            InitializeComponent();
+            prenotazione.id++;
+            VM = new ViewModel.PrenotazioniVM(prenotazione);
             BindingContext = VM;
             //avanti.Command = VM.ComandoAvanti;
             //indietro.Command = VM.ComandoIndietro;

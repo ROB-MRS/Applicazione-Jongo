@@ -38,4 +38,9 @@
   <ItemGroup>
     <None Include="..\..\.editorconfig" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="JongoApplicazione\Cronologia.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

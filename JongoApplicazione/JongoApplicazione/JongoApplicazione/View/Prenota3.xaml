@@ -71,7 +71,9 @@
             <Label Text="Di quale lavoro hai bisogno?"  Font="Title" TextColor="DarkViolet"/>
             </StackLayout>
              <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3">
-                  <Picker x:Name="categoria" Title="Categoria"/>
+                  <Picker x:Name="categoria"
+                          
+                          Title="Categoria"/>
                      
                  
                  </StackLayout>
@@ -83,7 +85,28 @@
                  
                  </StackLayout>
 
-               </Grid>
+            <Button  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Small" FontAttributes="Bold"
+                x:Name="conferma"
+                Text="Conferma Dati"
+                Clicked="bottone_conferma"
+                BackgroundColor="DarkGoldenrod"
+                TextColor="White"
+                IsVisible="True"
+                >
+
+            </Button>
+
+            <Button  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Small" FontAttributes="Bold"
+                x:Name="modifica"
+                Text="Modifica Dati"
+                Clicked="bottone_modifica"
+                BackgroundColor="DarkGoldenrod"
+                TextColor="White"
+                IsVisible="False"
+                >
+
+            </Button>
+        </Grid>
 
     </ContentView.Content>
 </ContentView>
