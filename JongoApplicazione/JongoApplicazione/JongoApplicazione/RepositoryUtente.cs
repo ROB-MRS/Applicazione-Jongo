@@ -33,6 +33,7 @@ namespace JongoApplicazione.JongoApplicazione
             
             return (await firebaseClient.Child(nameof(Utente)).OnceAsync<Utente>()).Select(item=> new Utente
                 {
+                    prenotazioni = item.Object.prenotazioni,
                     Email = item.Object.Email,
                     Name = item.Object.Name,
                     Surname = item.Object.Surname,
@@ -44,8 +45,14 @@ namespace JongoApplicazione.JongoApplicazione
 
         public async void Delete(Utente utente)
         {
+            await firebaseClient.Child(nameof(Utente) + "/" + utente.Id).DeleteAsync();
             List<Utente> list = await GetAll();
             list.Remove(utente);
+        }
+
+        public async void Update(Utente utente)
+        {
+            await firebaseClient.Child(nameof(Utente)+"/"+utente.Id).PutAsync(JsonConvert.SerializeObject(utente)); 
         }
 
         public async Task<string> SignUp(string email,string password)
@@ -73,6 +80,8 @@ namespace JongoApplicazione.JongoApplicazione
             }
             return "";
         }
+
+        
 
 
     }

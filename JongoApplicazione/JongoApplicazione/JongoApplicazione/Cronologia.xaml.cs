@@ -1,4 +1,5 @@
-﻿using JongoApplicazione.JongoApplicazione.View;
+﻿using JongoApplicazione.JongoApplicazione.PagineLogIn;
+using JongoApplicazione.JongoApplicazione.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,7 +21,7 @@ namespace JongoApplicazione.JongoApplicazione
 
         public ObservableCollection<string> Items { get; set; }
 
-        public Cronologia(string utente)
+        public Cronologia(Utente utente)
         {
             InitializeComponent();
 

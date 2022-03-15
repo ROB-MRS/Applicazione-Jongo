@@ -1,4 +1,5 @@
-﻿using JongoApplicazione.JongoApplicazione.View;
+﻿using JongoApplicazione.JongoApplicazione.PagineLogIn;
+using JongoApplicazione.JongoApplicazione.View;
 using System;
 using System.ComponentModel;
 using System.Windows.Input;
@@ -24,7 +25,7 @@ namespace JongoApplicazione.ViewModel
         public ICommand ComandoAvanti { private set; get; }
         public ICommand ComandoIndietro { private set; get; }
 
-        public PrenotazioniVM(Prenotazione prenotazione)
+        public PrenotazioniVM(Prenotazione prenotazione,Utente utente)
         {
             pagina = 1;
 
@@ -34,7 +35,7 @@ namespace JongoApplicazione.ViewModel
             Prenota3 = new View.Prenota3(prenotazione);
             Prenota4 = new View.Prenota4();
             Prenota5 = new View.Prenota5();
-            Prenota6 = new View.Prenota6(prenotazione);
+            Prenota6 = new View.Prenota6(prenotazione,utente);
 
 
             ComandoAvanti = new Command(Avanti);

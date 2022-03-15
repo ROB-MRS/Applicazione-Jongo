@@ -34,7 +34,8 @@ namespace JongoApplicazione.View
 
         void bottone_conferma(System.Object sender, System.EventArgs e)
         {
-            p.servizio = categoria.Title;
+            
+            p.servizio = (string) categoria.Title;
             conferma.IsVisible = false;
             modifica.IsVisible = true;
         }

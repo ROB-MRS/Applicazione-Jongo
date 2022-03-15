@@ -119,10 +119,9 @@ namespace JongoApplicazione
                             ut = utente;
                         }
                     }
-                    descrizioneUtente = ut.Name + " " + ut.Surname;
                     Errore_Password.IsVisible = false;
                     Console.WriteLine("stampa: " + Email.Text + Password.Text);
-                    await Navigation.PushAsync(new HomePage(descrizioneUtente));
+                    await Navigation.PushAsync(new HomePage(ut));
                 }
 
 

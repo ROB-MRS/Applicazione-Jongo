@@ -1,4 +1,5 @@
-﻿using JongoApplicazione.JongoApplicazione.View;
+﻿using JongoApplicazione.JongoApplicazione.PagineLogIn;
+using JongoApplicazione.JongoApplicazione.View;
 using System;
 using System.Collections.Generic;
 
@@ -11,12 +12,12 @@ namespace JongoApplicazione.View
         public ViewModel.PrenotazioniVM VM { get; set; }
         public Prenotazione prenotazione = new Prenotazione();
 
-        public Prenota()
+        public Prenota(Utente utente)
         {
 
             InitializeComponent();
             prenotazione.id++;
-            VM = new ViewModel.PrenotazioniVM(prenotazione);
+            VM = new ViewModel.PrenotazioniVM(prenotazione,utente);
             BindingContext = VM;
             //avanti.Command = VM.ComandoAvanti;
             //indietro.Command = VM.ComandoIndietro;

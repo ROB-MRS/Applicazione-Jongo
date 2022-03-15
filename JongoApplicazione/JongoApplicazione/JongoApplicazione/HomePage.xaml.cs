@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using JongoApplicazione.JongoApplicazione;
+using JongoApplicazione.JongoApplicazione.PagineLogIn;
 using JongoApplicazione.View;
 using Xamarin.Forms;
 
@@ -8,14 +9,17 @@ namespace JongoApplicazione
 {
     public partial class HomePage : ContentPage
     {
-        public HomePage(string utente)
+        public Utente utenteHomePage;
+
+        public HomePage(Utente utente)
         {
             InitializeComponent();
-            Utente_loggato.Text = utente;
-            if (Utente_loggato.Text == "---")
+            utenteHomePage = utente;
+            if (utente == null)
             {
                 bottone_logout.IsVisible = false;
                 bottone_login.IsVisible = true;
+                Utente_loggato.Text = "---";
                 
                 
             }
@@ -23,6 +27,7 @@ namespace JongoApplicazione
             {
                 bottone_login.IsVisible = false;
                 bottone_logout.IsVisible = true;
+                Utente_loggato.Text = utente.Name + " " + utente.Surname;
             }
         }
 
@@ -39,7 +44,7 @@ namespace JongoApplicazione
 
         void Bottone_logout(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new HomePage("---"));
+            Navigation.PushAsync(new HomePage(null));
         }
 
         async void Button_Clicked(System.Object sender, System.EventArgs e)
@@ -49,7 +54,7 @@ namespace JongoApplicazione
                 await DisplayAlert("Attenzione", "Per prenotare è necessario autenticarsi", "OK");
                 return;
             }
-            await Navigation.PushAsync(new View.Prenota());
+            await Navigation.PushAsync(new View.Prenota(utenteHomePage));
         }
 
         async void bottone_cronologia(System.Object sender, System.EventArgs e)
@@ -59,7 +64,7 @@ namespace JongoApplicazione
                 await DisplayAlert("Attenzione", "Per prenotare è necessario autenticarsi", "OK");
                 return;
             }
-            await Navigation.PushAsync(new Cronologia(Utente_loggato.Text));
+            await Navigation.PushAsync(new Cronologia(utenteHomePage));
         }
     }
 }
