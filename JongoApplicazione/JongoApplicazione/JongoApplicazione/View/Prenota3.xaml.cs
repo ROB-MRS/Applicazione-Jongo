@@ -36,6 +36,7 @@ namespace JongoApplicazione.View
         {
             int selectedIndex = categoria.SelectedIndex;
             p.servizio = categoria.Items[selectedIndex];
+            p.descrizione = descrizione.Text;
             conferma.IsVisible = false;
             modifica.IsVisible = true;
         }

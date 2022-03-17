@@ -23,6 +23,10 @@ namespace JongoApplicazione.JongoApplicazione.View
         public string informazioniExtra { get; set; }
 
         public string servizio  { get; set; }
+
+        public string numero    { get; set; }
+
+        public string descrizione { get; set; }
         
 
     }

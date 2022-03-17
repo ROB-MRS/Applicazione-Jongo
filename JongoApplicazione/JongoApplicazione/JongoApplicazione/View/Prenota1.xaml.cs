@@ -21,6 +21,7 @@ namespace JongoApplicazione.View
             p.cognome = Cognome.Text;
             p.cap = CAP.Text;
             p.via = Indirizzo.Text;
+            p.numero = Telefono.Text;
             conferma.IsVisible = false;
             modifica.IsVisible = true;
         }

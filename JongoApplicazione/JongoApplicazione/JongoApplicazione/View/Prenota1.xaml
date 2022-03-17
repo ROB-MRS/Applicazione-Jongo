@@ -20,6 +20,7 @@
             Placeholder="CAP"/>
 
         <Entry 
+            x:Name="Telefono"
             Placeholder="Numero telefono"/>
 
         <!--Margin="150,150,150,0"-->

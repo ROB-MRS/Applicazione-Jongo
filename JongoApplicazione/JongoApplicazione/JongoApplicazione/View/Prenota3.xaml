@@ -80,7 +80,10 @@
 
 
              <StackLayout Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3">
-                  <Entry Text="Descrizione"/>
+                  <Entry
+                      x:Name="descrizione"
+                      Placeholder="Descrizione"
+                      />
                      
                  
                  </StackLayout>
