@@ -5,7 +5,7 @@
     x:Class="JongoApplicazione.View.Prenota"
     BindingContext="JongoApplicazione.ViewModel.PrenotazioniVM">
     <StackLayout>
-        <ContentView VerticalOptions="CenterAndExpand" Content="{Binding content}" x:Name="content">
+        <ContentView VerticalOptions="CenterAndExpand" Content="{Binding content}" x:Name="content"> 
         <!-- <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
@@ -44,9 +44,9 @@
             </Grid.RowDefinitions>
             
        <!--Pulsanti avanti e indietro-->
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Margin="10" Grid.Row="4" Grid.Column="2">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Margin="10" Grid.Row="2" Grid.Column="2" x:Name="buttons">
             <Button BackgroundColor="DarkGray"  Text="INDIETRO" TextColor="Gray" Command="{Binding ComandoIndietro}" x:Name="indietro" ></Button>
-            <Button BackgroundColor="DarkGray" Text=" AVANTI " TextColor="Gray" Command="{Binding ComandoAvanti}" x:Name="avanti" ></Button>
+            <Button BackgroundColor="DarkGray" Text=" CONFERMA " TextColor="Gray" Command="{Binding ComandoAvanti}" x:Name="avanti" ></Button>
         </StackLayout>
              </Grid>
 

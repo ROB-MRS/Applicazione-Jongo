@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    NavigationPage.HasNavigationBar="False"
+     
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JongoApplicazione.View.Prenota6">
+    <ContentView.Content>
+
+        <Grid>
+                  <!--Divido la pagina in 5 colonne e 5 righe-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+             <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3">
+                 <Label Text="La prenotazione è avvenita con successo, cliccando OK tornerai all'home page"/>
+            </StackLayout>
+
+         
+
+
+        <!-- Bottone OK -->
+            <StackLayout Grid.Column="2" Grid.ColumnSpan="3"  Grid.Row="4">
+                <Button x:Name="Bottone_OK"
+                        Text="OK"
+                        FontSize="20"
+                        TextColor="White"
+                        BackgroundColor="#6F00FF"
+                        CornerRadius="15"
+                        Clicked="Button_OK_Clicked"/>
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

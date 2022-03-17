@@ -11,9 +11,10 @@ namespace JongoApplicazione
     public partial class LogInPage : ContentPage
     {   
         RepositoryUtente repository = new RepositoryUtente();
+        string descrizioneUtente;
 
         public LogInPage()
-        {
+        {   
             InitializeComponent();
         }
 
@@ -22,6 +23,12 @@ namespace JongoApplicazione
         void Bottone_Recupero_Password_Cliccato(System.Object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new PageRecuperoPassword());
+        }
+
+        //Bottone di Iscrizione
+        void Bottone_Iscrizione(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new PageIscrizione());
         }
 
 
@@ -56,36 +63,83 @@ namespace JongoApplicazione
             }
             */
 
-            List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
-            Utente u = null;
+            /*List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
+            Utente ut = null;
             foreach (Utente utente in listaUtenti)
             {
                 if(utente.Email == Email.Text)
                 {
-                    u = utente;
+                    ut = utente;
                 }
             }
 
-            if(u == null)
+            if(ut == null)
             {
                 await DisplayAlert("Errore", "Email errata", "OK");
             }
 
             else
             {
-                if(u.Password == Password.Text)
+                if(ut.Password == Password.Text.GetHashCode())
                 {
+                    descrizioneUtente = ut.Name + " " + ut.Surname;
                     Errore_Password.IsVisible = false;
                     Console.WriteLine("stampa: " + Email.Text + Password.Text);
-                    await Navigation.PushAsync(new MainPage());
+                    await Navigation.PushAsync(new HomePage(descrizioneUtente));
                 }
 
                 else
                 {
                     await DisplayAlert("Errore", "Password errata", "OK");
                 }
+            }*/
+
+            if (string.IsNullOrEmpty(Email.Text))
+            {
+                await DisplayAlert("Errore", "Inserisci l'email", "OK");
+                return;
             }
-                
+
+            if (string.IsNullOrEmpty(Password.Text))
+            {
+                await DisplayAlert("Errore", "Inserisci la password", "OK");
+                return;
+            }
+            try
+            {
+                string token = await repository.SignIn(Email.Text, Password.Text);
+                if (!string.IsNullOrEmpty(token))
+                {
+                    List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
+                    Utente ut = null;
+                    foreach (Utente utente in listaUtenti)
+                    {
+                        if (utente.Email == Email.Text)
+                        {
+                            ut = utente;
+                        }
+                    }
+                    Errore_Password.IsVisible = false;
+                    Console.WriteLine("stampa: " + Email.Text + Password.Text);
+                    await Navigation.PushAsync(new HomePage(ut));
+                }
+
+
+            }
+            
+            catch (Exception ex)
+            {
+                if (ex.Message.Contains("EMAIL_NOT_FOUND"))
+                {
+                    await DisplayAlert("Errore", "Email sbagliata", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("Errore", "Password errata", "OK");
+                }
+            }
+            
+            
         }
 
     }

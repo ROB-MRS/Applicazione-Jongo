@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#FFCCFF"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JongoApplicazione.View.Prenota1">
+    <StackLayout>
+        <Label 
+            Text="INFO PERSONALI"/>
+        <Entry 
+            x:Name="Nome"
+            Placeholder="Nome"/>
+        <Entry 
+            x:Name="Cognome"
+            Placeholder="Cognome"/>
+        <Entry x:Name="Indirizzo"
+            Placeholder="Indirizzo,n°civico"/>
+        <Entry x:Name="CAP" 
+            Placeholder="CAP"/>
+
+        <Entry 
+            x:Name="Telefono"
+            Placeholder="Numero telefono"/>
+
+        <!--Margin="150,150,150,0"-->
+
+        <Button HeightRequest="50" VerticalOptions="End" HorizontalOptions="EndAndExpand" FontAttributes="Bold"
+                x:Name="conferma"
+                Text="Conferma Dati"
+                Clicked="bottone_conferma"
+                BackgroundColor="DarkGoldenrod"
+                TextColor="White"
+                IsVisible="True"
+                >
+
+        </Button>
+
+        <Button HeightRequest="50" VerticalOptions="End" HorizontalOptions="EndAndExpand" FontAttributes="Bold"
+                x:Name="modifica"
+                Text="Modifica Dati"
+                Clicked="bottone_modifica"
+                BackgroundColor="DarkGoldenrod"
+                TextColor="White"
+                IsVisible="False"
+                >
+
+        </Button>
+
+    </StackLayout>
+
+    
+    
+</ContentView>

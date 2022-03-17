@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentView
+    NavigationPage.HasNavigationBar="False"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.View.Prenota3">
@@ -70,19 +71,45 @@
             <Label Text="Di quale lavoro hai bisogno?"  Font="Title" TextColor="DarkViolet"/>
             </StackLayout>
              <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3">
-                  <Picker x:Name="categoria" Title="Categoria"/>
+                  <Picker x:Name="categoria"
+                          
+                          Title="Categoria"/>
                      
                  
                  </StackLayout>
 
 
              <StackLayout Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3">
-                  <Entry Text="Descrizione"/>
+                  <Entry
+                      x:Name="descrizione"
+                      Placeholder="Descrizione"
+                      />
                      
                  
                  </StackLayout>
 
-               </Grid>
+            <Button  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Small" FontAttributes="Bold"
+                x:Name="conferma"
+                Text="Conferma Dati"
+                Clicked="bottone_conferma"
+                BackgroundColor="DarkGoldenrod"
+                TextColor="White"
+                IsVisible="True"
+                >
+
+            </Button>
+
+            <Button  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Small" FontAttributes="Bold"
+                x:Name="modifica"
+                Text="Modifica Dati"
+                Clicked="bottone_modifica"
+                BackgroundColor="DarkGoldenrod"
+                TextColor="White"
+                IsVisible="False"
+                >
+
+            </Button>
+        </Grid>
 
     </ContentView.Content>
 </ContentView>

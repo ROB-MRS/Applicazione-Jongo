@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage NavigationPage.HasNavigationBar="False" BackgroundColor="Black"
+<ContentPage NavigationPage.HasNavigationBar="False"     NavigationPage.HasBackButton="False"
+ BackgroundColor="Black"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.HomePage">
@@ -31,11 +32,47 @@
                 <ColumnDefinition Width="0.5*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <!-- Bottone utente -->
+            <!-- Bottone utente 
             <StackLayout VerticalOptions="End" Grid.Column="1">
                 <ImageButton
-                    Source="{StaticResource immagineUser}"
+                    Source="User.svg"
                     BackgroundColor="#83738E"></ImageButton>
+            </StackLayout>-->
+
+            <StackLayout VerticalOptions="End" Grid.Column="3">
+                <Label 
+                    x:Name="Utente_loggato"
+                    Text="---"
+                    TextColor="#FFDE00"
+                    BackgroundColor="#83738E"
+                    FontSize="Large">
+                    
+                </Label>
+
+            </StackLayout>
+
+
+            <!-- Bottone utente -->
+            <StackLayout VerticalOptions="End" Grid.Column="1">
+                <Button
+                    x:Name="bottone_login"
+                    TextColor="#FFDE00"
+                        Text="Log In"
+                        BackgroundColor="#83738E"
+                        IsVisible="True"
+                        Clicked="Bottone_login">
+                </Button>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="End" Grid.Column="1">
+                <Button
+                    x:Name="bottone_logout"
+                    Text="Log Out"
+                    TextColor="#FFDE00"
+                    BackgroundColor="#83738E"
+                    Clicked="Bottone_logout"
+                    IsVisible="False">
+                </Button>
             </StackLayout>
 
             <!-- Bottone 1 -->
@@ -47,7 +84,7 @@
 
             <Button Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 1"
+                    Text="CHI SIAMO?"
                     BackgroundColor="#83738E"
                     TextColor="#FFDE00"
                     Clicked="Button_1_Clicked">
@@ -61,10 +98,9 @@
 
             <Button Grid.Column="3" Grid.Row="2" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Impostazioni"
+                    Text="IMPOSTAZIONI"
                      BackgroundColor="#83738E"
-                    TextColor="#FFDE00"
-                    Clicked="Bottone_Impostazioni_Clicked">
+                    TextColor="#FFDE00">
             </Button>
 
             <!-- Bottone 3 -->
@@ -75,7 +111,7 @@
 
             <Button Grid.Column="2" Grid.Row="3" Grid.RowSpan="3"
                     CornerRadius="40"
-                    Text="pagine iscrizione"
+                    Text="PRENOTA SUBITO"
                      BackgroundColor="#83738E"
                     TextColor="#FFDE00"
                     Clicked="Button_Clicked">
@@ -89,7 +125,7 @@
 
             <Button Grid.Column="1" Grid.Row="5" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 4"
+                    Text="CONTATTACI"
                     BackgroundColor="#83738E"
                     TextColor="#FFDE00">
             </Button>
@@ -102,10 +138,10 @@
 
             <Button Grid.Column="3" Grid.Row="5" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Contattaci"
-                    BackgroundColor="#83738E"
-                    TextColor="#FFDE00"
-                    Clicked="Bottone_Contattaci">
+                    Text="CRONOLOGIA"
+                    Clicked="bottone_cronologia"
+                     BackgroundColor="#83738E"
+                    TextColor="#FFDE00">
             </Button>
 
             <!-- Bottone mappa -->

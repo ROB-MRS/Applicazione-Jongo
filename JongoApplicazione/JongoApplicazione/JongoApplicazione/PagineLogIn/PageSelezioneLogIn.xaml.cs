@@ -14,7 +14,7 @@ namespace JongoApplicazione.PagineLogIn
 
         void Bottone_Log_In_User_Clicked(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new LogInPage());
+            //Navigation.PushAsync(new LogInPage());
         }
 
         void Bottone_Log_In_Admin_Clicked(System.Object sender, System.EventArgs e)

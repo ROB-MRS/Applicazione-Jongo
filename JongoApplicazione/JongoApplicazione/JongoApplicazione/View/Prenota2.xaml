@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentView
+    NavigationPage.HasNavigationBar="False"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.View.Prenota2">
@@ -38,12 +39,12 @@
         </StackLayout>
 
              <!-- Titolo della pagina -->
-        <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Center" >
+        <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Center" >
             <Label Text="DATA E ORARIO"  Font="Title" TextColor="DarkViolet"/>
         </StackLayout>
 
 
-        <StackLayout   Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal">
+        <StackLayout   Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal">
 
             <!-- Data -->
             <DatePicker  x:Name="Data"
@@ -72,9 +73,33 @@
                
 
           <!--Entry per inserire info extra-->
-            <Entry Placeholder="INFO EXTRA" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Large" FontAttributes="Bold" PlaceholderColor="Violet" BackgroundColor="LightYellow"/>
+            <Entry x:Name="Info" 
+                Placeholder="INFO EXTRA" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Large" FontAttributes="Bold" PlaceholderColor="Violet" BackgroundColor="LightYellow"/>
 
-                   
 
-            </Grid>
+        <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Large" FontAttributes="Bold" 
+                x:Name="conferma"
+                Text="Conferma Dati"
+                Clicked="bottone_conferma"
+                BackgroundColor="DarkGoldenrod"
+                TextColor="White"
+                IsVisible="True"
+                >
+
+            </Button>
+
+        <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Large" FontAttributes="Bold" 
+                x:Name="modifica"
+                Text="Modifica Dati"
+                Clicked="bottone_modifica"
+                BackgroundColor="DarkGoldenrod"
+                TextColor="White"
+                IsVisible="False"
+                >
+
+        </Button>
+
+
+
+    </Grid>
 </ContentView>

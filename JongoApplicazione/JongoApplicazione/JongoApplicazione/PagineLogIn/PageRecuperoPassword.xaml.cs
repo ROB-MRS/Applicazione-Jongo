@@ -24,8 +24,16 @@ namespace JongoApplicazione.PagineLogIn
             foreach(Utente utente in listaUtenti)
             {
                 if(utente.Email == Inserimento.Text)
-                {
-                    await DisplayAlert("La tua password è: ", utente.Password, "OK");
+                {   
+                    bool isSend = await repository.ResetPassword(utente.Email);
+                    if (isSend)
+                    {
+                        await DisplayAlert("Informazione", "Controlla la tua email per cambiare la password", "OK");
+                    }
+                    else
+                    {
+                        await DisplayAlert("Errore", "Invio messaggio non riuscito", "OK");
+                    }
                     trovato = true;
                 }
             }

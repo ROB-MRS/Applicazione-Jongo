@@ -5,10 +5,11 @@ using Xamarin.Forms;
 
 namespace JongoApplicazione.View
 {
-    public partial class Prenota2 : ContentView
+    public partial class Prenota1 : ContentView
     {
         Prenotazione p;
-        public Prenota2(Prenotazione prenotazione)
+        
+        public Prenota1(Prenotazione prenotazione)
         {
             InitializeComponent();
             p = prenotazione;
@@ -16,9 +17,11 @@ namespace JongoApplicazione.View
 
         void bottone_conferma(System.Object sender, System.EventArgs e)
         {
-            p.data = Data.Date.ToLongDateString();
-            p.ora = Orario.Time.ToString();
-            p.informazioniExtra = Info.Text;
+            p.name = Nome.Text;
+            p.cognome = Cognome.Text;
+            p.cap = CAP.Text;
+            p.via = Indirizzo.Text;
+            p.numero = Telefono.Text;
             conferma.IsVisible = false;
             modifica.IsVisible = true;
         }
@@ -28,5 +31,6 @@ namespace JongoApplicazione.View
             modifica.IsVisible = false;
             conferma.IsVisible = true;
         }
+
     }
 }
