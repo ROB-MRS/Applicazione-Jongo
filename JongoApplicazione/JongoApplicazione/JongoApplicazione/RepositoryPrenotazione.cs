@@ -37,7 +37,7 @@ namespace JongoApplicazione.JongoApplicazione
                 ora = item.Object.ora,
                 informazioniExtra = item.Object.informazioniExtra,
                 servizio = item.Object.servizio,
-                tariffa = item.Object.tariffa,
+
 
             }).ToList();
         }

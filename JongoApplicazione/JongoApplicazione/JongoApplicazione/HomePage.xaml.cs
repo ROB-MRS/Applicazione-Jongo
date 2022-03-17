@@ -61,7 +61,7 @@ namespace JongoApplicazione
         {
             if (Utente_loggato.Text == "---")
             {
-                await DisplayAlert("Attenzione", "Per prenotare è necessario autenticarsi", "OK");
+                await DisplayAlert("Attenzione", "Per accedere alla cronologia è necessario autenticarsi", "OK");
                 return;
             }
             await Navigation.PushAsync(new Cronologia(utenteHomePage));
