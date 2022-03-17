@@ -34,8 +34,8 @@ namespace JongoApplicazione.View
 
         void bottone_conferma(System.Object sender, System.EventArgs e)
         {
-            
-            p.servizio = (string) categoria.Title;
+            int selectedIndex = categoria.SelectedIndex;
+            p.servizio = categoria.Items[selectedIndex];
             conferma.IsVisible = false;
             modifica.IsVisible = true;
         }

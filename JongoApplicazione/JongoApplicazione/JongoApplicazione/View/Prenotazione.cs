@@ -24,7 +24,6 @@ namespace JongoApplicazione.JongoApplicazione.View
 
         public string servizio  { get; set; }
         
-        public int tariffa { get; set; }
 
     }
 }
