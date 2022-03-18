@@ -127,7 +127,8 @@
                     CornerRadius="50"
                     Text="CONTATTACI"
                     BackgroundColor="#83738E"
-                    TextColor="#FFDE00">
+                    TextColor="#FFDE00"
+                    Clicked="Bottone_Contattaci">
             </Button>
 
              <!--Bottone 5 -->
@@ -148,7 +149,8 @@
             <StackLayout Grid.Column="2" Grid.Row="8" VerticalOptions="Start">
                 <Button Text="mappa"
                     BackgroundColor="#83738E"
-                    TextColor="#FFDE00"/>
+                    TextColor="#FFDE00"
+                    Clicked="Bottone_Mappa"/>
             </StackLayout>
 
         </Grid>

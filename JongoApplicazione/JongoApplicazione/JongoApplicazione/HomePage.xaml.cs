@@ -4,6 +4,7 @@ using JongoApplicazione.JongoApplicazione;
 using JongoApplicazione.JongoApplicazione.PagineLogIn;
 using JongoApplicazione.View;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace JongoApplicazione
 {
@@ -72,9 +73,38 @@ namespace JongoApplicazione
             Navigation.PushAsync(new NavigationPage(new SettingsPage()));
         }
 
+        async void SendWhatsapp()
+        {
+           
+            try
+            {
+                await Launcher.OpenAsync("https://wa.me/+393927288821?text=prova");
+            }
+            catch
+            {
+               await DisplayAlert("Attenzaione", "Errore", "OK");
+            }
+        }
+
         void Bottone_Contattaci(System.Object sender, System.EventArgs e)
         {
-          
+            SendWhatsapp();
+        }
+
+        async void Bottone_Mappa(System.Object sender, System.EventArgs e)
+        {
+            if (Device.RuntimePlatform == Device.iOS)
+            {
+                await Launcher.OpenAsync("http://maps.apple.com/?q=Roma&z=2");
+            }
+            else if (Device.RuntimePlatform == Device.Android)
+            {
+                await Launcher.OpenAsync("geo:0,0?q=Roma");
+            }
+            else if (Device.RuntimePlatform == Device.UWP)
+            {
+                await Launcher.OpenAsync("bingmaps:?where=Roma");
+            }
         }
     }
 }
