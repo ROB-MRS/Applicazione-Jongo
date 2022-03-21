@@ -1,10 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="JongoApplicazione.JongoApplicazione.Cronologia">
-    <ContentPage.Content>
-        <CollectionView>
-        </CollectionView>
-        
-    </ContentPage.Content>
+             x:Class="JongoApplicazione.JongoApplicazione.Cronologia"
+             BackgroundColor="#FFCCFF">
+    
+        <!--<ContentPage.Resources>
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="LightYellow" />
+                <Setter Property="BorderColor" Value="Blue" />
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="CornerRadius" Value="15" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="Margin" Value="0, 4" />
+            </Style>
+
+            <Style x:Name="headerLabel"  
+                   TargetType="Label">
+                <Setter Property="Margin" Value="0, 8" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="Blue" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="Text" Value="LEARN MORE" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BackgroundColor" Value="Green" />
+                <Setter Property="BorderRadius" Value="20" />
+            </Style>
+        </ContentPage.Resources>-->
+        <ContentPage.Content>
+            <ScrollView
+                x:Name="pagina"
+                >
+            
+            
+            </ScrollView>
+        </ContentPage.Content>
+
 </ContentPage>
