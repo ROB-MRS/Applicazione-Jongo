@@ -8,9 +8,7 @@
             <!--Divido la pagina in 3 colonne e 4 righe-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="3*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="1.3*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
 
             </Grid.ColumnDefinitions>
@@ -21,16 +19,17 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
-
-
-
-
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                
+                
             </Grid.RowDefinitions>
+            <StackLayout Grid.Column="1" Grid.Row="0"  VerticalOptions="StartAndExpand">
 
-            <StackLayout Grid.Column="2" Grid.Row="0" Grid.RowSpan="1" VerticalOptions="Fill">
                 <Label 
                     FontSize="Large"
-                    FontAttributes="Bold"
+                    FontAttributes="Italic"
                     Text="IMPOSTAZIONI"
                     TextColor="#FFDE00"
                     TextDecorations="None"
@@ -41,9 +40,10 @@
                 
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  HorizontalOptions="StartAndExpand" 
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"  HorizontalOptions="StartAndExpand" 
                          VerticalOptions="Center" Orientation="Horizontal">
                 <Label
+                    Margin="3,20"
                     FontSize="Large"
                     WidthRequest="100"
                     FontAttributes="Bold"
@@ -56,9 +56,10 @@
                 
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"  HorizontalOptions="StartAndExpand" 
-                         VerticalOptions="End" Orientation="Horizontal">
+            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"  HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="Start" Orientation="Horizontal">
                 <Label
+                    Margin="3"
                     x:Name="Nome"
                     WidthRequest="100"
                     FontSize="Title"
@@ -70,9 +71,10 @@
                 </Label>
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"  HorizontalOptions="StartAndExpand" 
+            <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"  HorizontalOptions="StartAndExpand" 
                          VerticalOptions="Start" Orientation="Horizontal">
                 <Label
+                    Margin="3"
                     x:Name="Cognome"
                     WidthRequest="130"
                     FontSize="Title"
@@ -84,9 +86,11 @@
                 </Label>
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"  HorizontalOptions="StartAndExpand" 
-                         VerticalOptions="StartAndExpand" Orientation="Horizontal" Margin="0,40">
+            <StackLayout Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"  HorizontalOptions="StartAndExpand" 
+                         VerticalOptions="Start" Orientation="Horizontal" >
                 <Label
+                    
+                    Margin="3"
                     x:Name="Email"
                     WidthRequest="250"
                     FontSize="Title"
@@ -98,9 +102,11 @@
                 </Label>
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"  HorizontalOptions="StartAndExpand" 
+
+            <StackLayout Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3"  HorizontalOptions="StartAndExpand" 
                          VerticalOptions="Start" Orientation="Horizontal">
                 <Label
+                    Margin="3"
                     WidthRequest="100"
                     FontSize="Large"
                     Text="Gestione Account"
@@ -112,9 +118,10 @@
                 </Label>
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" HorizontalOptions="StartAndExpand" 
-                         VerticalOptions="Start" Orientation="Horizontal" Margin="0,80">
+            <StackLayout Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3" Grid.RowSpan="2" HorizontalOptions="StartAndExpand" 
+                         VerticalOptions="Start" Orientation="Horizontal" >
                 <Button
+                    Margin="3"
                     Text="Cambia password"
                     CornerRadius="40"
                     FontSize="Large"
@@ -127,9 +134,10 @@
                 </Button>
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" HorizontalOptions="StartAndExpand" 
-                         VerticalOptions="End" Orientation="Horizontal" Margin="0,90">
+            <StackLayout Grid.Column="0" Grid.Row="7" Grid.ColumnSpan="3" Grid.RowSpan="2" HorizontalOptions="StartAndExpand" 
+                         VerticalOptions="Start" Orientation="Horizontal" >
                 <Button
+                    Margin="3"
                     Text="Cambia numero di telefono"
                     FontSize="Large"
                     CornerRadius="40"
