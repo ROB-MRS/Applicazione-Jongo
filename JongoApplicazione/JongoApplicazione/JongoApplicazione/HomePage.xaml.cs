@@ -34,8 +34,7 @@ namespace JongoApplicazione
 
         void Button_1_Clicked(System.Object sender, System.EventArgs e)
         {
-            
-
+            Browser.OpenAsync("https://www.jongomontaggi.it/", BrowserLaunchMode.SystemPreferred);
         }
 
         void Bottone_login(System.Object sender, System.EventArgs e)
