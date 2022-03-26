@@ -22,7 +22,7 @@ namespace JongoApplicazione.JongoApplicazione
         {
             InitializeComponent();
             this.utente= utente;
-            Nome.Text = "Nome: " + utente.Name;
+            Nome.Text = "Nome: " +  utente.Name;
             Cognome.Text ="Cognome: " + utente.Surname;
             Email.Text = "Email: "+utente.Email;
         }

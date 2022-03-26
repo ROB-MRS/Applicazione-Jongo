@@ -56,47 +56,50 @@
                 
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"  HorizontalOptions="FillAndExpand" 
+            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" 
                          VerticalOptions="Start" Orientation="Horizontal">
                 <Label
                     Margin="3"
                     x:Name="Nome"
                     WidthRequest="100"
+                    HorizontalOptions="FillAndExpand"
                     FontSize="Title"
                     FontAttributes="Bold"
-                    BackgroundColor="LightYellow"
-                    TextColor="#FFDE00"
+                    BackgroundColor="Goldenrod"
+                    TextColor="Black"
                     TextDecorations="None"
                     >
                 </Label>
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"  HorizontalOptions="StartAndExpand" 
+            <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" 
                          VerticalOptions="Start" Orientation="Horizontal">
                 <Label
                     Margin="3"
                     x:Name="Cognome"
+                    HorizontalOptions="FillAndExpand"
                     WidthRequest="130"
                     FontSize="Title"
                     FontAttributes="Bold"
-                    BackgroundColor="LightYellow"
-                    TextColor="#FFDE00"
+                    BackgroundColor="Goldenrod"
+                    TextColor="Black"
                     TextDecorations="None"
                     >
                 </Label>
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2"  HorizontalOptions="StartAndExpand" 
+            <StackLayout Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" 
                          VerticalOptions="Start" Orientation="Horizontal" >
                 <Label
                     
                     Margin="3"
                     x:Name="Email"
+                    HorizontalOptions="FillAndExpand"
                     WidthRequest="250"
                     FontSize="Title"
                     FontAttributes="Bold"
-                    BackgroundColor="LightYellow"
-                    TextColor="#FFDE00"
+                    BackgroundColor="Goldenrod"
+                    TextColor="Black"
                     TextDecorations="None"
                     >
                 </Label>
@@ -126,8 +129,8 @@
                     CornerRadius="40"
                     FontSize="Large"
                     FontAttributes="Bold"
-                    BackgroundColor="LightYellow"
-                    TextColor="#FFDE00"
+                    BackgroundColor="Goldenrod"
+                    TextColor="Black"
                     Clicked="bottone_password"
                     >
                     
@@ -142,8 +145,8 @@
                     FontSize="Large"
                     CornerRadius="40"
                     FontAttributes="Bold"
-                    BackgroundColor="LightYellow"
-                    TextColor="#FFDE00"
+                    BackgroundColor="Goldenrod"
+                    TextColor="Black"
                     Clicked="bottone_telefono"
                     >
 
