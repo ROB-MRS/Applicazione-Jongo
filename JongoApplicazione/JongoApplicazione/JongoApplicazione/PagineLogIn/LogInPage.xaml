@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage 
     BackgroundColor="#FFCCFF"
-    NavigationPage.HasNavigationBar="False"      
-    NavigationPage.HasBackButton="False"
+    NavigationPage.HasNavigationBar="True"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.LogInPage">
@@ -48,7 +47,7 @@
             <!-- Email-->
             <StackLayout Grid.Column="1" Grid.Row="3">
                 <!-- immagine email-->
-                <Image x:Name="Immagine_Email"
+                <Image Source= "{StaticResource immagineMail}"
                        VerticalOptions="Center"
                        HorizontalOptions="Center"/>
             </StackLayout>
