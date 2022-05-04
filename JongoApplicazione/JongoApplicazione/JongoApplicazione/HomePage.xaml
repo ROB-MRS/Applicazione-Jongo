@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage NavigationPage.HasNavigationBar="False"     NavigationPage.HasBackButton="False"
- BackgroundColor="Black"
+ BackgroundColor="{StaticResource ColoreSfondi}"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.HomePage">
@@ -43,8 +43,9 @@
                 <Label 
                     x:Name="Utente_loggato"
                     Text="---"
-                    TextColor="#FFDE00"
-                    BackgroundColor="#83738E"
+                    
+                    TextColor="{StaticResource ColoreScritte}"
+                 
                     FontSize="Large">
                     
                 </Label>
@@ -56,9 +57,11 @@
             <StackLayout VerticalOptions="End" Grid.Column="1">
                 <Button
                     x:Name="bottone_login"
-                    TextColor="#FFDE00"
+                    BackgroundColor="{StaticResource ColoreBottoni}"
+                    TextColor="{StaticResource ColoreScritte}"
+                     BorderColor="{StaticResource ColoreBordi}"
+                    BorderWidth="2"
                         Text="Log In"
-                        BackgroundColor="#83738E"
                         IsVisible="True"
                         Clicked="Bottone_login">
                 </Button>
@@ -68,8 +71,10 @@
                 <Button
                     x:Name="bottone_logout"
                     Text="Log Out"
-                    TextColor="#FFDE00"
-                    BackgroundColor="#83738E"
+                    BackgroundColor="{StaticResource ColoreBottoni}"
+                    TextColor="{StaticResource ColoreScritte}"
+                     BorderColor="{StaticResource ColoreBordi}"
+                    BorderWidth="2"
                     Clicked="Bottone_logout"
                     IsVisible="False">
                 </Button>
@@ -85,8 +90,11 @@
             <Button Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"
                     CornerRadius="50"
                     Text="CHI SIAMO?"
-                    BackgroundColor="#83738E"
-                    TextColor="#FFDE00"
+                    BorderColor="{StaticResource ColoreBordi}"
+                    BorderWidth="2"
+                    BackgroundColor="{StaticResource ColoreBottoni}"
+                    TextColor="{StaticResource ColoreScritte}"
+
                     Clicked="Button_1_Clicked">
             </Button>
 
@@ -99,8 +107,10 @@
             <Button Grid.Column="3" Grid.Row="2" Grid.RowSpan="2"
                     CornerRadius="50"
                     Text="IMPOSTAZIONI"
-                     BackgroundColor="#83738E"
-                    TextColor="#FFDE00">
+                    BackgroundColor="{StaticResource ColoreBottoni}"
+                    TextColor="{StaticResource ColoreScritte}"
+                     BorderColor="{StaticResource ColoreBordi}"
+                    BorderWidth="2">
             </Button>
 
             <!-- Bottone 3 -->
@@ -112,8 +122,10 @@
             <Button Grid.Column="2" Grid.Row="3" Grid.RowSpan="3"
                     CornerRadius="40"
                     Text="PRENOTA SUBITO"
-                     BackgroundColor="#83738E"
-                    TextColor="#FFDE00"
+                    BackgroundColor="{StaticResource ColoreBottoni}"
+                    TextColor="{StaticResource ColoreScritte}"
+                     BorderColor="{StaticResource ColoreBordi}"
+                    BorderWidth="2"
                     Clicked="Button_Clicked">
             </Button>
 
@@ -126,8 +138,10 @@
             <Button Grid.Column="1" Grid.Row="5" Grid.RowSpan="2"
                     CornerRadius="50"
                     Text="CONTATTACI"
-                    BackgroundColor="#83738E"
-                    TextColor="#FFDE00"
+                    BackgroundColor="{StaticResource ColoreBottoni}"
+                    TextColor="{StaticResource ColoreScritte}"
+                     BorderColor="{StaticResource ColoreBordi}"
+                    BorderWidth="2"
                     Clicked="Bottone_Contattaci">
             </Button>
 
@@ -141,15 +155,19 @@
                     CornerRadius="50"
                     Text="CRONOLOGIA"
                     Clicked="bottone_cronologia"
-                     BackgroundColor="#83738E"
-                    TextColor="#FFDE00">
+                    BackgroundColor="{StaticResource ColoreBottoni}"
+                     BorderColor="{StaticResource ColoreBordi}"
+                    BorderWidth="2"
+                    TextColor="{StaticResource ColoreScritte}">
             </Button>
 
             <!-- Bottone mappa -->
             <StackLayout Grid.Column="2" Grid.Row="8" VerticalOptions="Start">
                 <Button Text="mappa"
-                    BackgroundColor="#83738E"
-                    TextColor="#FFDE00"
+                    BackgroundColor="{StaticResource ColoreBottoni}"
+                    TextColor="{StaticResource ColoreScritte}"
+                         BorderColor="{StaticResource ColoreBordi}"
+                    BorderWidth="2"
                     Clicked="Bottone_Mappa"/>
             </StackLayout>
 

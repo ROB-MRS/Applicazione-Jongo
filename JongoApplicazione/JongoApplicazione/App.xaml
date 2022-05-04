@@ -12,5 +12,12 @@
             Android="User.svg"
             iOS ="User.svg" />
 
+        <!-- colori -->
+        <Color x:Key="ColoreBottoni">#FFCC99</Color>
+        <Color x:Key="ColoreSfondi">#FFCCFF</Color>
+        <Color x:Key="ColoreScritte">Black</Color>
+        <Color x:Key="ColoreBordi">#CC6600</Color>
+
+
     </Application.Resources>
-</Application>
+    </Application>
