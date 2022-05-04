@@ -1,10 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="JongoApplicazione.JongoApplicazione.Cronologia">
+                         x:Class="JongoApplicazione.JongoApplicazione.Cronologia"
+                BackgroundColor="#FFCCFF"
+             Title="CRONOLOGIA">
     <ContentPage.Content>
-        <CollectionView>
-        </CollectionView>
-        
-    </ContentPage.Content>
+            <ScrollView
+                x:Name="pagina"
+                >
+                <Label
+                    x:Name="Vuota"
+                    Text="Non ci sono prenotazioni effettuate"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    IsVisible="False"> 
+                
+                </Label>
+            </ScrollView>
+        </ContentPage.Content>
+
 </ContentPage>

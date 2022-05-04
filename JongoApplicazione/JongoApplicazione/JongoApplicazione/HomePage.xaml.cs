@@ -20,7 +20,6 @@ namespace JongoApplicazione
             {
                 bottone_logout.IsVisible = false;
                 bottone_login.IsVisible = true;
-                Utente_loggato.Text = "---";
                 
                 
             }
@@ -28,6 +27,7 @@ namespace JongoApplicazione
             {
                 bottone_login.IsVisible = false;
                 bottone_logout.IsVisible = true;
+                Utente_loggato.IsVisible = true;
                 Utente_loggato.Text = utente.Name + " " + utente.Surname;
             }
         }
@@ -49,7 +49,7 @@ namespace JongoApplicazione
 
         async void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            if(Utente_loggato.Text == "---")
+            if(utenteHomePage == null)
             {
                 await DisplayAlert("Attenzione", "Per prenotare è necessario autenticarsi", "OK");
                 return;
@@ -59,7 +59,7 @@ namespace JongoApplicazione
 
         async void bottone_cronologia(System.Object sender, System.EventArgs e)
         {
-            if (Utente_loggato.Text == "---")
+            if (utenteHomePage == null)
             {
                 await DisplayAlert("Attenzione", "Per accedere alla cronologia è necessario autenticarsi", "OK");
                 return;
@@ -104,6 +104,16 @@ namespace JongoApplicazione
             {
                 await Launcher.OpenAsync("bingmaps:?where=Roma");
             }
+        }
+
+        async void bottone_impostazioni(System.Object sender, System.EventArgs e)
+        {
+            if (utenteHomePage == null)
+            {
+                await DisplayAlert("Attenzione", "Per accedere alle impostazioni è necessario autenticarsi", "OK");
+                return;
+            }
+            await Navigation.PushAsync(new Impostazioni(utenteHomePage));
         }
     }
 }
