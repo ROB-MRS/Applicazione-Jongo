@@ -42,8 +42,5 @@
     <EmbeddedResource Update="JongoApplicazione\Cronologia.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="JongoApplicazione\Impostazioni.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
   </ItemGroup>
 </Project>

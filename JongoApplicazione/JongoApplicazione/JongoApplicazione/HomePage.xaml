@@ -42,11 +42,10 @@
             <StackLayout VerticalOptions="End" Grid.Column="3">
                 <Label 
                     x:Name="Utente_loggato"
-
+                    Text="---"
+                    
                     TextColor="{StaticResource ColoreScritte}"
-                    BackgroundColor="#83738E"
-                    IsVisible="False"
-
+                 
                     FontSize="Large">
                     
                 </Label>
@@ -108,14 +107,10 @@
             <Button Grid.Column="3" Grid.Row="2" Grid.RowSpan="2"
                     CornerRadius="50"
                     Text="IMPOSTAZIONI"
-
                     BackgroundColor="{StaticResource ColoreBottoni}"
                     TextColor="{StaticResource ColoreScritte}"
                      BorderColor="{StaticResource ColoreBordi}"
-                    BorderWidth="2"
-                    Clicked="bottone_impostazioni">
-
-
+                    BorderWidth="2">
             </Button>
 
             <!-- Bottone 3 -->

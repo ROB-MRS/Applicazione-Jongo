@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using JongoApplicazione.JongoApplicazione;
 using JongoApplicazione.JongoApplicazione.PagineLogIn;
 using JongoApplicazione.PagineLogIn;
-using Xamarin.Essentials;
+
 using Xamarin.Forms;
 
 namespace JongoApplicazione
@@ -119,7 +119,6 @@ namespace JongoApplicazione
                             ut = utente;
                         }
                     }
-                    Preferences.Set("token", token);
                     Errore_Password.IsVisible = false;
                     Console.WriteLine("stampa: " + Email.Text + Password.Text);
                     await Navigation.PushAsync(new HomePage(ut));

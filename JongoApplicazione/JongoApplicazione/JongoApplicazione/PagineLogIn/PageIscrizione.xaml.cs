@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
 
 //using System.Data.SqlClient;
 using Xamarin.Forms;
@@ -120,7 +119,7 @@ namespace JongoApplicazione.PagineLogIn
                 
                     if (!string.IsNullOrEmpty(token)) 
                     { 
-                        
+
                         List<string> listaEmail = new List<string>();
                         List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
 

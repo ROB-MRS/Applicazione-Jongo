@@ -25,7 +25,7 @@
 
         <!--Margin="150,150,150,0"-->
 
-        <Button HeightRequest="50" VerticalOptions="End" HorizontalOptions="FillAndExpand" FontAttributes="Bold"
+        <Button HeightRequest="50" VerticalOptions="End" HorizontalOptions="EndAndExpand" FontAttributes="Bold"
                 x:Name="conferma"
                 Text="Conferma Dati"
                 Clicked="bottone_conferma"
@@ -36,7 +36,7 @@
 
         </Button>
 
-        <Button HeightRequest="50" VerticalOptions="End" HorizontalOptions="FillAndExpand" FontAttributes="Bold"
+        <Button HeightRequest="50" VerticalOptions="End" HorizontalOptions="EndAndExpand" FontAttributes="Bold"
                 x:Name="modifica"
                 Text="Modifica Dati"
                 Clicked="bottone_modifica"

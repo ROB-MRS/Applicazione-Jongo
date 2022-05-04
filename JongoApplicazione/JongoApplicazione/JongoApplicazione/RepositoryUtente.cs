@@ -81,12 +81,7 @@ namespace JongoApplicazione.JongoApplicazione
             return "";
         }
 
-
-        public async Task<string> ChangePassword(string token,string password)
-        {
-            var auth = await authProvider.ChangeUserPassword(token,password);
-            return auth.FirebaseToken;
-        }
+        
 
 
     }

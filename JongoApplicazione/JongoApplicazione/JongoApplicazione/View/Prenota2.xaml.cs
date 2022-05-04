@@ -16,7 +16,7 @@ namespace JongoApplicazione.View
 
         void bottone_conferma(System.Object sender, System.EventArgs e)
         {
-            p.data = Data.Date.ToShortDateString();
+            p.data = Data.Date.ToLongDateString();
             p.ora = Orario.Time.ToString();
             p.informazioniExtra = Info.Text;
             conferma.IsVisible = false;
@@ -28,7 +28,5 @@ namespace JongoApplicazione.View
             modifica.IsVisible = false;
             conferma.IsVisible = true;
         }
-
-        
     }
 }
