@@ -1,4 +1,5 @@
-﻿using Firebase.Database;
+﻿using Firebase.Auth;
+using Firebase.Database;
 using JongoApplicazione.JongoApplicazione.View;
 using Newtonsoft.Json;
 using System;
@@ -23,6 +24,5 @@ namespace JongoApplicazione.JongoApplicazione.PagineLogIn
         public string Numero { get; set; }
 
         public int Password { get; set; }
-
     }
 }
