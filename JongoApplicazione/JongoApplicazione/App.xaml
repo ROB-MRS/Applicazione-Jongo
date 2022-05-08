@@ -18,6 +18,8 @@
         <Color x:Key="ColoreScritte">Black</Color>
         <Color x:Key="ColoreBordi">#CC6600</Color>
         <Color x:Key="ColoreBottoniModifica">#FFCC99</Color>
+        <Color x:Key="ColoreTitoli">DarkViolet</Color>
+
 
 
 

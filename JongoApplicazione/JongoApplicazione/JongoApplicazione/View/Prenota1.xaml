@@ -9,7 +9,8 @@
         <!-- margin : sinistra, sopra, destra, sotto --> 
         <Label FontSize="Subtitle" Margin="110,30,100,30"
             Text="INFO PERSONALI"
-             TextDecorations="Underline"
+            FontAttributes="Bold"
+            TextColor="{StaticResource ColoreTitoli}"
               />
         <Entry FontSize="Large" Margin="10,0,10,0"
             x:Name="Nome"
