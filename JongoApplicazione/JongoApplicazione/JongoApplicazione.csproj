@@ -20,11 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="ViewModel\" />
-    <None Remove="PagineLogIn\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModel\" />
-    <Folder Include="PagineLogIn\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
