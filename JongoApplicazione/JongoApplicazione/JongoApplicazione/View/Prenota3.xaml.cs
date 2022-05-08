@@ -34,11 +34,20 @@ namespace JongoApplicazione.View
 
         void bottone_conferma(System.Object sender, System.EventArgs e)
         {
+            
+            
             int selectedIndex = categoria.SelectedIndex;
+            if(selectedIndex < 0)
+            {
+                selectedIndex = 4;
+            }
             p.servizio = categoria.Items[selectedIndex];
             p.descrizione = descrizione.Text;
             conferma.IsVisible = false;
             modifica.IsVisible = true;
+             
+            
+            
         }
 
         void bottone_modifica(System.Object sender, System.EventArgs e)
