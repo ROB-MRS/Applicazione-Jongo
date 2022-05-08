@@ -67,10 +67,10 @@ namespace JongoApplicazione
             await Navigation.PushAsync(new Cronologia(utenteHomePage));
         }
 
-        void Bottone_Impostazioni_Clicked(System.Object sender, System.EventArgs e)
-        {
-            Navigation.PushAsync(new NavigationPage(new SettingsPage()));
-        }
+        //void Bottone_Impostazioni_Clicked(System.Object sender, System.EventArgs e)
+        //{
+        //    Navigation.PushAsync(new NavigationPage(new SettingsPage()));
+        //}
 
         async void SendWhatsapp()
         {
