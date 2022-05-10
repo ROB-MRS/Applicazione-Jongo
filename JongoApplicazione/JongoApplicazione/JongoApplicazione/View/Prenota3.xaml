@@ -53,62 +53,71 @@
 
         </Grid.RowDefinitions>
 
-              <!-- Immagine/ Animazione Jongo -->
+              <!-- Immagine/ Animazione Jongo 
             <StackLayout Grid.Column="1" Grid.Row="0" Padding="0,-125,0,0" Margin="15" Grid.ColumnSpan="3">
-                <Image Source="logo_rettangolare2.png"
+                <Image Source="logo_quadrato2.png"
                        HeightRequest="400"
                        WidthRequest="400"
                        VerticalOptions="Start"
                        HorizontalOptions="End"/>
-            </StackLayout>
+            </StackLayout> -->
              
              <!-- TITOLO -->
-        <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3">
-            <Label Text="DETTAGLI"  Font="Title" FontSize="Large" TextColor="DarkViolet"/>
+        <StackLayout Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,50">
+            <Label Text="DETTAGLI"  FontAttributes="Bold" FontSize="Subtitle" TextColor="{StaticResource ColoreTitoli}"/>
             </StackLayout>
 
-              <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
-            <Label Text="Di quale lavoro hai bisogno?"  Font="Title" TextColor="DarkViolet"/>
+              <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,-110,0,0">
+            <Label Text="Di quale lavoro hai bisogno?" FontSize="Large" FontAttributes="Italic" TextColor="{StaticResource ColoreTitoli}"/>
             </StackLayout>
-             <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3">
+             <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,-40,0,0">
                   <Picker x:Name="categoria"
-                          
                           Title="Categoria"/>
-                     
-                 
                  </StackLayout>
 
 
-             <StackLayout Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3">
-                  <Entry
+             <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,20,0,80">
+                  <Editor
+                      HeightRequest="200"
                       x:Name="descrizione"
-                      Placeholder="Descrizione"
+                      Placeholder="Descrizione del lavoro da svolgere"
                       />
                      
-                 
-                 </StackLayout>
-
-            <Button  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Small" FontAttributes="Bold"
+               
+                
+             <StackLayout Margin="150,10,0,0">
+            <Button FontSize="Small" FontAttributes="Bold"
                 x:Name="conferma"
                 Text="Conferma Dati"
                 Clicked="bottone_conferma"
-                BackgroundColor="DarkGoldenrod"
-                TextColor="White"
+                BackgroundColor="{StaticResource ColoreBottoni}"
+                TextColor="{StaticResource ColoreScritte}"
+                BorderWidth="2"
+                BorderColor="{StaticResource ColoreBordi}"
+                CornerRadius="10"
+                Padding="10"
                 IsVisible="True"
                 >
 
             </Button>
+            </StackLayout>
 
-            <Button  Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" FontSize="Small" FontAttributes="Bold"
+             <StackLayout Margin="0,-4,150,0">
+            <Button  FontSize="Small" FontAttributes="Bold"
                 x:Name="modifica"
                 Text="Modifica Dati"
                 Clicked="bottone_modifica"
-                BackgroundColor="DarkGoldenrod"
-                TextColor="White"
+                BackgroundColor="{StaticResource ColoreBottoni}"
+                TextColor="{StaticResource ColoreScritte}"
+                BorderWidth="2"
+                BorderColor="{StaticResource ColoreBordi}"
+                CornerRadius="10"
                 IsVisible="False"
                 >
 
             </Button>
+           </StackLayout>
+         </StackLayout>
         </Grid>
 
     </ContentView.Content>
