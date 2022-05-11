@@ -14,20 +14,22 @@ namespace JongoApplicazione.View
         RepositoryPrenotazione repository = new RepositoryPrenotazione();
         RepositoryUtente repositoryU = new RepositoryUtente();
 
-        public Prenota6(Prenotazione prenotazione,Utente utente)
+        public Prenota6(Prenotazione prenotazione, Utente utente)
         {
             InitializeComponent();
             p = prenotazione;
             u = utente;
         }
-         void Button_OK_Clicked(System.Object sender, System.EventArgs e)
+
+        void Button_OK_Clicked(System.Object sender, System.EventArgs e)
         {
             u.prenotazioni.Add(p);
             repositoryU.Update(u);
-            var isSaved =   repository.Save(p);
-            
+            var isSaved = repository.Save(p);
+
             Navigation.PopAsync();
 
         }
+
     }
 }
