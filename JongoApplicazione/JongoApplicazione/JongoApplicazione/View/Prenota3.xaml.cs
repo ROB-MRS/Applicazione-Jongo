@@ -10,12 +10,7 @@ namespace JongoApplicazione.View
         Prenotazione p;
         public Prenota3(Prenotazione prenotazione)
         {
-            /* List<string> listOfNames = new List<string>()
-            {
-                "John Doe",
-                "Jane Doe",
-                "Joe Doe"
-            }; */
+           
 
             InitializeComponent();
 
@@ -32,15 +27,11 @@ namespace JongoApplicazione.View
             
         }
 
-        void bottone_conferma(System.Object sender, System.EventArgs e)
+        void Bottone_conferma(System.Object sender, System.EventArgs e)
         {
             
             
             int selectedIndex = categoria.SelectedIndex;
-            if(selectedIndex < 0)
-            {
-                selectedIndex = 4;
-            }
             p.servizio = categoria.Items[selectedIndex];
             p.descrizione = descrizione.Text;
             conferma.IsVisible = false;
@@ -50,7 +41,7 @@ namespace JongoApplicazione.View
             
         }
 
-        void bottone_modifica(System.Object sender, System.EventArgs e)
+        void Bottone_modifica(System.Object sender, System.EventArgs e)
         {
             modifica.IsVisible = false;
             conferma.IsVisible = true;

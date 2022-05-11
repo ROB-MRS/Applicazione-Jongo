@@ -5,9 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.View.Prenota3">
     <ContentView.Content>
-         <Grid>
+         <Grid> 
                   <!--Divido la pagina in 5 colonne e 5 righe-->
-        <Grid.ColumnDefinitions>
+        <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="3*"></ColumnDefinition>
@@ -20,7 +20,7 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition> -->
 
 
             <!--Griglia di prova 
@@ -51,7 +51,7 @@
              <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="4" />
                 -->
 
-        </Grid.RowDefinitions>
+      <!-- </Grid.RowDefinitions> -->  
 
               <!-- Immagine/ Animazione Jongo 
             <StackLayout Grid.Column="1" Grid.Row="0" Padding="0,-125,0,0" Margin="15" Grid.ColumnSpan="3">
@@ -63,51 +63,52 @@
             </StackLayout> -->
              
              <!-- TITOLO -->
-        <StackLayout Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,50">
+             <StackLayout> 
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Start" Margin="0,30,0,0">
             <Label Text="DETTAGLI"  FontAttributes="Bold" FontSize="Subtitle" TextColor="{StaticResource ColoreTitoli}"/>
             </StackLayout>
 
-              <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,-110,0,0">
+             <!-- SOTTOTITOLO -->
+              <StackLayout Margin="56,30,0,0">
             <Label Text="Di quale lavoro hai bisogno?" FontSize="Large" FontAttributes="Italic" TextColor="{StaticResource ColoreTitoli}"/>
             </StackLayout>
-             <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,-40,0,0">
+
+             <!-- CATEGORIA -->
+             <StackLayout Margin="55,30,55,0">
                   <Picker x:Name="categoria"
                           Title="Categoria"/>
                  </StackLayout>
 
-
-             <StackLayout Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,20,0,80">
+             <!-- BOX PER AGGIUNGERE DESCRIZIONE -->
+            
+             <StackLayout Margin="55,20,55,0"> 
                   <Editor
-                      HeightRequest="200"
                       x:Name="descrizione"
                       Placeholder="Descrizione del lavoro da svolgere"
-                      />
-                     
-               
-                
-             <StackLayout Margin="150,10,0,0">
-            <Button FontSize="Small" FontAttributes="Bold"
+                      HeightRequest="170"
+                      />  
+
+                 <!-- BOTTONI CONFERMA E MODIFICA  --> 
+             
+               <Button  VerticalOptions="End" HorizontalOptions="EndAndExpand" FontAttributes="Bold" Padding="10" Margin="0,10,0,0"
                 x:Name="conferma"
                 Text="Conferma Dati"
-                Clicked="bottone_conferma"
+                Clicked="Bottone_conferma"
                 BackgroundColor="{StaticResource ColoreBottoni}"
                 TextColor="{StaticResource ColoreScritte}"
                 BorderWidth="2"
                 BorderColor="{StaticResource ColoreBordi}"
                 CornerRadius="10"
-                Padding="10"
                 IsVisible="True"
                 >
 
-            </Button>
-            </StackLayout>
+        </Button>
 
-             <StackLayout Margin="0,-4,150,0">
-            <Button  FontSize="Small" FontAttributes="Bold"
+        <Button  VerticalOptions="End" HorizontalOptions="StartAndExpand" FontAttributes="Bold" Padding="10" Margin="0,10,0,0"
                 x:Name="modifica"
                 Text="Modifica Dati"
-                Clicked="bottone_modifica"
-                BackgroundColor="{StaticResource ColoreBottoni}"
+                Clicked="Bottone_modifica"
+                BackgroundColor="{StaticResource ColoreBottoniModifica}"
                 TextColor="{StaticResource ColoreScritte}"
                 BorderWidth="2"
                 BorderColor="{StaticResource ColoreBordi}"
@@ -115,10 +116,15 @@
                 IsVisible="False"
                 >
 
-            </Button>
-           </StackLayout>
+        </Button>
+           
+
          </StackLayout>
-        </Grid>
+
+              
+
+           </StackLayout>  
+         </Grid> 
 
     </ContentView.Content>
 </ContentView>
