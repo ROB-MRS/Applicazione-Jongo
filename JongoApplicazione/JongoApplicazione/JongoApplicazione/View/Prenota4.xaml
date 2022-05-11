@@ -39,42 +39,7 @@
             <RowDefinition Height="*"></RowDefinition>
 
         </Grid.RowDefinitions>
-
-            <!--Griglia di prova 
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="4" /> -->
-                
-
-            
-             
-
-            
-        
-      
-
+       
         <!-- TITOLO -->
         <StackLayout Grid.Row="1" Grid.Column="2" >
             <Label Text="TARIFFE"  Font="Title" FontSize="Large" TextColor="DarkViolet"/>
