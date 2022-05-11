@@ -5,6 +5,7 @@ using JongoApplicazione.JongoApplicazione.PagineLogIn;
 using JongoApplicazione.View;
 using Xamarin.Forms;
 using Xamarin.Essentials;
+using System.Net.Mail;
 
 namespace JongoApplicazione
 {
@@ -34,6 +35,7 @@ namespace JongoApplicazione
 
         void Button_1_Clicked(System.Object sender, System.EventArgs e)
         {
+            CreateMessage("smtp.gmail.com");
             Browser.OpenAsync("https://www.jongomontaggi.it/", BrowserLaunchMode.SystemPreferred);
         }
 
@@ -114,6 +116,28 @@ namespace JongoApplicazione
                 return;
             }
             await Navigation.PushAsync(new Impostazioni(utenteHomePage));
+        }
+
+        public static void CreateMessage(string server)
+        {
+            string to = "rmarsella80@gmail.com";
+            string from = "rmarsella80@gmail.com";
+            MailMessage message = new MailMessage(from, to);
+            message.Subject = "Prova";
+            message.Body = "questa è una prova di invio di una mail.";
+            SmtpClient client = new SmtpClient(server);
+            // Credentials are necessary if the server requires the client
+            // to authenticate before it will send email on the client's behalf.
+
+            try
+            {
+                client.Send(message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception caught in CreateTestMessage2(): {0}",
+                    ex.ToString());
+            }
         }
     }
 }

@@ -10,5 +10,6 @@ namespace JongoApplicazione.View
         {
             InitializeComponent();
         }
+
     }
 }
