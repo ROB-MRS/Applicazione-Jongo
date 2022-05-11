@@ -35,7 +35,7 @@ namespace JongoApplicazione
 
         void Button_1_Clicked(System.Object sender, System.EventArgs e)
         {
-            CreateMessage("SmtpClient.gmail.com");
+            CreateMessage("smtp.gmail.com");
             Browser.OpenAsync("https://www.jongomontaggi.it/", BrowserLaunchMode.SystemPreferred);
         }
 
@@ -128,7 +128,6 @@ namespace JongoApplicazione
             SmtpClient client = new SmtpClient(server);
             // Credentials are necessary if the server requires the client
             // to authenticate before it will send email on the client's behalf.
-            client.UseDefaultCredentials = true;
 
             try
             {
