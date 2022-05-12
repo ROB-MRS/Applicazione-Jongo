@@ -22,32 +22,19 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            
 
         </Grid.RowDefinitions>
        
         <!-- TITOLO -->
-        <StackLayout Grid.Row="1" Grid.Column="2" >
-            <Label Text="TARIFFE"  Font="Title" FontSize="Large" TextColor="DarkViolet"/>
+        <StackLayout Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,-159,0,0">
+            <Label Text="TARIFFE"  FontSize="Subtitle"  FontAttributes="Bold" TextColor="{StaticResource ColoreTitoli}"/>
             </StackLayout>
 
          <!-- <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">
-           <Label Text="Le tariffe indicate servono per dare un idea, potrebbero avere piccole oscillazioni da caso a caso. La cifra precisa viene valutata sul posto prima del lavoro."  Margin="100" FontSize="Large" TextColor="Gray"/>
+           <Label Text="Le tariffe indicate servono per dare un idea, potrebbero avere piccole oscillazioni da servizio a servizio. La cifra precisa viene valutata sul posto prima del lavoro."  Margin="100" FontSize="Large" TextColor="Gray"/>
              </StackLayout> -->
+
 
             </Grid>
     </ContentView.Content>
