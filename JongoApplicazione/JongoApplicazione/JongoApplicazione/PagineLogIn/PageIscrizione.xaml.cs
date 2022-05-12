@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Net.Mail;
 using System.Threading.Tasks;
 
 //using System.Data.SqlClient;
@@ -147,6 +148,7 @@ namespace JongoApplicazione.PagineLogIn
                             var isSaved = await repository.Save(utente);
                             if (isSaved)
                             {
+
                                 await DisplayAlert("Informazione", "Registrazione effettuata!", "OK");
                                 Etichetta.IsVisible = true;
                             }
@@ -162,6 +164,33 @@ namespace JongoApplicazione.PagineLogIn
             catch (Exception ex)
             {
                 await DisplayAlert("Errore", "Email già presente o inesistente", "OK");
+            }
+        }
+
+        void CreateMail()
+        {
+            try
+            {
+
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                mail.From = new MailAddress("rmarsella80@gmail.com");
+                mail.To.Add(Email.Text);
+                mail.Subject = "GRAZIE PER ESSERTI ISCRITTO! ";
+                mail.Body = "prova dell'invio di una mail.";
+
+                SmtpServer.Port = 587;
+                SmtpServer.Host = "smtp.gmail.com";
+                SmtpServer.EnableSsl = true;
+                SmtpServer.UseDefaultCredentials = false;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("rmarsella80@gmail.com", "Roberto01");
+
+                SmtpServer.Send(mail);
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Faild", ex.Message, "OK");
             }
         }
 

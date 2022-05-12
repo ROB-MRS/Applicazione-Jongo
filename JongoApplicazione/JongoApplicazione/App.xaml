@@ -21,7 +21,5 @@
         <Color x:Key="ColoreTitoli">DarkViolet</Color>
 
 
-
-
     </Application.Resources>
     </Application>
