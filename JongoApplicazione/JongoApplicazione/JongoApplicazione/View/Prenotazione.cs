@@ -26,6 +26,8 @@ namespace JongoApplicazione.JongoApplicazione.View
 
         public string numero    { get; set; }
 
+        public string mail { get; set; }
+
         public string descrizione { get; set; }
         
 

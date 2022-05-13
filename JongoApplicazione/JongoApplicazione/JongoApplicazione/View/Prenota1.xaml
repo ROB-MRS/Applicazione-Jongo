@@ -24,7 +24,9 @@
         <Entry FontSize="Large" Margin="10,10,10,0"
             x:Name="CAP" 
             Placeholder="CAP"/>
-
+        <Entry FontSize="Large" Margin="10,10,10,0"
+            x:Name="Mail"
+            Placeholder="Mail"/>
         <Entry FontSize="Large" Margin="10,10,10,0"
             x:Name="Telefono"
             Placeholder="Numero telefono"/>

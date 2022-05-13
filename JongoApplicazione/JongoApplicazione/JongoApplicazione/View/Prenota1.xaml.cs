@@ -22,6 +22,7 @@ namespace JongoApplicazione.View
             p.cap = CAP.Text;
             p.via = Indirizzo.Text;
             p.numero = Telefono.Text;
+            p.mail = Mail.Text;
             conferma.IsVisible = false;
             modifica.IsVisible = true;
         }

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 
 //using System.Data.SqlClient;
 using Xamarin.Forms;
@@ -148,7 +149,7 @@ namespace JongoApplicazione.PagineLogIn
                             var isSaved = await repository.Save(utente);
                             if (isSaved)
                             {
-
+                                CreateMail();
                                 await DisplayAlert("Informazione", "Registrazione effettuata!", "OK");
                                 Etichetta.IsVisible = true;
                             }
@@ -175,7 +176,7 @@ namespace JongoApplicazione.PagineLogIn
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
-                mail.From = new MailAddress("rmarsella80@gmail.com");
+                mail.From = new MailAddress("info.jongo@gmail.com");
                 mail.To.Add(Email.Text);
                 mail.Subject = "GRAZIE PER ESSERTI ISCRITTO! ";
                 mail.Body = "Hai completato con successo l'iscrizione a Jongo!/nPer saperne di piu sui nostri servizi visita https://www.jongomontaggi.it/";
@@ -184,7 +185,7 @@ namespace JongoApplicazione.PagineLogIn
                 SmtpServer.Host = "smtp.gmail.com";
                 SmtpServer.EnableSsl = true;
                 SmtpServer.UseDefaultCredentials = false;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("rmarsella80@gmail.com", "Roberto01");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("info.jongo@gmail.com", "Info2022");
 
                 SmtpServer.Send(mail);
             }

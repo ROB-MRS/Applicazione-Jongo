@@ -2,8 +2,10 @@
 using JongoApplicazione.JongoApplicazione.View;
 using System;
 using System.ComponentModel;
+using System.Net.Mail;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace JongoApplicazione.ViewModel
 {
@@ -57,7 +59,7 @@ namespace JongoApplicazione.ViewModel
 
         public void Avanti()
         {
-          
+
             if(pagina<6)
                 pagina++;
             
@@ -100,6 +102,8 @@ namespace JongoApplicazione.ViewModel
                     return;
                 case 6:
                     content = Prenota6;
+                    //CreateMail(Prenotazione.getMail(),"PRENOTAZIONE LAVORO",CreateMessage(true));
+                    CreateMail("info.jongo@gmail.com", "RIEPILOGO ORDINE JONGO", CreateMessage(false));
                     AggiornaPagina();
                     return;
                 default:
@@ -111,6 +115,47 @@ namespace JongoApplicazione.ViewModel
         {
             OnPropertyChanged("content");
             CambioPaginaEvent?.Invoke(pagina);
+        }
+
+        void CreateMail(String email, String subject, String message)
+        {
+            try
+            {
+
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                mail.From = new MailAddress("info.jongo@gmail.com");
+                mail.To.Add(email);
+                mail.Subject = subject;
+                mail.Body = message;
+
+                SmtpServer.Port = 587;
+                SmtpServer.Host = "smtp.gmail.com";
+                SmtpServer.EnableSsl = true;
+                SmtpServer.UseDefaultCredentials = false;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("info.jongo@gmail.com", "Info2022");
+
+                SmtpServer.Send(mail);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+                //DisplayAlert("Faild", ex.Message, "OK");
+            }
+        }
+
+        String CreateMessage(bool valore)
+        {
+            String messaggio = "";
+            if (valore)
+            {
+                return messaggio;
+            }
+            else
+            {
+                return messaggio ;
+            }
         }
     }
 }
