@@ -178,7 +178,7 @@ namespace JongoApplicazione.PagineLogIn
                 mail.From = new MailAddress("rmarsella80@gmail.com");
                 mail.To.Add(Email.Text);
                 mail.Subject = "GRAZIE PER ESSERTI ISCRITTO! ";
-                mail.Body = "prova dell'invio di una mail.";
+                mail.Body = "Hai completato con successo l'iscrizione a Jongo!/nPer saperne di piu sui nostri servizi visita https://www.jongomontaggi.it/";
 
                 SmtpServer.Port = 587;
                 SmtpServer.Host = "smtp.gmail.com";
