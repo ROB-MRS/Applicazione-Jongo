@@ -26,20 +26,22 @@
         </Grid.RowDefinitions>
 
              <!-- TITOLO -->
-        <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" HorizontalOptions="Center" VerticalOptions="Start" Margin="20,0,0,0" >
-            <Label Text="LA PRENOTAZIONE É AVVENUTA CON SUCCESSO✅"  FontSize="Subtitle"  FontAttributes="Bold" TextColor="{StaticResource ColoreTitoli}"/>
+        <StackLayout Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,20,0,0" >
+            <Label Text="COMPLETATA✅"  FontSize="Subtitle"  FontAttributes="Bold" TextColor="{StaticResource ColoreTitoli}"/>
             </StackLayout>
 
             <!-- SOTTOTITOLO -->
-             <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3">
-                 <Label Text="La prenotazione è avvenita con successo, cliccando OK tornerai all'home page"/>
+             <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,-40,0,0">
+                 <Frame>
+                 <Label Text="La prenotazione è avvenuta con successo! Cliccando OK tornerai all'home page"  FontSize="Large" FontAttributes="Italic"/>
+                 </Frame>
             </StackLayout>
 
          
 
 
         <!-- Bottone OK -->
-            <StackLayout Grid.Column="2" Grid.ColumnSpan="3"  Grid.Row="4">
+            <StackLayout Grid.Column="2" Grid.Row="2" Margin="0,20,0,0">
                 <Button x:Name="Bottone_OK"
                         Text="OK"
                         FontSize="20"
