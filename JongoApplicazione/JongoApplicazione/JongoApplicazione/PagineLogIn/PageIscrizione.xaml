@@ -6,60 +6,64 @@
     BackgroundColor="#FFCCFF">
 
     <ContentPage.Content>
-        <StackLayout >
-                <Entry
+        <StackLayout>
+            <!-- TITOLO -->
+            <Label FontSize="Subtitle" Margin="110,30,100,30"
+            Text="ISCRIZIONE💳"
+            FontAttributes="Bold"
+            TextColor="{StaticResource ColoreTitoli}"
+              />
+            <!-- TUTTE LE ENTRY PER LE INFO -->
+                <Entry FontSize="Large" Margin="10,0,10,0"
                 x:Name="Nome"
-                Placeholder="Nome"
-                PlaceholderColor="Violet"
-                Text="">
+                Placeholder="Nome">
                 </Entry>
-                <Entry
+
+                <Entry FontSize="Large" Margin="10,10,10,0"
                 x:Name="Cognome"
-                Placeholder="Cognome"
-                PlaceholderColor="Violet"
-                Text="">
-                    <!--Text="Cognome">-->
+                Placeholder="Cognome">
                 </Entry>
-                <Entry
+
+                <Entry FontSize="Large" Margin="10,10,10,0"
                 x:Name="Numero"
-                Placeholder="Numero di telefono"
-                PlaceholderColor="Violet"
-                Text="">
-                    <!--Text="Numero di telefono">-->
+                Placeholder="Numero di telefono">
                 </Entry>
-                <Entry
+
+                <Entry FontSize="Large" Margin="10,10,10,0"
                 x:Name="Email"
-                Placeholder="Email"
-                PlaceholderColor="Violet"
-                Text="">
-                    <!--Text="Email">-->
+                Placeholder="Email">
                 </Entry>
-                <Entry
+
+                <Entry FontSize="Large" Margin="10,10,10,0"
                 x:Name="Password"
                 Placeholder="Password"
-                PlaceholderColor="Violet"
-                Text=""
                 IsPassword="True">
-                    <!--Text="Password">-->
-
                 </Entry>
-                <Entry
+
+                <Entry FontSize="Large" Margin="10,10,10,0"
                 x:Name="Conferma_Password"
                 IsPassword="True"
-                Text=""
-                PlaceholderColor="Violet"
                 Placeholder="Conferma Password">
-                    <!--Text="Conferma password">-->
                 </Entry>
-                <Button
-                Text="Iscriviti"
-                BackgroundColor="Gold"
-                Clicked="Bottone_premuto"
-                ></Button>
-                <Label
+
+                <Button HorizontalOptions="Center" Margin="0,60,0,0"
+                Text="ISCRIVITI"
+                TextColor="White"
+                Padding="50,10,50,10"
+                FontSize="20"
+                BackgroundColor="#6F00FF"
+                CornerRadius="15"
+                Clicked="Bottone_premuto">
+                </Button>
+
+                <Label Margin="70,30,0,0"
                 x:Name="Etichetta"
-                Text="Ti Sei Iscritto con Successo"
-                IsVisible="False"></Label>
+                TextColor="Green"
+                FontSize="Large"
+                Text="Ti sei iscritto con successo"
+                IsVisible="False">
+                </Label>
+
             </StackLayout>
         
 
