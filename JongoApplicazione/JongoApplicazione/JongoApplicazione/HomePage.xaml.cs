@@ -96,15 +96,15 @@ namespace JongoApplicazione
         {
             if (Device.RuntimePlatform == Device.iOS)
             {
-                await Launcher.OpenAsync("http://maps.apple.com/?q=Roma&z=2");
+                await Launcher.OpenAsync("http://maps.apple.com/?q=Viale+dell+Esperanto+14+Roma&z=2");
             }
             else if (Device.RuntimePlatform == Device.Android)
             {
-                await Launcher.OpenAsync("geo:0,0?q=Roma");
+                await Launcher.OpenAsync("geo:0,0?q=Viale+dell'+Esperanto+14+Roma");
             }
             else if (Device.RuntimePlatform == Device.UWP)
             {
-                await Launcher.OpenAsync("bingmaps:?where=Roma");
+                await Launcher.OpenAsync("bingmaps:?where=Viale dell'Esperanto 14 Roma");
             }
         }
 
