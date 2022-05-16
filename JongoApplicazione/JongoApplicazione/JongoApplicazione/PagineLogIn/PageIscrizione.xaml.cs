@@ -46,7 +46,7 @@ namespace JongoApplicazione.PagineLogIn
         {
             foreach(char c in numero)
             {
-                if(c < '1' || c > '9')
+                if(c < '0' || c > '9')
                 {
                     return false;
                 }
@@ -76,15 +76,15 @@ namespace JongoApplicazione.PagineLogIn
                 verifica = false;
             }
 
-            else if (string.IsNullOrEmpty(numero) && isNumero(numero))
+            else if (string.IsNullOrEmpty(numero))
             {
-                await DisplayAlert("Errore", "Inserire un numero", "OK");
+                await DisplayAlert("Errore", "Inserire il numero di telefono", "OK");
                 verifica = false;
             }
 
-            else if (string.IsNullOrEmpty(password))
+            else if (!isNumero(numero))
             {
-                await DisplayAlert("Errore", "Inserire la password", "OK");
+                await DisplayAlert("Errore", "Il numero di telefono deve essere composto da soli numeri senza spazi", "OK");
                 verifica = false;
             }
 
@@ -94,6 +94,13 @@ namespace JongoApplicazione.PagineLogIn
                 verifica = false;
             }
 
+            else if (string.IsNullOrEmpty(password))
+            {
+                await DisplayAlert("Errore", "Inserire la password", "OK");
+                verifica = false;
+            }
+
+            
             else if (password != Conferma_Password.Text)
             {
                 await DisplayAlert("Errore", "Password di conferma non corretta", "OK");
@@ -140,8 +147,8 @@ namespace JongoApplicazione.PagineLogIn
                 
 
                             Utente utente = new Utente();
-                            utente.Name = nome;
-                            utente.Surname = cognome;
+                            utente.Name = nome.ToUpper();
+                            utente.Surname = cognome.ToUpper();
                             utente.Email = email;
                             utente.Password = password.GetHashCode();
                             utente.Numero = numero;
@@ -150,16 +157,12 @@ namespace JongoApplicazione.PagineLogIn
                             if (isSaved)
                             {
                                 CreateMail();
-                                await DisplayAlert("Informazione", "Registrazione effettuata!", "OK");
-                                Etichetta.IsVisible = true;
+                                await DisplayAlert("Informazione", "Controlla la mail per verificare di esserti iscritto con successo ", "OK");
+                                await Navigation.PushAsync(new HomePage(utente));
                             }
                         }
                     }
 
-                    else
-                    {
-                        await DisplayAlert("Errore", "Email non esistente", "OK");
-                    }
                 }
             }
             catch (Exception ex)
@@ -179,7 +182,7 @@ namespace JongoApplicazione.PagineLogIn
                 mail.From = new MailAddress("info.jongo@gmail.com");
                 mail.To.Add(Email.Text);
                 mail.Subject = "GRAZIE PER ESSERTI ISCRITTO! ";
-                mail.Body = "Hai completato con successo l'iscrizione a Jongo!/nPer saperne di piu sui nostri servizi visita https://www.jongomontaggi.it/";
+                mail.Body = "Hai completato con successo l'iscrizione a Jongo!\nPer saperne di piu sui nostri servizi visita https://www.jongomontaggi.it/";
 
                 SmtpServer.Port = 587;
                 SmtpServer.Host = "smtp.gmail.com";

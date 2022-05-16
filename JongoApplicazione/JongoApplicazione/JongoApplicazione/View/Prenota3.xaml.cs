@@ -29,10 +29,16 @@ namespace JongoApplicazione.View
 
         void Bottone_conferma(System.Object sender, System.EventArgs e)
         {
+            try
+            {
+                int selectedIndex = categoria.SelectedIndex;
+                p.servizio = categoria.Items[selectedIndex];
+            }
+            catch(Exception ex)
+            {
+                p.servizio = categoria.Items[4];
+            }
             
-            
-            int selectedIndex = categoria.SelectedIndex;
-            p.servizio = categoria.Items[selectedIndex];
             p.descrizione = descrizione.Text;
             conferma.IsVisible = false;
             modifica.IsVisible = true;
