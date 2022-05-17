@@ -34,7 +34,7 @@ namespace JongoApplicazione.ViewModel
             pagina = 1;
 
             content = new ContentView();
-            Prenota1 = new View.Prenota1(prenotazione);
+            Prenota1 = new View.Prenota1(prenotazione,utente);
             Prenota2 = new View.Prenota2(prenotazione);
             Prenota3 = new View.Prenota3(prenotazione);
             Prenota4 = new View.Prenota4();

@@ -52,8 +52,7 @@ namespace JongoApplicazione
         {
             if(utenteHomePage == null)
             {
-                await DisplayAlert("Attenzione", "Per prenotare è necessario autenticarsi", "OK");
-                return;
+                await Navigation.PushAsync(new LogInPage());
             }
             await Navigation.PushAsync(new View.Prenota(utenteHomePage));
         }

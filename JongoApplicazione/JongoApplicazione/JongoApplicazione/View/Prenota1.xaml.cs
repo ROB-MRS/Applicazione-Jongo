@@ -1,4 +1,5 @@
-﻿using JongoApplicazione.JongoApplicazione.View;
+﻿using JongoApplicazione.JongoApplicazione.PagineLogIn;
+using JongoApplicazione.JongoApplicazione.View;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
@@ -9,9 +10,12 @@ namespace JongoApplicazione.View
     {
         Prenotazione p;
         
-        public Prenota1(Prenotazione prenotazione)
+        public Prenota1(Prenotazione prenotazione,Utente utente)
         {
             InitializeComponent();
+            Nome.Text = utente.Name;
+            Cognome.Text = utente.Surname;
+            Mail.Text = utente.Email;
             p = prenotazione;
         }
 
