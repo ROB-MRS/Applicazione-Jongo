@@ -53,6 +53,7 @@ namespace JongoApplicazione
             if(utenteHomePage == null)
             {
                 await Navigation.PushAsync(new LogInPage());
+                return;
             }
             await Navigation.PushAsync(new View.Prenota(utenteHomePage));
         }
