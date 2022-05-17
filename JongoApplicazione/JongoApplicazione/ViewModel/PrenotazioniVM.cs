@@ -12,6 +12,8 @@ namespace JongoApplicazione.ViewModel
     public class PrenotazioniVM :  INotifyPropertyChanged
     {
         public int pagina { get; set; }
+        private Prenotazione p;
+        private Utente u;
 
         public ContentView content { get; set; }
 
@@ -38,6 +40,8 @@ namespace JongoApplicazione.ViewModel
             Prenota4 = new View.Prenota4();
             Prenota5 = new View.Prenota5();
             Prenota6 = new View.Prenota6(prenotazione,utente);
+            this.p = prenotazione;
+            this.u = utente;
 
 
             ComandoAvanti = new Command(Avanti);
@@ -102,8 +106,10 @@ namespace JongoApplicazione.ViewModel
                     return;
                 case 6:
                     content = Prenota6;
-                    //CreateMail(Prenotazione.getMail(),"PRENOTAZIONE LAVORO",CreateMessage(true));
-                    CreateMail("info.jongo@gmail.com", "RIEPILOGO ORDINE JONGO", CreateMessage(false));
+                    string dest = "";
+                    if (string.IsNullOrEmpty(p.mail)) { dest = u.Email; } else { dest = p.mail; }
+                    //CreateMail("info.jongo@gmail.com","PRENOTAZIONE LAVORO",CreateMessage(true));
+                    CreateMail(dest, "RIEPILOGO ORDINE JONGO", CreateMessage(false));
                     AggiornaPagina();
                     return;
                 default:
@@ -117,7 +123,7 @@ namespace JongoApplicazione.ViewModel
             CambioPaginaEvent?.Invoke(pagina);
         }
 
-        void CreateMail(String email, String subject, String message)
+        void CreateMail(string email, string subject, string message)
         {
             try
             {
@@ -141,15 +147,15 @@ namespace JongoApplicazione.ViewModel
             catch (Exception ex)
             {
                 ex.ToString();
-                //DisplayAlert("Faild", ex.Message, "OK");
             }
         }
 
-        String CreateMessage(bool valore)
+        string CreateMessage(bool valore)
         {
-            String messaggio = "";
+            string messaggio = "Ciao";
             if (valore)
             {
+
                 return messaggio;
             }
             else

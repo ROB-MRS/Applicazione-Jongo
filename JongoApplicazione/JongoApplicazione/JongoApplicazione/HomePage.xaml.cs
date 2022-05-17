@@ -35,7 +35,6 @@ namespace JongoApplicazione
 
         void Button_1_Clicked(System.Object sender, System.EventArgs e)
         {
-            //CreateMail();
             Browser.OpenAsync("https://www.jongomontaggi.it/", BrowserLaunchMode.SystemPreferred);
         }
 
@@ -68,11 +67,6 @@ namespace JongoApplicazione
             }
             await Navigation.PushAsync(new Cronologia(utenteHomePage));
         }
-
-        //void Bottone_Impostazioni_Clicked(System.Object sender, System.EventArgs e)
-        //{
-        //    Navigation.PushAsync(new NavigationPage(new SettingsPage()));
-        //}
 
         async void SendWhatsapp()
         {
@@ -118,31 +112,5 @@ namespace JongoApplicazione
             await Navigation.PushAsync(new Impostazioni(utenteHomePage));
         }
 
-        //void CreateMail()
-        //{
-        //    try
-        //    {
-
-        //        MailMessage mail = new MailMessage();
-        //        SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-
-        //        mail.From = new MailAddress("info.jongo@gmail.com");
-        //        mail.To.Add("info.jongo@gmail.com");
-        //        mail.Subject = "prova";
-        //        mail.Body = "prova dell'invio di una mail.";
-
-        //        SmtpServer.Port = 587;
-        //        SmtpServer.Host = "smtp.gmail.com";
-        //        SmtpServer.EnableSsl = true;
-        //        SmtpServer.UseDefaultCredentials = false;
-        //        SmtpServer.Credentials = new System.Net.NetworkCredential("info.jongo@gmail.com", "Info2022");
-
-        //        SmtpServer.Send(mail);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        DisplayAlert("Faild", ex.Message, "OK");
-        //    }
-        //}
     }
 }
