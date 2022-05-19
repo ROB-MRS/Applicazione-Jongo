@@ -155,7 +155,7 @@ namespace JongoApplicazione.ViewModel
             string messaggio = "Ciao";
             if (valore)
             {
-
+                
                 return messaggio;
             }
             else
