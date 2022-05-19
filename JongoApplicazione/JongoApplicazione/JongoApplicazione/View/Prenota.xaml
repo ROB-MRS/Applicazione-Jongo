@@ -45,9 +45,9 @@
             </Grid.RowDefinitions>
             
        <!--Pulsanti avanti e indietro-->
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Margin="10" Grid.Row="2" Grid.Column="2" x:Name="buttons">
-            <Button BackgroundColor="DarkGray"  Text="INDIETRO" TextColor="Gray" Command="{Binding ComandoIndietro}" x:Name="indietro" ></Button>
-            <Button BackgroundColor="DarkGray" Text=" CONFERMA " TextColor="Gray" Command="{Binding ComandoAvanti}" x:Name="avanti" ></Button>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Margin="-15,5,0,5"  Grid.Row="3" Grid.Column="2" x:Name="buttons">
+            <Button BackgroundColor="OrangeRed"  Text="INDIETRO" TextColor="Black" BorderColor="Black" BorderWidth="2" CornerRadius="10" Padding="10,5,10,5" Command="{Binding ComandoIndietro}" x:Name="indietro" ></Button>
+            <Button BackgroundColor="#228b22" Text=" AVANTI " TextColor="Black" BorderColor="Black" BorderWidth="2" CornerRadius="10" Padding="18,5,18,5" Command="{Binding ComandoAvanti}" x:Name="avanti" ></Button>
         </StackLayout>
              </Grid>
 
