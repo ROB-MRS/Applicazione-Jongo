@@ -45,7 +45,7 @@
             </StackLayout>
 
             <!-- Email-->
-            <StackLayout Grid.Column="1" Grid.Row="3">
+            <StackLayout Grid.Column="0" Grid.Row="3">
                 <!-- immagine email-->
                 <Image Source= "{StaticResource immagineMail}"
                        VerticalOptions="Center"
