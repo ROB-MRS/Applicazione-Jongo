@@ -27,28 +27,22 @@
 
             </Grid.RowDefinitions>
 
-            <StackLayout Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="Fill">
+            <StackLayout Grid.Column="1"  Grid.ColumnSpan="3" Grid.Row="0" Margin="50,40,0,0">
                 <Label 
-                    Text="IMPOSTAZIONI"
-                    FontAttributes="Bold"
-                    TextColor="{StaticResource ColoreTitoli}"
+                    Text="IMPOSTAZIONI⚙️"
                     FontSize="Subtitle"
-                    >
-                    
+                    FontAttributes="Bold"
+                    TextColor="{StaticResource ColoreTitoli}">
                 </Label>
-                
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"  HorizontalOptions="StartAndExpand" 
-                         VerticalOptions="Center" Orientation="Horizontal">
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,-50,0,0" HorizontalOptions="StartAndExpand" >
                 <Label
-                    FontSize="Large"
-                    WidthRequest="100"
+                    FontSize="Medium"
                     FontAttributes="Bold"
-                    Text="Generali"
-                    TextColor="DarkViolet"
-                    TextDecorations="None">
-                    
+                    Text="GENERALI"
+                    TextColor="{StaticResource ColoreTitoli}"
+                    TextDecorations="Underline">
                 </Label>
                 
             </StackLayout>
@@ -112,7 +106,7 @@
                          VerticalOptions="Start" Orientation="Horizontal" Margin="0,80">
                 <Button
                     Text="Cambia password"
-                    CornerRadius="40"
+                    CornerRadius="10"
                     FontSize="Large"
                     FontAttributes="Bold"
                     BackgroundColor="#6F00FF"
@@ -128,7 +122,7 @@
                 <Button
                     Text="Cambia numero di telefono"
                     FontSize="Large"
-                    CornerRadius="40"
+                    CornerRadius="10"
                     FontAttributes="Bold"
                     BackgroundColor="#6F00FF"
                     TextColor="White"
