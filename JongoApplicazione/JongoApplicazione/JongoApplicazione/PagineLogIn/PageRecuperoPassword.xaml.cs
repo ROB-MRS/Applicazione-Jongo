@@ -29,6 +29,7 @@ namespace JongoApplicazione.PagineLogIn
                     if (isSend)
                     {
                         await DisplayAlert("Informazione", "Controlla la tua email per cambiare la password", "OK");
+                        await Navigation.PushAsync(new LogInPage());
                     }
                     else
                     {
