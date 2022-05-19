@@ -147,8 +147,8 @@ namespace JongoApplicazione.PagineLogIn
                 
 
                             Utente utente = new Utente();
-                            utente.Name = nome.ToUpper();
-                            utente.Surname = cognome.ToUpper();
+                            utente.Name = nome;
+                            utente.Surname = cognome;
                             utente.Email = email;
                             utente.Password = password.GetHashCode();
                             utente.Numero = numero;
