@@ -33,6 +33,7 @@ namespace JongoApplicazione.View
             {
                 int selectedIndex = categoria.SelectedIndex;
                 p.servizio = categoria.Items[selectedIndex];
+                categoria.TextColor = Color.Gray;
             }
             catch(Exception ex)
             {
@@ -40,6 +41,10 @@ namespace JongoApplicazione.View
             }
             
             p.descrizione = descrizione.Text;
+            
+            descrizione.TextColor = Color.Gray;
+            descrizione.IsReadOnly = true;
+
             conferma.IsVisible = false;
             modifica.IsVisible = true;
              
@@ -49,6 +54,11 @@ namespace JongoApplicazione.View
 
         void Bottone_modifica(System.Object sender, System.EventArgs e)
         {
+            categoria.TextColor=Color.Black;
+            descrizione.TextColor=Color.Black;
+
+            descrizione.IsReadOnly=true;
+
             modifica.IsVisible = false;
             conferma.IsVisible = true;
         }
