@@ -27,6 +27,7 @@
 
             </Grid.RowDefinitions>
 
+            <!-- TITOLO -->
             <StackLayout Grid.Column="1"  Grid.ColumnSpan="3" Grid.Row="0" Margin="50,40,0,0">
                 <Label 
                     Text="IMPOSTAZIONI⚙️"
@@ -36,6 +37,7 @@
                 </Label>
             </StackLayout>
 
+            <!-- SOTTOTITOLO -->
             <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,-50,0,0" HorizontalOptions="StartAndExpand" >
                 <Label
                     FontSize="Medium"
@@ -44,52 +46,37 @@
                     TextColor="{StaticResource ColoreTitoli}"
                     TextDecorations="Underline">
                 </Label>
-                
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"  HorizontalOptions="StartAndExpand" 
-                         VerticalOptions="End" Orientation="Horizontal">
+            <!-- NOME -->
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,-10,0,0" HorizontalOptions="StartAndExpand">
                 <Label
                     x:Name="Nome"
-                    WidthRequest="100"
-                    FontSize="Title"
-                    FontAttributes="Bold"
-                    BackgroundColor="LightYellow"
-                    TextColor="#FFDE00"
-                    TextDecorations="None"
-                    >
+                    FontSize="Subtitle"
+                    TextColor="Black">
                 </Label>
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"  HorizontalOptions="StartAndExpand" 
-                         VerticalOptions="Start" Orientation="Horizontal">
+            <!-- COGNOME -->
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,30,0,0"  HorizontalOptions="StartAndExpand" 
+                          >
                 <Label
                     x:Name="Cognome"
-                    WidthRequest="130"
-                    FontSize="Title"
-                    FontAttributes="Bold"
-                    BackgroundColor="LightYellow"
-                    TextColor="#FFDE00"
-                    TextDecorations="None"
-                    >
+                    FontSize="Subtitle"
+                    TextColor="Black">
                 </Label>
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"  HorizontalOptions="StartAndExpand" 
-                         VerticalOptions="StartAndExpand" Orientation="Horizontal" Margin="0,40">
+            <!-- EMAIL -->
+            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Margin="10,-80,0,0" HorizontalOptions="StartAndExpand">
                 <Label
                     x:Name="Email"
-                    WidthRequest="250"
-                    FontSize="Title"
-                    FontAttributes="Bold"
-                    BackgroundColor="LightYellow"
-                    TextColor="#FFDE00"
-                    TextDecorations="None"
-                    >
+                    FontSize="Subtitle"
+                    TextColor="Black">
                 </Label>
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"  HorizontalOptions="StartAndExpand" 
+            <!--<StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"  HorizontalOptions="StartAndExpand" 
                          VerticalOptions="Start" Orientation="Horizontal">
                 <Label
                     WidthRequest="100"
@@ -100,9 +87,9 @@
                     TextDecorations="None"
                     >
                 </Label>
-            </StackLayout>
+            </StackLayout>-->
 
-            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" HorizontalOptions="StartAndExpand" 
+            <!--<StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" HorizontalOptions="StartAndExpand" 
                          VerticalOptions="Start" Orientation="Horizontal" Margin="0,80">
                 <Button
                     Text="Cambia password"
@@ -117,7 +104,7 @@
                 </Button>
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" HorizontalOptions="StartAndExpand" 
+            <StackLayout Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" HorizontalOptions="StartAndExpand" 
                          VerticalOptions="End" Orientation="Horizontal" Margin="0,90">
                 <Button
                     Text="Cambia numero di telefono"
@@ -128,9 +115,9 @@
                     TextColor="White"
                     Clicked="bottone_telefono"
                     >
-
+            7
                 </Button>
-            </StackLayout>
+            </StackLayout>-->
         </Grid>
 
     </ContentPage.Content>

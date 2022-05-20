@@ -22,9 +22,9 @@ namespace JongoApplicazione.JongoApplicazione
         {
             InitializeComponent();
             this.utente = utente;
-            Nome.Text = "Nome: " + utente.Name;
-            Cognome.Text = "Cognome: " + utente.Surname;
-            Email.Text = "Email: " + utente.Email;
+            Nome.Text = "•Nome: " + utente.Name;
+            Cognome.Text = "•Cognome: " + utente.Surname;
+            Email.Text = "•Email: " + utente.Email;
         }
 
         async void bottone_password(System.Object sender, System.EventArgs e)
