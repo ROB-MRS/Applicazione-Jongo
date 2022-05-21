@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage NavigationPage.HasNavigationBar="False"     NavigationPage.HasBackButton="False"
- BackgroundColor="{StaticResource ColoreSfondi}"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.HomePage">
@@ -96,7 +95,6 @@
                     FontSize="Micro"
                     BackgroundColor="{StaticResource ColoreBottoni}"
                     TextColor="{StaticResource ColoreScritte}"
-
                     Clicked="Button_1_Clicked">
             </Button>
 
@@ -131,7 +129,7 @@
                     FontSize="Micro"
                     BackgroundColor="{StaticResource ColoreBottoni}"
                     TextColor="{StaticResource ColoreScritte}"
-                     BorderColor="{StaticResource ColoreBordi}"
+                    BorderColor="{StaticResource ColoreBordi}"
                     BorderWidth="2"
                     Clicked="Button_Clicked">
             </Button>
@@ -149,7 +147,7 @@
                     FontSize="Micro"
                     BackgroundColor="{StaticResource ColoreBottoni}"
                     TextColor="{StaticResource ColoreScritte}"
-                     BorderColor="{StaticResource ColoreBordi}"
+                    BorderColor="{StaticResource ColoreBordi}"
                     BorderWidth="2"
                     Clicked="Bottone_Contattaci">
             </Button>
@@ -167,7 +165,7 @@
                     FontSize="Micro"
                     Clicked="bottone_cronologia"
                     BackgroundColor="{StaticResource ColoreBottoni}"
-                     BorderColor="{StaticResource ColoreBordi}"
+                    BorderColor="{StaticResource ColoreBordi}"
                     BorderWidth="2"
                     TextColor="{StaticResource ColoreScritte}">
             </Button>

@@ -27,13 +27,28 @@
         </Grid.RowDefinitions>
        
         <!-- TITOLO -->
-        <StackLayout Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,-159,0,0">
-            <Label Text="TARIFFE"  FontSize="Subtitle"  FontAttributes="Bold" TextColor="{StaticResource ColoreTitoli}"/>
+        <StackLayout Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,40,0,57">
+            <Label Text="TARIFFE💶"  FontSize="Subtitle"  FontAttributes="Bold" TextColor="{StaticResource ColoreTitoli}"/>
             </StackLayout>
 
-         <!-- <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4">
-           <Label Text="Le tariffe indicate servono per dare un idea, potrebbero avere piccole oscillazioni da servizio a servizio. La cifra precisa viene valutata sul posto prima del lavoro."  Margin="100" FontSize="Large" TextColor="Gray"/>
-             </StackLayout> -->
+        <!-- TARIFFE -->
+            <Frame Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="2" BackgroundColor="Bisque">
+                <StackLayout HeightRequest="1000">
+                    <Label Text="Servizi                 Prezzo"> </Label>
+                    <Label Text="------------------------"> </Label>
+                    <Label Text="•Montaggio:         18€/h "> </Label>
+                    <Label Text="•Fabbro:                18€/h "> </Label>
+                    <Label Text="•Idraulico:             18€/h "> </Label>
+                    <Label Text="•Muratore:            18€/h "> </Label>
+                </StackLayout>
+                
+            </Frame>
+           
+          <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,20,0,0">
+                    <Label Text="Le tariffe sono solo indicative, potrebbero avere piccole oscillazioni in base al servizio specifico."
+                           FontSize="15"
+                           TextColor="Gray"/>
+          </StackLayout> 
 
 
             </Grid>
