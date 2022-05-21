@@ -138,8 +138,12 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\logo_quadrato2.png" />
-    <BundleResource Include="Resources\iconaPrenota.png" />
-    <BundleResource Include="Resources\iconaPrenotazione2.png" />
+    <BundleResource Include="Resources\chisiamo.png" />
+    <BundleResource Include="Resources\contattaci.png" />
+    <BundleResource Include="Resources\cronologia.png" />
+    <BundleResource Include="Resources\dovesiamo.png" />
+    <BundleResource Include="Resources\impostazioni.png" />
+    <BundleResource Include="Resources\prenota.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Mail.png" />
