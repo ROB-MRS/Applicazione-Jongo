@@ -23,8 +23,6 @@
     <None Remove="JongoApplicazione\Resources\drawable\IconaPrenota.png" />
     <None Remove="JongoApplicazione.Android\Resources\drawable\IconaPrenota.png" />
     <None Remove="JongoApplicazione\Resources\drawable\iconaPrenota.png" />
-    <None Remove="JongoApplicazione.iOS\Resources\iconaPrenota.png" />
-    <None Remove="JongoApplicazione.Android\Resources\drawable\iconaPrenota.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModel\" />
@@ -49,7 +47,5 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="JongoApplicazione\Resources\drawable\iconaPrenota.png" />
-    <BundleResource Include="JongoApplicazione.iOS\Resources\iconaPrenota.png" />
-    <BundleResource Include="JongoApplicazione.Android\Resources\drawable\iconaPrenota.png" />
   </ItemGroup>
 </Project>
