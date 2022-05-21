@@ -68,7 +68,7 @@ namespace JongoApplicazione.JongoApplicazione
 
         public async void bottone_telefono(System.Object sender, System.EventArgs e)
         {
-            string numeroNuovo = await DisplayPromptAsync("Informazione", "Inserisci il tuo nuovo numero di telefono");
+            string numeroNuovo = await DisplayPromptAsync("Informazione", "Inserisci il tuo nuovo numero di telefono", "OK", "Indietro", utente.Numero);
             if (numeroNuovo != null)
             {
                 utente.Numero = numeroNuovo;
