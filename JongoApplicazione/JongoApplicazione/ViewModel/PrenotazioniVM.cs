@@ -108,8 +108,8 @@ namespace JongoApplicazione.ViewModel
                     content = Prenota6;
                     string dest = "";
                     if (string.IsNullOrEmpty(p.mail)) { dest = u.Email; } else { dest = p.mail; }
-                    //CreateMail("info.jongo@gmail.com","PRENOTAZIONE LAVORO",CreateMessage(true));
-                    CreateMail(dest, "RIEPILOGO ORDINE JONGO", CreateMessage(false));
+                    CreateMail("info.jongo@gmail.com", "PRENOTAZIONE LAVORO n'{this.p.id.ToString()}", CreateMessage(true));
+                    CreateMail(dest, "RIEPILOGO ORDINE JONGO n'{this.p.id.ToString()} " , CreateMessage(false));
                     AggiornaPagina();
                     return;
                 default:
@@ -152,15 +152,18 @@ namespace JongoApplicazione.ViewModel
 
         string CreateMessage(bool valore)
         {
-            string messaggio = "Ciao";
+            var i = (nome:this.p.name, cognome: this.p.cognome, cell: this.p.numero, via:this.p.via, cap: this.p.cap, data: this.p.data,
+                        ora: this.p.ora, servizio: this.p.servizio, descrizione:this.p.descrizione, infoExtra: this.p.informazioniExtra);
+            System.Text.StringBuilder messaggio = new System.Text.StringBuilder("");
             if (valore)
             {
-                
-                return messaggio;
+                messaggio.Append("Gentile cliente, ecco un riepilogo dell'ordine effettuato tramite il servizio JONGO:")
+                .Append($"Nome: {i.nome}\n").Append($"Cognome: {i.cognome}/n");
+                return messaggio.ToString();
             }
             else
             {
-                return messaggio ;
+                return messaggio.ToString();
             }
         }
     }
