@@ -22,9 +22,9 @@ namespace JongoApplicazione.JongoApplicazione
         {
             InitializeComponent();
             this.utente = utente;
-            Nome.Text = "•Nome: " + utente.Name;
-            Cognome.Text = "•Cognome: " + utente.Surname;
-            Email.Text = "•Email: " + utente.Email;
+            Nome.Text = utente.Name;
+            Cognome.Text = utente.Surname;
+            Email.Text = utente.Email;
         }
 
         async void bottone_password(System.Object sender, System.EventArgs e)
@@ -68,7 +68,7 @@ namespace JongoApplicazione.JongoApplicazione
 
         public async void bottone_telefono(System.Object sender, System.EventArgs e)
         {
-            string numeroNuovo = await DisplayPromptAsync("Informazione", "Inserisci il tuo nuovo numero di telefono");
+            string numeroNuovo = await DisplayPromptAsync("Informazione", "Inserisci il tuo nuovo numero di telefono", "OK", "Indietro", utente.Numero);
             if (numeroNuovo != null)
             {
                 utente.Numero = numeroNuovo;

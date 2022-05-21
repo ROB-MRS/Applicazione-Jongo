@@ -42,14 +42,23 @@
                 <Label
                     FontSize="Medium"
                     FontAttributes="Bold"
-                    Text="GENERALI"
+                    Text="•GENERALI"
                     TextColor="{StaticResource ColoreTitoli}"
                     TextDecorations="Underline">
                 </Label>
             </StackLayout>
 
             <!-- NOME -->
-            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,-10,0,0" HorizontalOptions="StartAndExpand">
+           <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,-10,0,0" HorizontalOptions="StartAndExpand">
+                <Label
+                    Text="•Nome: "
+                    FontSize="Subtitle"
+                    FontAttributes="Bold"
+                    TextColor="#00008b">
+                </Label>
+            </StackLayout>
+
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="87,-10,0,0" HorizontalOptions="StartAndExpand">
                 <Label
                     x:Name="Nome"
                     FontSize="Subtitle"
@@ -58,8 +67,16 @@
             </StackLayout>
 
             <!-- COGNOME -->
-            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,30,0,0"  HorizontalOptions="StartAndExpand" 
-                          >
+
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,30,0,0"  HorizontalOptions="StartAndExpand">
+                <Label
+                    TextColor="#00008b"
+                    FontAttributes="Bold"
+                    Text="•Cognome: "
+                    FontSize="Subtitle">
+                </Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="125,30,0,0"  HorizontalOptions="StartAndExpand">
                 <Label
                     x:Name="Cognome"
                     FontSize="Subtitle"
@@ -70,55 +87,56 @@
             <!-- EMAIL -->
             <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Margin="10,-80,0,0" HorizontalOptions="StartAndExpand">
                 <Label
+                    Text="•Email: "
+                    FontSize="Subtitle"
+                    FontAttributes="Bold"
+                    TextColor="#00008b">
+                </Label>
+            </StackLayout>
+
+            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Margin="82,-80,0,0" HorizontalOptions="StartAndExpand">
+                <Label
                     x:Name="Email"
                     FontSize="Subtitle"
                     TextColor="Black">
                 </Label>
             </StackLayout>
 
-            <!--<StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"  HorizontalOptions="StartAndExpand" 
-                         VerticalOptions="Start" Orientation="Horizontal">
+            <!-- SOTTOTITOLO -->
+            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Margin="10,-20,0,0" HorizontalOptions="StartAndExpand">
                 <Label
-                    WidthRequest="100"
-                    FontSize="Large"
-                    Text="Gestione Account"
-                    TextColor="DarkViolet"
+                    Text="•GESTIONE ACCOUNT"
+                    FontSize="Medium"
                     FontAttributes="Bold"
-                    TextDecorations="None"
-                    >
+                    TextColor="{StaticResource ColoreTitoli}"
+                    TextDecorations="Underline">
                 </Label>
-            </StackLayout>-->
+            </StackLayout>
 
-            <!--<StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" HorizontalOptions="StartAndExpand" 
-                         VerticalOptions="Start" Orientation="Horizontal" Margin="0,80">
+            <!-- PULSANTE CAMBIA PASSWORD -->
+            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Margin="15,20,0,0" HorizontalOptions="StartAndExpand">
                 <Button
                     Text="Cambia password"
-                    CornerRadius="10"
-                    FontSize="Large"
-                    FontAttributes="Bold"
-                    BackgroundColor="#6F00FF"
-                    TextColor="White"
-                    Clicked="bottone_password"
-                    >
-                    
+                        FontSize="20"
+                        TextColor="#00008b"
+                        FontAttributes="Bold"
+                        BackgroundColor="Transparent"
+                        Clicked="bottone_password">
                 </Button>
             </StackLayout>
 
-            <StackLayout Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" HorizontalOptions="StartAndExpand" 
-                         VerticalOptions="End" Orientation="Horizontal" Margin="0,90">
+         <!-- PULSANTE CAMBIA NUMERO TELEFONO -->
+            <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"  Margin="15,-80,0,0" HorizontalOptions="StartAndExpand">
                 <Button
                     Text="Cambia numero di telefono"
-                    FontSize="Large"
-                    CornerRadius="10"
+                    FontSize="20"
+                    TextColor="#00008b"
                     FontAttributes="Bold"
-                    BackgroundColor="#6F00FF"
-                    TextColor="White"
-                    Clicked="bottone_telefono"
-                    >
-            7
+                    BackgroundColor="Transparent"
+                    Clicked="bottone_telefono">
                 </Button>
-            </StackLayout>-->
-        </Grid>
+            </StackLayout>
 
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
