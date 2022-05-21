@@ -19,13 +19,11 @@
                     x:TypeArguments="FileImageSource"
                     Android="prenota.png"
                     iOS="premota.png"/>
-
         <!--Chi siamo-->
         <OnPlatform x:Key="immagineChiSiamo"
                     x:TypeArguments="FileImageSource"
                     Android="chisiamo.png"
                     iOS="chisiamo.png"/>
-
         <!--Contattaci-->
         <OnPlatform x:Key="immagineContattaci"
                     x:TypeArguments="FileImageSource"
