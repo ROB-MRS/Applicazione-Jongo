@@ -84,7 +84,8 @@
              <StackLayout Margin="55,20,55,0"> 
                   <Editor
                       x:Name="descrizione"
-                      Placeholder="Descrizione del lavoro da svolgere"
+                      Placeholder="Descrizione del lavoro da svolgere
+                                   es:nome, marca e codice del mobile da montare"
                       HeightRequest="170"
                       />  
 

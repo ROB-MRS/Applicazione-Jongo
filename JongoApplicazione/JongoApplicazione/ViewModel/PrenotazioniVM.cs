@@ -108,8 +108,8 @@ namespace JongoApplicazione.ViewModel
                     content = Prenota6;
                     string dest = "";
                     if (string.IsNullOrEmpty(p.mail)) { dest = u.Email; } else { dest = p.mail; }
-                    CreateMail("info.jongo@gmail.com", $"PRENOTAZIONE LAVORO n'{this.p.id.ToString()}", CreateMessage(false));
-                    CreateMail(dest, $"RIEPILOGO ORDINE JONGO n'{this.p.id.ToString()} " , CreateMessage(true));
+                    CreateMail("info.jongo@gmail.com", "PRENOTAZIONE LAVORO ", CreateMessage(false));
+                    CreateMail(dest, "RIEPILOGO ORDINE JONGO " , CreateMessage(true));
                     AggiornaPagina();
                     return;
                 default:
@@ -157,10 +157,10 @@ namespace JongoApplicazione.ViewModel
             System.Text.StringBuilder messaggio = new System.Text.StringBuilder("");
             if (valore)
             {
-                messaggio.Append("Gentile cliente, ecco un riepilogo dell'ordine effettuato tramite il servizio JONGO:")
+                messaggio.Append("Gentile cliente, ecco un riepilogo dell'ordine effettuato tramite il servizio JONGO:\n")
                 .Append($"Nome: {i.nome}\n").Append($"Cognome: {i.cognome}\n").Append($"Telefono/Cellulare: {i.cell}\n")
                 .Append($"Presso: {i.via}").Append($",{i.cap}\n").Append($"In data: {i.data}").Append($"alle ore {i.data}\n")
-                .Append($"Per il servizio di: {i.servizio}\n").Append($"Descrizione: {i.descrizione}\n").Append($"[info extra: {i.infoExtra}]")
+                .Append($"Per il servizio di: {i.servizio}\n").Append($"Descrizione: {i.descrizione}\n").Append($"[info extra: {i.infoExtra}]\n")
                 .Append("Ti ringraziamo per aver utilizzato Jongo. Presto verrai contattato da un nostro operatore per un preventivo accurato.\n" +
                         "Per altre informazioni puoi contattarci a info@jongomontaggi.it o al numero verdi +39 351 7085953.\n\n");
                 return messaggio.ToString();
