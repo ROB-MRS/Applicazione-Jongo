@@ -30,8 +30,8 @@ namespace JongoApplicazione.JongoApplicazione
                     Frame frame = new Frame
                     {
                         WidthRequest = 300,
-                        HeightRequest = 220,
-                        BackgroundColor = Color.Goldenrod,
+                        HeightRequest = 230,
+                        BackgroundColor = Color.Silver,
                         BorderColor = Color.Black,
                         Margin = new Thickness(10),
                         CornerRadius = 20,
@@ -46,8 +46,8 @@ namespace JongoApplicazione.JongoApplicazione
                     {
                         Text = p.name + " " + p.cognome,
                         Margin = new Thickness(0.8),
-                        FontSize = 50,
-                        TextColor = Color.Black,
+                        FontSize = 25,
+                        TextColor = Color.DarkRed,
                     };
 
                     Label label1 = new Label
