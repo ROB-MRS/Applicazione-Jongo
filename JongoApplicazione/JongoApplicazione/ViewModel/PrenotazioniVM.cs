@@ -158,7 +158,7 @@ namespace JongoApplicazione.ViewModel
             if (valore)
             {
                 messaggio.Append("Gentile cliente, ecco un riepilogo dell'ordine effettuato tramite il servizio JONGO:")
-                .Append($"Nome: {i.nome}\n").Append($"Cognome: {i.cognome}/n")
+                .Append($"Nome: {i.nome}\n").Append($"Cognome: {i.cognome}/n");
                 return messaggio.ToString();
             }
             else
