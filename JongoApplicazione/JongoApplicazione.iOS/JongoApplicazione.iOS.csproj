@@ -144,12 +144,7 @@
     <BundleResource Include="Resources\prenota.png" />
     <BundleResource Include="Resources\chisiamo.png" />
     <BundleResource Include="Resources\cronologia.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Mail.png" />
-    <AndroidResource Include="Resources\User.svg">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
+    <BundleResource Include="Resources\password.png" />
+    <BundleResource Include="Resources\email.png" />
   </ItemGroup>
 </Project>

@@ -21811,40 +21811,40 @@ namespace JongoApplicazione.Droid
 			public const int dovesiamo = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int ic_arrow_down_24dp = 2131165288;
+			public const int email = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int ic_clock_black_24dp = 2131165289;
+			public const int ic_arrow_down_24dp = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int ic_errorstatus = 2131165290;
+			public const int ic_clock_black_24dp = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int ic_keyboard_black_24dp = 2131165291;
+			public const int ic_errorstatus = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int ic_mtrl_checked_circle = 2131165292;
+			public const int ic_keyboard_black_24dp = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int ic_mtrl_chip_checked_black = 2131165293;
+			public const int ic_mtrl_checked_circle = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int ic_mtrl_chip_checked_circle = 2131165294;
+			public const int ic_mtrl_chip_checked_black = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int ic_mtrl_chip_close_circle = 2131165295;
+			public const int ic_mtrl_chip_checked_circle = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int ic_successstatus = 2131165296;
+			public const int ic_mtrl_chip_close_circle = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int impostazioni = 2131165297;
+			public const int ic_successstatus = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int logo_quadrato2 = 2131165298;
+			public const int impostazioni = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int Mail = 2131165299;
+			public const int logo_quadrato2 = 2131165299;
 			
 			// aapt resource value: 0x7F070074
 			public const int material_cursor_drawable = 2131165300;
@@ -21946,28 +21946,28 @@ namespace JongoApplicazione.Droid
 			public const int notify_panel_notification_icon_bg = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int preference_list_divider_material = 2131165333;
+			public const int password = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int prenota = 2131165334;
+			public const int preference_list_divider_material = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int roundedbg = 2131165335;
+			public const int prenota = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int roundedbgdark = 2131165336;
+			public const int roundedbg = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int test_custom_background = 2131165337;
+			public const int roundedbgdark = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int tooltip_frame_dark = 2131165338;
+			public const int test_custom_background = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int tooltip_frame_light = 2131165339;
+			public const int tooltip_frame_dark = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int User = 2131165340;
+			public const int tooltip_frame_light = 2131165340;
 			
 			static Drawable()
 			{

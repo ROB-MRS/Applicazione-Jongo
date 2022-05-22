@@ -3,14 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JongoApplicazione.App">
     <Application.Resources>
-        <OnPlatform x:Key="immagineMail"
-            x:TypeArguments="FileImageSource"
-            Android="Mail.png"
-            iOS ="Mail.png" />
-        <OnPlatform x:Key="immagineUser"
-            x:TypeArguments="FileImageSource"
-            Android="User.svg"
-            iOS ="User.svg" />
+
+        <!--ICONE EMAIL E PASSWORD-->
+        <!--email-->
+        <OnPlatform x:Key="iconaEmail"
+                    x:TypeArguments="FileImageSource"
+                    Android="email.png"
+                    iOS="email.png"/>
+        <!--password-->
+        <OnPlatform x:Key="iconaPassword"
+                    x:TypeArguments="FileImageSource"
+                    Android="password.png"
+                    iOS="password.png"/>
 
         <!-- ICONE HOME PAGE -->
 
@@ -44,6 +48,12 @@
                     x:TypeArguments="FileImageSource"
                     Android="impostazioni.png"
                     iOS="impostazioni.png"/>
+
+        <!--Sfondi
+        <OnPlatform x:Key="sfondoHome"
+                    x:TypeArguments="FileImageSource"
+                    Android="sfondo.png"
+                    iOS="sfondo.png"/>-->
 
 
         <!-- colori -->
