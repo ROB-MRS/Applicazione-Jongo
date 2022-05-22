@@ -18,7 +18,7 @@
         <OnPlatform x:Key="immaginePrenota"
                     x:TypeArguments="FileImageSource"
                     Android="prenota.png"
-                    iOS="premota.png"/>
+                    iOS="prenota.png"/>
         <!--Chi siamo-->
         <OnPlatform x:Key="immagineChiSiamo"
                     x:TypeArguments="FileImageSource"

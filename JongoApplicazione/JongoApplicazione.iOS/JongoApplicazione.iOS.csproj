@@ -138,7 +138,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\logo_quadrato2.png" />
-    <BundleResource Include="Resources\chisiamo.png" />
     <BundleResource Include="Resources\contattaci.png" />
     <BundleResource Include="Resources\cronologia.png" />
     <BundleResource Include="Resources\dovesiamo.png" />
@@ -151,5 +150,6 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
+    <AndroidResource Include="Resources\chisiamo.png" />
   </ItemGroup>
 </Project>
