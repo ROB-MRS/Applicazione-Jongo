@@ -73,7 +73,8 @@ namespace JongoApplicazione
            
             try
             {
-                await Launcher.OpenAsync("https://wa.me/+393927288821?text=prova");
+                string messaggio = "Benvenuto nell'assistenza clienti Jongo.\nScrivici il tuo nome e cognome e il motivo per il quale hai contattato l'assistenta\n====================\n";
+                await Launcher.OpenAsync($"https://wa.me/+393517085953?text="+messaggio);
             }
             catch
             {
