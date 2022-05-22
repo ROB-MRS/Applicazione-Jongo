@@ -8,13 +8,23 @@
         <!--email-->
         <OnPlatform x:Key="iconaEmail"
                     x:TypeArguments="FileImageSource"
-                    Android="email.png"
-                    iOS="email.png"/>
+                    Android="mailnuova.png"
+                    iOS="mailnuova.png"/>
         <!--password-->
         <OnPlatform x:Key="iconaPassword"
                     x:TypeArguments="FileImageSource"
-                    Android="password.png"
-                    iOS="password.png"/>
+                    Android="passwordnuova.png"
+                    iOS="passwordnuova.png"/>
+        <!--occhio aperto-->
+        <OnPlatform x:Key="iconaOcchioAperto"
+                    x:TypeArguments="FileImageSource"
+                    Android="occhioaperto.png"
+                    iOS="occhioaperto.png"/>
+        <!--occhio chiuso-->
+        <OnPlatform x:Key="iconaOcchioChiuso"
+                    x:TypeArguments="FileImageSource"
+                    Android="occhiochiuso.png"
+                    iOS="occhiochiuso.png"/>
 
         <!-- ICONE HOME PAGE -->
 

@@ -45,7 +45,7 @@
             </StackLayout>
 
             <!-- Email-->
-            <StackLayout Grid.Column="0" Grid.Row="3" Padding="0,-14,-15,0">
+            <StackLayout Grid.Column="0" Grid.Row="3" Padding="0,-8,-10,0">
                 <!-- immagine email-->
                 <Image Source="{StaticResource iconaEmail}"
                        Scale="0.5"
@@ -63,7 +63,7 @@
             </StackLayout>
 
             <!-- Password -->
-            <StackLayout Grid.Column="0" Grid.Row="4" Padding="0,-13,-17,0">
+            <StackLayout Grid.Column="0" Grid.Row="4" Padding="0,-8,-13,0">
                 <!-- immagine password -->
                 <Image Source="{StaticResource iconaPassword}"
                        Scale="0.4"
@@ -80,6 +80,15 @@
                        TextColor="Red"
                        IsVisible="false"/>
             </StackLayout>
+            <StackLayout Grid.Column="4" Grid.Row="4" Padding="0,-1,12,0">
+                 <!--bottone per mostrare password--> 
+                 <ImageButton x:Name="Bottone_password" Grid.Column="4" Grid.Row="4"
+                        Source="{StaticResource iconaOcchioChiuso}"
+                        Scale="0.7"
+                        Clicked="bottone_password_Clicked">
+                </ImageButton>
+            </StackLayout>
+            
 
             <!-- Password Dimenticata -->
             <StackLayout Grid.Column="2" Grid.Row="5" >

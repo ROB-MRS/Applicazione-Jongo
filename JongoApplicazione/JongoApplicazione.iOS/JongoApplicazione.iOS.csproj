@@ -146,5 +146,9 @@
     <BundleResource Include="Resources\cronologia.png" />
     <BundleResource Include="Resources\password.png" />
     <BundleResource Include="Resources\email.png" />
+    <BundleResource Include="Resources\passwordnuova.png" />
+    <BundleResource Include="Resources\mailnuova.png" />
+    <BundleResource Include="Resources\occhiochiuso.png" />
+    <BundleResource Include="Resources\occhioaperto.png" />
   </ItemGroup>
 </Project>

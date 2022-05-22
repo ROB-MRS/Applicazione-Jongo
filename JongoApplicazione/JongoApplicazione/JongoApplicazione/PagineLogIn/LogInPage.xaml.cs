@@ -18,6 +18,20 @@ namespace JongoApplicazione
             InitializeComponent();
         }
 
+        //Bottone per mostrare la Password
+        void bottone_password_Clicked(System.Object sender, System.EventArgs e)
+        {
+            if (Password.IsPassword)
+            {
+                Password.IsPassword = false;
+                Bottone_password.Source = "occhioaperto.png";
+            }
+            else
+            {
+                Password.IsPassword = true;
+                Bottone_password.Source = "occhiochiuso.png";
+            }
+        }
 
         //Bottone di Recupero Password
         void Bottone_Recupero_Password_Cliccato(System.Object sender, System.EventArgs e)
