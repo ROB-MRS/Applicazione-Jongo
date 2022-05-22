@@ -110,10 +110,6 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\cronologia.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable\dovesiamo.png">
       <SubType></SubType>
       <Generator></Generator>
@@ -127,6 +123,10 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\chisiamo.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\cronologia.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
