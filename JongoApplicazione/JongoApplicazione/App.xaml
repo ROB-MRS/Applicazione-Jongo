@@ -58,12 +58,17 @@
                     x:TypeArguments="FileImageSource"
                     Android="impostazioni.png"
                     iOS="impostazioni.png"/>
+        <!--User-->
+        <OnPlatform x:Key="immagineLogIn"
+                    x:TypeArguments="FileImageSource"
+                    Android="user.png"
+                    iOS="user.png"/>
 
-        <!--Sfondi
+        <!--Sfondi-->
         <OnPlatform x:Key="sfondoHome"
                     x:TypeArguments="FileImageSource"
-                    Android="sfondo.png"
-                    iOS="sfondo.png"/>-->
+                    Android="sfondotre.png"
+                    iOS="sfondotre.png"/>
 
 
         <!-- colori -->

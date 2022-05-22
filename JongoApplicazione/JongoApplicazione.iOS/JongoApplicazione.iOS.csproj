@@ -150,5 +150,9 @@
     <BundleResource Include="Resources\mailnuova.png" />
     <BundleResource Include="Resources\occhiochiuso.png" />
     <BundleResource Include="Resources\occhioaperto.png" />
+    <BundleResource Include="Resources\user.png" />
+    <BundleResource Include="Resources\sfondouno.png" />
+    <BundleResource Include="Resources\sfondodue.png" />
+    <BundleResource Include="Resources\sfondotre.png" />
   </ItemGroup>
 </Project>
