@@ -7,23 +7,6 @@
     BindingContext="JongoApplicazione.ViewModel.PrenotazioniVM">
     <StackLayout>
         <ContentView VerticalOptions="CenterAndExpand" Content="{Binding content}" x:Name="content"> 
-        <!-- <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start deveexdelo" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-        </StackLayout> -->
         </ContentView>
          <Grid>
                 <!--Divido la pagina in 5 colonne e 5 righe-->
@@ -50,21 +33,5 @@
             <Button BackgroundColor="#228b22" Text=" AVANTI " TextColor="Black" BorderColor="Black" BorderWidth="2" CornerRadius="10" Padding="18,5,18,5" Command="{Binding ComandoAvanti}" x:Name="avanti" ></Button>
         </StackLayout>
              </Grid>
-
-<!--Griglia con pulsanti che indicano la pagina in cui ci troviamo
-    <Grid VerticalOptions="End">
-    <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="*"/>
-        <ColumnDefinition Width="*"/>
-    </Grid.ColumnDefinitions>
-
-       <Frame BackgroundColor="LightGreen" Padding="3" CornerRadius="3" Grid.Column="0" HeightRequest="3" WidthRequest="3"/>
-       <Frame BackgroundColor="#2196F3" Padding="3" CornerRadius="3" Grid.Column="1" HeightRequest="3" WidthRequest="3"/>
-       <Frame BackgroundColor="#2196F3" Padding="3" CornerRadius="3" Grid.Column="2" HeightRequest="3" WidthRequest="3"/>
-       <Frame BackgroundColor="#2196F3" Padding="3" CornerRadius="3" Grid.Column="3" HeightRequest="3" WidthRequest="3"/>
-    </Grid>
-        -->
     </StackLayout>
 </ContentPage>

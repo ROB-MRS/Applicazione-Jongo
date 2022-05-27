@@ -8,7 +8,8 @@
     <ContentView.Content>
 
         <Grid>
-                  <!--Divido la pagina in 5 colonne e 5 righe-->
+
+        <!--Divido la pagina in 5 colonne e 5 righe-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -25,7 +26,7 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
-             <!-- TITOLO -->
+         <!-- TITOLO -->
         <StackLayout Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,20,0,0" >
             <Label Text="COMPLETATA✅"  FontSize="Subtitle"  FontAttributes="Bold" TextColor="{StaticResource ColoreTitoli}"/>
             </StackLayout>
@@ -37,7 +38,6 @@
                  </Frame>
             </StackLayout>
 
-         
 
 
         <!-- Bottone OK -->

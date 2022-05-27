@@ -19,8 +19,6 @@ namespace JongoApplicazione.View
             prenotazione.id++;
             VM = new ViewModel.PrenotazioniVM(prenotazione,utente);
             BindingContext = VM;
-            //avanti.Command = VM.ComandoAvanti;
-            //indietro.Command = VM.ComandoIndietro;
             VM.CambioPaginaEvent += CambioPagina;
 
         }

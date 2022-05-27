@@ -31,8 +31,6 @@
             x:Name="Telefono"
             Placeholder="Numero telefono"/>
 
-        <!--Margin="150,150,150,0"-->
-
         <Button HeightRequest="50" VerticalOptions="End" HorizontalOptions="EndAndExpand" FontAttributes="Bold" Margin="20" Padding="10"
                 x:Name="conferma"
                 Text="Conferma Dati"

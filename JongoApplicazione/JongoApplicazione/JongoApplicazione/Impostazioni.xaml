@@ -21,10 +21,6 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
-
-
-
-
             </Grid.RowDefinitions>
 
             <!-- TITOLO -->

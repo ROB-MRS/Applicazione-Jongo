@@ -5,62 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.View.Prenota3">
     <ContentView.Content>
-         <Grid> 
-                  <!--Divido la pagina in 5 colonne e 5 righe-->
-        <!--<Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition> -->
-
-
-            <!--Griglia di prova 
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="1" />
-             <Frame BackgroundColor="AntiqueWhite" Grid.Row="0" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="0" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="1" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="2" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="3" Grid.Column="4" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="0" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="1" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="2" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="3" />
-             <Frame BackgroundColor="Aqua" Grid.Row="4" Grid.Column="4" />
-                -->
-
-      <!-- </Grid.RowDefinitions> -->  
-
-              <!-- Immagine/ Animazione Jongo 
-            <StackLayout Grid.Column="1" Grid.Row="0" Padding="0,-125,0,0" Margin="15" Grid.ColumnSpan="3">
-                <Image Source="logo_quadrato2.png"
-                       HeightRequest="400"
-                       WidthRequest="400"
-                       VerticalOptions="Start"
-                       HorizontalOptions="End"/>
-            </StackLayout> -->
+         <Grid>
              
              <!-- TITOLO -->
              <StackLayout> 
