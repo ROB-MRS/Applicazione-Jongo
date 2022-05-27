@@ -123,12 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\logo_quadrato2.png" />
-    <BundleResource Include="Resources\contattaci.png" />
-    <BundleResource Include="Resources\dovesiamo.png" />
-    <BundleResource Include="Resources\impostazioni.png" />
-    <BundleResource Include="Resources\prenota.png" />
-    <BundleResource Include="Resources\chisiamo.png" />
-    <BundleResource Include="Resources\cronologia.png" />
     <BundleResource Include="Resources\password.png" />
     <BundleResource Include="Resources\email.png" />
     <BundleResource Include="Resources\passwordnuova.png" />
@@ -139,5 +133,12 @@
     <BundleResource Include="Resources\sfondouno.png" />
     <BundleResource Include="Resources\sfondodue.png" />
     <BundleResource Include="Resources\sfondotre.png" />
+    <BundleResource Include="Resources\prenota.png" />
+    <BundleResource Include="Resources\chisiamo.png" />
+    <BundleResource Include="Resources\contattaci.png" />
+    <BundleResource Include="Resources\dovesiamo.png" />
+    <BundleResource Include="Resources\impostazioni.png" />
+    <BundleResource Include="Resources\cronologia.png" />
+    <BundleResource Include="Resources\logout.png" />
   </ItemGroup>
 </Project>
