@@ -154,5 +154,6 @@
     <BundleResource Include="Resources\dovesiamo.png" />
     <BundleResource Include="Resources\impostazioni.png" />
     <BundleResource Include="Resources\cronologia.png" />
+    <BundleResource Include="Resources\logout.png" />
   </ItemGroup>
 </Project>
