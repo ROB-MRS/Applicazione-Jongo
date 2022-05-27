@@ -233,7 +233,7 @@
                     Clicked="Bottone_Mappa"/>-->
                  <ImageButton 
                     Padding="5"
-                    Scale="1.3"
+                    Scale="1"
                     Source="{StaticResource immagineDoveSiamo}"
                     BackgroundColor="Transparent"
                     Clicked="Bottone_Mappa"/>
