@@ -59,7 +59,7 @@
             </StackLayout>
 
             <!-- Bottone utente logout -->
-            <StackLayout VerticalOptions="End" Grid.Column="1" Margin="0,15,25,0">
+            <StackLayout VerticalOptions="End" Grid.Column="1" Margin="0,15,35,0">
                 <ImageButton
                     x:Name="bottone_logout"
                     Source="{StaticResource immagineLogOut}"
