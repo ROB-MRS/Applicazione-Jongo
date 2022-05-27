@@ -74,37 +74,13 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
@@ -113,6 +89,15 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logoapp_40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logoapp_60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logoapp_80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logoapp_120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logoapp_120-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logoapp_180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logoapp_1024.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logoapp_58-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\logoapp_87-1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -126,8 +111,8 @@
     <PackageReference Include="FirebaseDatabase.net">
       <Version>4.0.7</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -138,9 +123,22 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\logo_quadrato2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Mail.png" />
-    <AndroidResource Include="Resources\User.svg" />
+    <BundleResource Include="Resources\password.png" />
+    <BundleResource Include="Resources\email.png" />
+    <BundleResource Include="Resources\passwordnuova.png" />
+    <BundleResource Include="Resources\mailnuova.png" />
+    <BundleResource Include="Resources\occhiochiuso.png" />
+    <BundleResource Include="Resources\occhioaperto.png" />
+    <BundleResource Include="Resources\user.png" />
+    <BundleResource Include="Resources\sfondouno.png" />
+    <BundleResource Include="Resources\sfondodue.png" />
+    <BundleResource Include="Resources\sfondotre.png" />
+    <BundleResource Include="Resources\prenota.png" />
+    <BundleResource Include="Resources\chisiamo.png" />
+    <BundleResource Include="Resources\contattaci.png" />
+    <BundleResource Include="Resources\dovesiamo.png" />
+    <BundleResource Include="Resources\impostazioni.png" />
+    <BundleResource Include="Resources\cronologia.png" />
+    <BundleResource Include="Resources\logout.png" />
   </ItemGroup>
 </Project>

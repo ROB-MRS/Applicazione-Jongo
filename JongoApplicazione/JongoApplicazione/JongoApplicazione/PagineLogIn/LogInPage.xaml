@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage BackgroundColor="#FFCCFF"
+<ContentPage 
+    BackgroundColor="{StaticResource ColoreSfondi}"
+    NavigationPage.HasNavigationBar="True"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="JongoApplicazione.LogInPage"
-    NavigationPage.HasNavigationBar="True"
-    NavigationPage.HasBackButton="True">
+    x:Class="JongoApplicazione.LogInPage">
+    
     <ContentPage.Content>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -44,11 +45,12 @@
             </StackLayout>
 
             <!-- Email-->
-            <StackLayout Grid.Column="1" Grid.Row="3">
+            <StackLayout Grid.Column="0" Grid.Row="3" Padding="0,-8,-10,0">
                 <!-- immagine email-->
-                <Image x:Name="Immagine_Email"
-                       VerticalOptions="Center"
-                       HorizontalOptions="Center"/>
+                <Image Source="{StaticResource iconaEmail}"
+                       Scale="0.5"
+                       HorizontalOptions="End"
+                       VerticalOptions="Start"/>
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3" >
                 <Entry x:Name="Email"
@@ -61,8 +63,12 @@
             </StackLayout>
 
             <!-- Password -->
-            <StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="4" Padding="0,-8,-13,0">
                 <!-- immagine password -->
+                <Image Source="{StaticResource iconaPassword}"
+                       Scale="0.4"
+                       HorizontalOptions="End"
+                       VerticalOptions="Start"/>
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="4">
                 <Entry x:Name="Password"
@@ -74,6 +80,15 @@
                        TextColor="Red"
                        IsVisible="false"/>
             </StackLayout>
+            <StackLayout Grid.Column="4" Grid.Row="4" Padding="0,-1,12,0">
+                 <!--bottone per mostrare password--> 
+                 <ImageButton x:Name="Bottone_password" Grid.Column="4" Grid.Row="4"
+                        Source="{StaticResource iconaOcchioChiuso}"
+                        Scale="0.7"
+                        Clicked="bottone_password_Clicked">
+                </ImageButton>
+            </StackLayout>
+            
 
             <!-- Password Dimenticata -->
             <StackLayout Grid.Column="2" Grid.Row="5" >
@@ -85,6 +100,15 @@
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
                         Clicked="Bottone_Recupero_Password_Cliccato"/>
+
+                <Button x:Name="Bottone_Iscrizione_Login"
+                        Text="Iscriviti"
+                        FontSize="13"
+                        TextColor="#6F00FF"
+                        BackgroundColor="Transparent"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Clicked="Bottone_Iscrizione"/>
             </StackLayout>
 
             <!-- Bottone LogIn -->

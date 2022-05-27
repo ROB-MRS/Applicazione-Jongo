@@ -1,4 +1,5 @@
-﻿using Firebase.Database;
+﻿using Firebase.Auth;
+using Firebase.Database;
 using JongoApplicazione.JongoApplicazione.PagineLogIn;
 using Newtonsoft.Json;
 using System;
@@ -13,6 +14,9 @@ namespace JongoApplicazione.JongoApplicazione
     {
         FirebaseClient firebaseClient =
                 new FirebaseClient("https://jongo-data-default-rtdb.europe-west1.firebasedatabase.app/");
+        
+        FirebaseAuthProvider authProvider = new FirebaseAuthProvider(new FirebaseConfig("AIzaSyCJ1J9HJUzcQnBaP3i5d8xhke9gXy7rcfA"));
+
 
         public async Task<bool> Save(Utente utente)
         {
@@ -29,6 +33,7 @@ namespace JongoApplicazione.JongoApplicazione
             
             return (await firebaseClient.Child(nameof(Utente)).OnceAsync<Utente>()).Select(item=> new Utente
                 {
+                    prenotazioni = item.Object.prenotazioni,
                     Email = item.Object.Email,
                     Name = item.Object.Name,
                     Surname = item.Object.Surname,
@@ -40,8 +45,51 @@ namespace JongoApplicazione.JongoApplicazione
 
         public async void Delete(Utente utente)
         {
+            await firebaseClient.Child(nameof(Utente) + "/" + utente.Id).DeleteAsync();
             List<Utente> list = await GetAll();
             list.Remove(utente);
         }
+
+        public async void Update(Utente utente)
+        {
+            await firebaseClient.Child(nameof(Utente)+"/"+utente.Id).PutAsync(JsonConvert.SerializeObject(utente)); 
+        }
+
+        public async Task<string> SignUp(string email,string password)
+        {
+            var token = await authProvider.CreateUserWithEmailAndPasswordAsync(email,password);
+            if (!string.IsNullOrEmpty(token.FirebaseToken))
+            {
+                return token.FirebaseToken;
+            }
+            return "";
+        }
+
+        public async Task<bool> ResetPassword(string email)
+        {
+            await authProvider.SendPasswordResetEmailAsync(email);
+            return true;
+        }
+
+        public async Task<string> SignIn(string email,string password)
+        {
+            var token = await authProvider.SignInWithEmailAndPasswordAsync(email, password);
+            if (!string.IsNullOrEmpty(token.FirebaseToken))
+            {
+                return token.FirebaseToken;
+            }
+            return "";
+        }
+
+        public async Task<string> ChangePassword(string token, string password)
+        {
+            var auth = await authProvider.ChangeUserPassword(token, password);
+            return auth.FirebaseToken;
+        }
+
+
+
     }
+
+
 }

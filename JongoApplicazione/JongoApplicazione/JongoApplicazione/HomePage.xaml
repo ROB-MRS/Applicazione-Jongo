@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<ContentPage NavigationPage.HasNavigationBar="False" BackgroundColor="Black"
+<ContentPage NavigationPage.HasNavigationBar="False"     NavigationPage.HasBackButton="False"
+             BackgroundImageSource="{StaticResource sfondoHome}"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.HomePage">
@@ -31,85 +32,101 @@
                 <ColumnDefinition Width="0.5*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <!-- Bottone utente -->
-            <StackLayout VerticalOptions="End" Grid.Column="1">
-                <ImageButton
-                    Source="User.svg"
-                    BackgroundColor="#83738E"></ImageButton>
+            <!-- Nome utente -->
+            <StackLayout VerticalOptions="End" Grid.Column="3" Margin="0,30,-10,0">
+                <Label 
+                    x:Name="Utente_loggato"
+                    TextColor="{StaticResource ColoreScritte}"
+                    IsVisible="False"
+                    FontSize="Large">
+                </Label>
+
             </StackLayout>
 
-            <!-- Bottone 1 -->
-            <!--<StackLayout Grid.Column="1" Grid.Row="2">
-                <Button Text="Bottone 1"
-                        CornerRadius="23"
-                        BackgroundColor="Blue"/>
-            </StackLayout>-->
 
-            <Button Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"
+            <!-- Bottone utente login -->
+            <StackLayout VerticalOptions="End" Grid.Column="1">
+                <ImageButton
+                    x:Name="bottone_login"
+                    Source="{StaticResource immagineLogIn}"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="Start"
+                    VerticalOptions="End"
+                    Scale="0.7"
+                    IsVisible="True"
+                    Clicked="Bottone_login">
+                </ImageButton>
+            </StackLayout>
+
+            <!-- Bottone utente logout -->
+            <StackLayout VerticalOptions="End" Grid.Column="1" Margin="0,15,25,0">
+                <ImageButton
+                    x:Name="bottone_logout"
+                    Source="{StaticResource immagineLogOut}"
+                    Scale="0.4"
+                    Clicked="Bottone_logout"
+                    IsVisible="False">
+                </ImageButton>
+            </StackLayout>
+
+           <ImageButton Grid.Column="1" Grid.Row="2" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 1"
-                    BackgroundColor="#83738E"
-                    TextColor="#FFDE00">
-            </Button>
+                    Source="{StaticResource immagineChiSiamo}"
+                    BorderColor="{StaticResource ColoreBordi}"
+                    BorderWidth="2"
+                    Padding="5"
+                    BackgroundColor="{StaticResource ColoreBottoni}"
+                    Clicked="Button_1_Clicked">
+            </ImageButton>
 
-            <!-- Bottone 2 -->
-            <!--<StackLayout Grid.Column="3" Grid.Row="2">
-                <Button Text="Bottone 2"
-                        BackgroundColor="Blue"/>
-            </StackLayout>-->
-
-            <Button Grid.Column="3" Grid.Row="2" Grid.RowSpan="2"
+            <ImageButton Grid.Column="3" Grid.Row="2" Grid.RowSpan="2"
+                    Source="{StaticResource immagineImpostazioni}"
                     CornerRadius="50"
-                    Text="Bottone 2"
-                     BackgroundColor="#83738E"
-                    TextColor="#FFDE00">
-            </Button>
+                    Padding="5"
+                    Clicked="bottone_impostazioni"
+                    BackgroundColor="{StaticResource ColoreBottoni}"
+                    BorderColor="{StaticResource ColoreBordi}"
+                    BorderWidth="2">
+            </ImageButton>
 
-            <!-- Bottone 3 -->
-            <!--<StackLayout Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3">
-                <Button Text="Bottone 3"
-                        Background="Blue"/>
-            </StackLayout>-->
-
-            <Button Grid.Column="2" Grid.Row="3" Grid.RowSpan="3"
+            <ImageButton Grid.Column="2" Grid.Row="3" Grid.RowSpan="3"
                     CornerRadius="40"
-                    Text="pagine iscrizione"
-                     BackgroundColor="#83738E"
-                    TextColor="#FFDE00"
+                    Source="{StaticResource immaginePrenota}"
+                    Padding="5"
+                    BackgroundColor="{StaticResource ColoreBottoni}"
+                    BorderColor="{StaticResource ColoreBordi}"
+                    BorderWidth="2"
                     Clicked="Button_Clicked">
-            </Button>
+            </ImageButton>
 
-            <!-- Bottone 4 -->
-            <!--<StackLayout Grid.Column="1" Grid.Row="4">
-                <Button Text="Bottone 1"
-                        BackgroundColor="Blue"/>
-            </StackLayout>-->
-
-            <Button Grid.Column="1" Grid.Row="5" Grid.RowSpan="2"
+            <ImageButton Grid.Column="1" Grid.Row="5" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 4"
-                    BackgroundColor="#83738E"
-                    TextColor="#FFDE00">
-            </Button>
+                    Padding="5"
+                    Source="{StaticResource immagineContattaci}"
+                    BackgroundColor="{StaticResource ColoreBottoni}"
+                    BorderColor="{StaticResource ColoreBordi}"
+                    BorderWidth="2"
+                    Clicked="Bottone_Contattaci">
+            </ImageButton>
 
-             <!--Bottone 5 -->
-            <!--<StackLayout Grid.Column="3" Grid.Row="4">
-                <Button Text="Bottone 1"
-                        BackgroundColor="Blue"/>
-            </StackLayout>-->
-
-            <Button Grid.Column="3" Grid.Row="5" Grid.RowSpan="2"
+            <ImageButton Grid.Column="3" Grid.Row="5" Grid.RowSpan="2"
                     CornerRadius="50"
-                    Text="Bottone 5"
-                     BackgroundColor="#83738E"
-                    TextColor="#FFDE00">
-            </Button>
+                    Padding="5"
+                    Source="{StaticResource immagineCronologia}"
+                    Clicked="bottone_cronologia"
+                    BackgroundColor="{StaticResource ColoreBottoni}"
+                    BorderColor="{StaticResource ColoreBordi}"
+                    BorderWidth="2">
+            </ImageButton>
 
             <!-- Bottone mappa -->
             <StackLayout Grid.Column="2" Grid.Row="8" VerticalOptions="Start">
-                <Button Text="mappa"
-                    BackgroundColor="#83738E"
-                    TextColor="#FFDE00"/>
+                 <ImageButton 
+                    Padding="5"
+                    Scale="1"
+                    Source="{StaticResource immagineDoveSiamo}"
+                    BackgroundColor="Transparent"
+                    Clicked="Bottone_Mappa"/>
             </StackLayout>
 
         </Grid>

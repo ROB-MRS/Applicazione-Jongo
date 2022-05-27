@@ -1,12 +1,56 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentView
+    NavigationPage.HasNavigationBar="False"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="JongoApplicazione.View.Prenota4">
     <ContentView.Content>
-        <StackLayout>
-            <Label Text="TARIFFE" Font="Title" Margin="100" FontSize="Large" TextColor="DarkViolet"/>
 
+        <Grid>
+                  <!--Divido la pagina in 5 colonne e 5 righe-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            
+
+        </Grid.RowDefinitions>
+       
+        <!-- TITOLO -->
+        <StackLayout Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,40,0,57">
+            <Label Text="TARIFFE💶"  FontSize="Subtitle"  FontAttributes="Bold" TextColor="{StaticResource ColoreTitoli}"/>
             </StackLayout>
+
+        <!-- TARIFFE -->
+            <Frame Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="2" BackgroundColor="Bisque">
+                <StackLayout HeightRequest="1000">
+                    <Label Text="Servizi                 Prezzo"> </Label>
+                    <Label Text="------------------------"> </Label>
+                    <Label Text="•Montaggio:         18€/h "> </Label>
+                    <Label Text="•Fabbro:                28€/h "> </Label>
+                    <Label Text="•Idraulico:             25€/h "> </Label>
+                    <Label Text="•Muratore:            20€/h "> </Label>
+                </StackLayout>
+                
+            </Frame>
+           
+          <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,20,0,0">
+                    <Label Text="Le tariffe sono solo indicative, potrebbero avere piccole oscillazioni in base al servizio specifico."
+                           FontSize="15"
+                           TextColor="Gray"/>
+          </StackLayout> 
+
+
+            </Grid>
     </ContentView.Content>
 </ContentView>

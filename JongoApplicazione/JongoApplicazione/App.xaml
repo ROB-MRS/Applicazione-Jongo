@@ -4,5 +4,88 @@
              x:Class="JongoApplicazione.App">
     <Application.Resources>
 
+        <!--ICONE EMAIL E PASSWORD-->
+        <!--email-->
+        <OnPlatform x:Key="iconaEmail"
+                    x:TypeArguments="FileImageSource"
+                    Android="mailnuova.png"
+                    iOS="mailnuova.png"/>
+        <!--password-->
+        <OnPlatform x:Key="iconaPassword"
+                    x:TypeArguments="FileImageSource"
+                    Android="passwordnuova.png"
+                    iOS="passwordnuova.png"/>
+        <!--occhio aperto-->
+        <OnPlatform x:Key="iconaOcchioAperto"
+                    x:TypeArguments="FileImageSource"
+                    Android="occhioaperto.png"
+                    iOS="occhioaperto.png"/>
+        <!--occhio chiuso-->
+        <OnPlatform x:Key="iconaOcchioChiuso"
+                    x:TypeArguments="FileImageSource"
+                    Android="occhiochiuso.png"
+                    iOS="occhiochiuso.png"/>
+
+        <!-- ICONE HOME PAGE -->
+
+        <!--Prenota-->
+        <OnPlatform x:Key="immaginePrenota"
+                    x:TypeArguments="FileImageSource"
+                    Android="prenota.png"
+                    iOS="prenota.png"/>
+        <!--Chi siamo-->
+        <OnPlatform x:Key="immagineChiSiamo"
+                    x:TypeArguments="FileImageSource"
+                    Android="chisiamo.png"
+                    iOS="chisiamo.png"/>
+        <!--Contattaci-->
+        <OnPlatform x:Key="immagineContattaci"
+                    x:TypeArguments="FileImageSource"
+                    Android="contattaci.png"
+                    iOS="contattaci.png"/>
+        <!--Cronologia-->
+        <OnPlatform x:Key="immagineCronologia"
+                    x:TypeArguments="FileImageSource"
+                    Android="cronologia.png"
+                    iOS="cronologia.png"/>
+        <!--Dove siamo-->
+        <OnPlatform x:Key="immagineDoveSiamo"
+                    x:TypeArguments="FileImageSource"
+                    Android="dovesiamo.png"
+                    iOS="dovesiamo.png"/>
+        <!--Impostazioni-->
+        <OnPlatform x:Key="immagineImpostazioni"
+                    x:TypeArguments="FileImageSource"
+                    Android="impostazioni.png"
+                    iOS="impostazioni.png"/>
+        <!--User-->
+        <OnPlatform x:Key="immagineLogIn"
+                    x:TypeArguments="FileImageSource"
+                    Android="user.png"
+                    iOS="user.png"/>
+
+        <!--Logout-->
+        <OnPlatform x:Key="immagineLogOut"
+                    x:TypeArguments="FileImageSource"
+                    Android="logout.png"
+                    iOS="logout.png"/>
+
+
+        <!--Sfondi-->
+        <OnPlatform x:Key="sfondoHome"
+                    x:TypeArguments="FileImageSource"
+                    Android="sfondotre.png"
+                    iOS="sfondotre.png"/>
+
+
+        <!-- colori -->
+        <Color x:Key="ColoreBottoni">#FFCC99</Color>
+        <Color x:Key="ColoreSfondi">#FFCCFF</Color>
+        <Color x:Key="ColoreScritte">Black</Color>
+        <Color x:Key="ColoreBordi">#CC6600</Color>
+        <Color x:Key="ColoreBottoniModifica">#FFCC99</Color>
+        <Color x:Key="ColoreTitoli">DarkViolet</Color>
+
+
     </Application.Resources>
-</Application>
+    </Application>

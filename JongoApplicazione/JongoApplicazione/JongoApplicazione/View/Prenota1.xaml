@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="{StaticResource ColoreSfondi}"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="JongoApplicazione.View.Prenota1">
+    <StackLayout>
+        <!-- margin : sinistra, sopra, destra, sotto --> 
+        <Label FontSize="Subtitle" Margin="110,30,100,30"
+            Text="INFO PERSONALI"
+            FontAttributes="Bold"
+            TextColor="{StaticResource ColoreTitoli}"
+              />
+        <Entry FontSize="Large" Margin="10,0,10,0"
+            x:Name="Nome"
+            Placeholder="Nome"/>
+        <Entry FontSize="Large" Margin="10,10,10,0"
+            x:Name="Cognome"
+            Placeholder="Cognome"/>
+        <Entry FontSize="Large" Margin="10,10,10,0"
+            x:Name="Indirizzo"
+            Placeholder="Indirizzo,n°civico"/>
+        <Entry FontSize="Large" Margin="10,10,10,0"
+            x:Name="CAP" 
+            Placeholder="CAP"/>
+        <Entry FontSize="Large" Margin="10,10,10,0"
+            x:Name="Mail"
+            Placeholder="Mail"/>
+        <Entry FontSize="Large" Margin="10,10,10,0"
+            x:Name="Telefono"
+            Placeholder="Numero telefono"/>
+
+        <Button HeightRequest="50" VerticalOptions="End" HorizontalOptions="EndAndExpand" FontAttributes="Bold" Margin="20" Padding="10"
+                x:Name="conferma"
+                Text="Conferma Dati"
+                Clicked="bottone_conferma"
+                BackgroundColor="{StaticResource ColoreBottoni}"
+                TextColor="{StaticResource ColoreScritte}"
+                BorderWidth="2"
+                BorderColor="{StaticResource ColoreBordi}"
+                CornerRadius="10"
+                IsVisible="True"
+                >
+
+        </Button>
+
+        <Button HeightRequest="50" VerticalOptions="End" HorizontalOptions="StartAndExpand" FontAttributes="Bold" Margin="20" Padding="10"
+                x:Name="modifica"
+                Text="Modifica Dati"
+                Clicked="bottone_modifica"
+                BackgroundColor="{StaticResource ColoreBottoniModifica}"
+                TextColor="{StaticResource ColoreScritte}"
+                BorderWidth="2"
+                BorderColor="{StaticResource ColoreBordi}"
+                CornerRadius="10"
+                IsVisible="False"
+                >
+
+        </Button>
+
+    </StackLayout>
+
+    
+    
+</ContentView>

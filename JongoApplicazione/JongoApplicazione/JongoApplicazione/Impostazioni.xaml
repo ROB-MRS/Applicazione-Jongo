@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JongoApplicazione.JongoApplicazione.Impostazioni"
+             BackgroundColor="{StaticResource ColoreSfondi}">
+    <ContentPage.Content>
+        <Grid>
+            <!--Divido la pagina in 5 colonne e 5 righe-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!-- TITOLO -->
+            <StackLayout Grid.Column="1"  Grid.ColumnSpan="3" Grid.Row="0" Margin="50,40,0,0">
+                <Label 
+                    Text="IMPOSTAZIONI⚙️"
+                    FontSize="Subtitle"
+                    FontAttributes="Bold"
+                    TextColor="{StaticResource ColoreTitoli}">
+                </Label>
+            </StackLayout>
+
+            <!-- SOTTOTITOLO -->
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,-50,0,0" HorizontalOptions="StartAndExpand" >
+                <Label
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    Text="•GENERALI"
+                    TextColor="{StaticResource ColoreTitoli}"
+                    TextDecorations="Underline">
+                </Label>
+            </StackLayout>
+
+            <!-- NOME -->
+           <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,-10,0,0" HorizontalOptions="StartAndExpand">
+                <Label
+                    Text="•Nome: "
+                    FontSize="Subtitle"
+                    FontAttributes="Bold"
+                    TextColor="#00008b">
+                </Label>
+            </StackLayout>
+
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="95,-10,0,0" HorizontalOptions="StartAndExpand">
+                <Label
+                    x:Name="Nome"
+                    FontSize="Subtitle"
+                    TextColor="Black">
+                </Label>
+            </StackLayout>
+
+            <!-- COGNOME -->
+
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10,30,0,0"  HorizontalOptions="StartAndExpand">
+                <Label
+                    TextColor="#00008b"
+                    FontAttributes="Bold"
+                    Text="•Cognome: "
+                    FontSize="Subtitle">
+                </Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="133,30,0,0"  HorizontalOptions="StartAndExpand">
+                <Label
+                    x:Name="Cognome"
+                    FontSize="Subtitle"
+                    TextColor="Black">
+                </Label>
+            </StackLayout>
+
+            <!-- EMAIL -->
+            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Margin="10,-80,0,0" HorizontalOptions="StartAndExpand">
+                <Label
+                    Text="•Email: "
+                    FontSize="Subtitle"
+                    FontAttributes="Bold"
+                    TextColor="#00008b">
+                </Label>
+            </StackLayout>
+
+            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Margin="90,-80,0,0" HorizontalOptions="StartAndExpand">
+                <Label
+                    x:Name="Email"
+                    FontSize="Subtitle"
+                    TextColor="Black">
+                </Label>
+            </StackLayout>
+
+            <!-- SOTTOTITOLO -->
+            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Margin="10,-20,0,0" HorizontalOptions="StartAndExpand">
+                <Label
+                    Text="•GESTIONE ACCOUNT"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    TextColor="{StaticResource ColoreTitoli}"
+                    TextDecorations="Underline">
+                </Label>
+            </StackLayout>
+
+            <!-- PULSANTE CAMBIA PASSWORD -->
+            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Margin="15,20,0,0" HorizontalOptions="StartAndExpand">
+                <Button
+                    Text="Cambia password"
+                        FontSize="20"
+                        TextColor="#00008b"
+                        FontAttributes="Bold"
+                        BackgroundColor="Transparent"
+                        Clicked="bottone_password">
+                </Button>
+            </StackLayout>
+
+         <!-- PULSANTE CAMBIA NUMERO TELEFONO -->
+            <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"  Margin="15,-80,0,0" HorizontalOptions="StartAndExpand">
+                <Button
+                    Text="Cambia numero di telefono"
+                    FontSize="20"
+                    TextColor="#00008b"
+                    FontAttributes="Bold"
+                    BackgroundColor="Transparent"
+                    Clicked="bottone_telefono">
+                </Button>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

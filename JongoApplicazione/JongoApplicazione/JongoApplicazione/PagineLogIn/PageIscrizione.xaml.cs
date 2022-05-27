@@ -5,7 +5,9 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Net.Mail;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 
 //using System.Data.SqlClient;
 using Xamarin.Forms;
@@ -44,7 +46,7 @@ namespace JongoApplicazione.PagineLogIn
         {
             foreach(char c in numero)
             {
-                if(c < '1' || c > '9')
+                if(c < '0' || c > '9')
                 {
                     return false;
                 }
@@ -74,15 +76,15 @@ namespace JongoApplicazione.PagineLogIn
                 verifica = false;
             }
 
-            else if (string.IsNullOrEmpty(numero) && isNumero(numero))
+            else if (string.IsNullOrEmpty(numero))
             {
-                await DisplayAlert("Errore", "Inserire un numero", "OK");
+                await DisplayAlert("Errore", "Inserire il numero di telefono", "OK");
                 verifica = false;
             }
 
-            else if (string.IsNullOrEmpty(password))
+            else if (!isNumero(numero))
             {
-                await DisplayAlert("Errore", "Inserire la password", "OK");
+                await DisplayAlert("Errore", "Il numero di telefono deve essere composto da soli numeri senza spazi", "OK");
                 verifica = false;
             }
 
@@ -92,6 +94,13 @@ namespace JongoApplicazione.PagineLogIn
                 verifica = false;
             }
 
+            else if (string.IsNullOrEmpty(password))
+            {
+                await DisplayAlert("Errore", "Inserire la password", "OK");
+                verifica = false;
+            }
+
+            
             else if (password != Conferma_Password.Text)
             {
                 await DisplayAlert("Errore", "Password di conferma non corretta", "OK");
@@ -110,56 +119,83 @@ namespace JongoApplicazione.PagineLogIn
                 verifica = false;
             }
 
-            List<string> listaEmail = new List<string>();
-            List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
 
-            foreach (Utente u in await repository.GetAll())
-            {
-                listaEmail.Add(u.Email);
-            }
+            try {
+                string token = "";
+                if (verifica)
+                {
+                    token = await repository.SignUp(email, password);
+                
+                    if (!string.IsNullOrEmpty(token)) 
+                    { 
 
-            if (listaEmail.Contains(email) && verifica)
-            {
-                await DisplayAlert("Errore", "Email già presente", "OK");
-            }
+                        List<string> listaEmail = new List<string>();
+                        List<Utente> listaUtenti = new List<Utente>(await repository.GetAll());
 
-            else if(verifica)
-            {   
+                        foreach (Utente u in await repository.GetAll())
+                        {
+                            listaEmail.Add(u.Email);
+                        }
+
+                        if (listaEmail.Contains(email) && verifica)
+                        {
+                            await DisplayAlert("Errore", "Email già presente", "OK");
+                        }
+
+                        else if(verifica)
+                        {   
                 
 
-                Utente utente = new Utente();
-                utente.Name = nome;
-                utente.Surname = cognome;
-                utente.Email = email;
-                utente.Password = password;
-                utente.Numero = numero;
+                            Utente utente = new Utente();
+                            utente.Name = nome;
+                            utente.Surname = cognome;
+                            utente.Email = email;
+                            utente.Password = password.GetHashCode();
+                            utente.Numero = numero;
                           
-                var isSaved = await repository.Save(utente);
-                if (isSaved)
-                {
-                    await DisplayAlert("Informazione", "Registrazione effettuata!", "OK");
-                    Etichetta.IsVisible = true;
+                            var isSaved = await repository.Save(utente);
+                            if (isSaved)
+                            {
+                                CreateMail();
+                                await DisplayAlert("Informazione", "Controlla la mail per verificare di esserti iscritto con successo ", "OK");
+                                await Navigation.PushAsync(new HomePage(utente));
+                            }
+                        }
+                    }
+
                 }
-
-
-                /*try {
-                    string srvrdbname = "Jongo";
-                    string srvrname = "192.168.1.254";
-                    string srvrusername = "adp";
-                    string srvrpasswd = "Anto4700";
-                    string sqlconn = $"Data Source = {srvrname};Initial Catalog = {srvrdbname};User Id = {srvrusername};Password = {srvrpasswd}; Trudted_connection = true";
-
-                    SqlConnection connessione = new SqlConnection(sqlconn);
-                    connessione.Open();
-                }
-
-                catch (Exception ex){
-                    Console.WriteLine(ex.Message);
-                    throw;
-                }*/
             }
-            
+            catch (Exception ex)
+            {
+                await DisplayAlert("Errore", "Email già presente o inesistente", "OK");
+            }
+        }
 
+        void CreateMail()
+        {
+            try
+            {
+
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                mail.From = new MailAddress("info.jongo@gmail.com");
+                mail.To.Add(Email.Text);
+                mail.Subject = "GRAZIE PER ESSERTI ISCRITTO! ";
+                mail.Body = "Hai completato con successo l'iscrizione a Jongo!\nPer saperne di piu sui nostri servizi visita https://www.jongomontaggi.it/";
+
+                SmtpServer.Port = 587;
+                SmtpServer.Host = "smtp.gmail.com";
+                SmtpServer.EnableSsl = true;
+                SmtpServer.UseDefaultCredentials = false;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("info.jongo@gmail.com", "Info2022");
+
+                SmtpServer.Send(mail);
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Faild", ex.Message, "OK");
+            }
         }
 
     }

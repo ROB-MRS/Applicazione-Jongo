@@ -11,20 +11,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.564" />
+    <PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
     <PackageReference Include="FirebaseDatabase.net" Version="4.0.7" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.1" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="View\" />
     <None Remove="ViewModel\" />
-    <None Remove="PagineLogIn\" />
+    <None Remove="JongoApplicazione\Resources\drawable\IconaPrenota.png" />
+    <None Remove="JongoApplicazione.Android\Resources\drawable\IconaPrenota.png" />
+    <None Remove="JongoApplicazione\Resources\drawable\iconaPrenota.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="View\" />
     <Folder Include="ViewModel\" />
-    <Folder Include="PagineLogIn\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
@@ -35,5 +36,16 @@
       <DependentUpon>LogInPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\.editorconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="JongoApplicazione\Cronologia.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="JongoApplicazione\Resources\drawable\iconaPrenota.png" />
   </ItemGroup>
 </Project>
