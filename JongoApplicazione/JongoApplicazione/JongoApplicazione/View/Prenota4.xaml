@@ -37,9 +37,9 @@
                     <Label Text="Servizi                 Prezzo"> </Label>
                     <Label Text="------------------------"> </Label>
                     <Label Text="•Montaggio:         18€/h "> </Label>
-                    <Label Text="•Fabbro:                18€/h "> </Label>
-                    <Label Text="•Idraulico:             18€/h "> </Label>
-                    <Label Text="•Muratore:            18€/h "> </Label>
+                    <Label Text="•Fabbro:                28€/h "> </Label>
+                    <Label Text="•Idraulico:             25€/h "> </Label>
+                    <Label Text="•Muratore:            20€/h "> </Label>
                 </StackLayout>
                 
             </Frame>

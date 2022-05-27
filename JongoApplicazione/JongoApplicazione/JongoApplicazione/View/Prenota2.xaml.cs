@@ -12,6 +12,7 @@ namespace JongoApplicazione.View
         {
             InitializeComponent();
             p = prenotazione;
+            Info.Placeholder = "Per ulteriori dettagli/richieste...\nes: citofono rotto\nes: interno 21 scala D";
         }
 
         void bottone_conferma(System.Object sender, System.EventArgs e)

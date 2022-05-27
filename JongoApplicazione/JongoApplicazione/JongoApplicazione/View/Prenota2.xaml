@@ -73,7 +73,7 @@
 
           <!-- Entry per inserire info extra -->
             <StackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"  Grid.RowSpan="5">
-                <Editor x:Name="Info"  HeightRequest="230" Placeholder="Per ulteriori dettagli o richieste..." />
+                <Editor x:Name="Info"  HeightRequest="230"/>
             
 
          <!-- Bottoni conferma e modifica -->
@@ -87,7 +87,7 @@
                 BorderWidth="2"
                 BorderColor="{StaticResource ColoreBordi}"
                 CornerRadius="10"
-                Padding="10"
+                Padding="5"
                 IsVisible="True"
                 >
 

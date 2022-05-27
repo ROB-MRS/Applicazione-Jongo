@@ -64,6 +64,13 @@
                     Android="user.png"
                     iOS="user.png"/>
 
+        <!--Logout-->
+        <OnPlatform x:Key="immagineLogOut"
+                    x:TypeArguments="FileImageSource"
+                    Android="logout.png"
+                    iOS="logout.png"/>
+
+
         <!--Sfondi-->
         <OnPlatform x:Key="sfondoHome"
                     x:TypeArguments="FileImageSource"

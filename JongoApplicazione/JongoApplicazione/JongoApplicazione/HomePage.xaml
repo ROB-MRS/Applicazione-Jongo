@@ -39,21 +39,20 @@
                     BackgroundColor="#83738E"></ImageButton>
             </StackLayout>-->
 
-            <StackLayout VerticalOptions="End" Grid.Column="3">
+
+            <!-- Nome utente -->
+            <StackLayout VerticalOptions="End" Grid.Column="3" Margin="0,30,-10,0">
                 <Label 
                     x:Name="Utente_loggato"
-                    
-                    
                     TextColor="{StaticResource ColoreScritte}"
-                 IsVisible="False"
+                    IsVisible="False"
                     FontSize="Large">
-                    
                 </Label>
 
             </StackLayout>
 
 
-            <!-- Bottone utente -->
+            <!-- Bottone utente login -->
             <StackLayout VerticalOptions="End" Grid.Column="1">
                 <ImageButton
                     x:Name="bottone_login"
@@ -67,17 +66,15 @@
                 </ImageButton>
             </StackLayout>
 
-            <StackLayout VerticalOptions="End" Grid.Column="1">
-                <Button
+            <!-- Bottone utente logout -->
+            <StackLayout VerticalOptions="End" Grid.Column="1" Margin="0,15,25,0">
+                <ImageButton
                     x:Name="bottone_logout"
-                    Text="Log Out"
-                    BackgroundColor="{StaticResource ColoreBottoni}"
-                    TextColor="{StaticResource ColoreScritte}"
-                     BorderColor="{StaticResource ColoreBordi}"
-                    BorderWidth="2"
+                    Source="{StaticResource immagineLogOut}"
+                    Scale="0.4"
                     Clicked="Bottone_logout"
                     IsVisible="False">
-                </Button>
+                </ImageButton>
             </StackLayout>
 
             <!-- Bottone 1 -->

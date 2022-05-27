@@ -24,6 +24,7 @@ namespace JongoApplicazione.View
 
             categoria.ItemsSource = categorie;
             p = prenotazione;
+            descrizione.Placeholder = "Descrizione lavoro da svolgere\nes: nome, marca e codice del\nmobile da montare";
             
         }
 

@@ -58,7 +58,7 @@
                 </Label>
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="87,-10,0,0" HorizontalOptions="StartAndExpand">
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="95,-10,0,0" HorizontalOptions="StartAndExpand">
                 <Label
                     x:Name="Nome"
                     FontSize="Subtitle"
@@ -76,7 +76,7 @@
                     FontSize="Subtitle">
                 </Label>
             </StackLayout>
-            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="125,30,0,0"  HorizontalOptions="StartAndExpand">
+            <StackLayout Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="133,30,0,0"  HorizontalOptions="StartAndExpand">
                 <Label
                     x:Name="Cognome"
                     FontSize="Subtitle"
@@ -94,7 +94,7 @@
                 </Label>
             </StackLayout>
 
-            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Margin="82,-80,0,0" HorizontalOptions="StartAndExpand">
+            <StackLayout Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Margin="90,-80,0,0" HorizontalOptions="StartAndExpand">
                 <Label
                     x:Name="Email"
                     FontSize="Subtitle"
