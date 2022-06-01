@@ -162,14 +162,14 @@ namespace JongoApplicazione.ViewModel
                 .Append($"Presso: {i.via}").Append($",{i.cap}\n").Append($"In data: {i.data}").Append($"alle ore {i.data}\n")
                 .Append($"Per il servizio di: {i.servizio}\n").Append($"Descrizione: {i.descrizione}\n").Append($"[info extra: {i.infoExtra}]\n")
                 .Append("Ti ringraziamo per aver utilizzato Jongo. Presto verrai contattato da un nostro operatore per un preventivo accurato.\n" +
-                        "Per altre informazioni puoi contattarci a info@jongomontaggi.it o al numero verdi +39 351 7085953.\n\n");
+                        "Per altre informazioni puoi contattarci a info@jongomontaggi.it o al numero verde +39 351 7085953.\n\n");
                 return messaggio.ToString();
             }
             else
             {
                 messaggio.Append("Richesta di lavoro Jongo:")
                 .Append($"Nome: {i.nome}\n").Append($"Cognome: {i.cognome}\n").Append($"Telefono/Cellulare: {i.cell}\n")
-                .Append($"Presso: {i.via}").Append($",{i.cap}\n").Append($"In data: {i.data}").Append($"alle ore {i.data}\n")
+                .Append($"Presso: {i.via}").Append($",{i.cap}\n").Append($"In data: {i.data}").Append($"alle ore {i.ora}\n")
                 .Append($"Per il servizio di: {i.servizio}\n").Append($"Descrizione: {i.descrizione}\n").Append($"[info extra: {i.infoExtra}]")
                 .Append("\n\nInviare al piu presto il preventivo al cliente.");
                 return messaggio.ToString();
